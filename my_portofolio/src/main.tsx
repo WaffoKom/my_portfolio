@@ -1,10 +1,26 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import store from "./store/store.ts";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const root = createRoot(document.getElementById("root")!);
+
+function renderApp() {
+  fancyLog();
+  root.render(
+    <>
+      <StrictMode>
+        <App />
+      </StrictMode>
+    </>
+  );
+}
+
+function fancyLog() {
+  console.log("%c Rendered with👌👍", "background: purple; color: #fff");
+  console.log(store.getState());
+}
+
+renderApp();
+store.subscribe(renderApp);
