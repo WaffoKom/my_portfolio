@@ -13,7 +13,7 @@ i18n
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
-    ns: ["translation"],
+    ns: ["about", "home", "navbar", "projet", "skills", "testimonials"],
     interpolation: { escapeValue: false }, // Éviter d'échapper automatiquement les valeurs }
   });
 
