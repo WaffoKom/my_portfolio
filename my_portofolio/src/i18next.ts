@@ -11,9 +11,9 @@ i18n
     fallbackLng: "fr",
     debug: true,
     backend: {
-      loadPath: "/locales/{{lng}}/{{ns}}.json",
+      loadPath: "src/locales/{{lng}}/{{ns}}.json",
     },
-    ns: ["about", "home", "navbar", "projet", "skills", "testimonials"],
+    ns: ["about", "navbar", "projet", "skills", "testimonials"],
     interpolation: { escapeValue: false }, // Éviter d'échapper automatiquement les valeurs }
   });
 

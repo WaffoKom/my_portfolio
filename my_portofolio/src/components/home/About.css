@@ -1,0 +1,37 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.about-left{
+    flex: 1;
+    margin-right: 20px;
+}
+.about-right{
+    flex: 1;
+    text-align: center;
+}
+
+.about-image{
+    max-width: 100%;
+    height: auto;
+}
+
+.external-links{
+margin-top: 10px;
+}
+
+.link-icon{
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
