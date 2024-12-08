@@ -13,7 +13,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const About: React.FC = () => {
   const { t } = useTranslation("about");
   return (
-    <section className="about-container">
+    <section className={`about-container `}>
       <div className="about-letft">
         <h1>{t("title")}</h1>
         <h2>{t("content")}</h2>
