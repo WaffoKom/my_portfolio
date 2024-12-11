@@ -4,15 +4,19 @@ import "./index.css";
 import App from "./App.tsx";
 import "./i18next.ts";
 import store from "./store/store.ts";
+import { Provider } from "react-redux";
 
 const root = createRoot(document.getElementById("root")!);
 
 function renderApp() {
   fancyLog();
+
   root.render(
     <>
       <StrictMode>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </StrictMode>
     </>
   );
