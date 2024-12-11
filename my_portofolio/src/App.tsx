@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from "./hooks.ts";
 import { setTheme } from "./actions/themeActions.ts";
 
 export default function App() {
-  const theme = useAppSelector((state) => state.theme.theme);
+  const { theme } = useAppSelector((state) => state.theme);
   const dispatch = useAppDispatch();
   const handleToggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
