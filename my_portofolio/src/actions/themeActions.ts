@@ -8,7 +8,10 @@ export interface SetThemeAction {
 export type ThemeActionTypes = SetThemeAction;
 
 // Action creator for change theme
-export const setTheme = (theme: "light" | "dark"): ThemeActionTypes => ({
-  type: SET_THEME,
-  payload: theme,
-});
+export const setTheme = (theme: "light" | "dark"): ThemeActionTypes => {
+  localStorage.setItem("theme", theme);
+  return {
+    type: SET_THEME,
+    payload: theme,
+  };
+};

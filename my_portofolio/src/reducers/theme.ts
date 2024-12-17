@@ -2,9 +2,11 @@ import { ThemState } from "../types/ThemeState.ts";
 import { SET_THEME } from "../constants/actionTypes.ts";
 import { ThemeActionTypes } from "../actions/themeActions.ts";
 
+const savedTheme =
+  (localStorage.getItem("theme") as "light" | "dark") || "light";
 // Initial State
 const initialState: ThemState = {
-  theme: "light",
+  theme: savedTheme ? savedTheme : "light",
 };
 
 export default function theme(

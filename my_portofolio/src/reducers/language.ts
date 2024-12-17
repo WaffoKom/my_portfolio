@@ -3,8 +3,10 @@ import { TranslationActionTypes } from "../actions/languageAction.ts";
 import { SET_LANGUAGE } from "../constants/actionTypes.ts";
 import i18n from "../i18next.ts";
 
+const savedLanguage = localStorage.getItem("language");
+
 const initialState: TranslationState = {
-  currentLanguage: "en",
+  currentLanguage: savedLanguage ? savedLanguage : "en",
 };
 
 export default function language(
