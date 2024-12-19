@@ -1,7 +1,6 @@
 import "./About.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Button } from "flowbite-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWhatsapp,
@@ -15,14 +14,10 @@ const About: React.FC = () => {
   return (
     <section className={`about-container `}>
       <div className="about-letft">
-        <h1>{t("title")}</h1>
-        <h2>{t("content")}</h2>
-        <p>{t("role")}</p>
-        <p>{t("presentation")}</p>
-        <p>{t("experience")}</p>
-        <p>{t("presentation_next")}</p>
-        <Button>{t("letGetStarted")}</Button>
-        <Button>{t("downlaodResume")}</Button>
+        <h1>{t("perso.title")}</h1> <h2>{t("perso.name")}</h2>{" "}
+        <h3>{t("perso.role")}</h3> <p>{t("perso.presentation")}</p>{" "}
+        <p>{t("perso.presentation_next")}</p> <p>{t("perso.rendezvous")}</p>{" "}
+        <button>{t("perso.letGetStarted")}</button>
       </div>
       <div className="about-right">
         <img
