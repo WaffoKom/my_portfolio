@@ -1,10 +1,12 @@
 {
-  "title": "Hello guys",
-  "content": "I'm KOM WAFFO DANIEL PRINCE",
-  "role": "a Software Developer",
-  "presentation": "I am a web and mobile developer",
-  "presentation_next": "and I propose to learn to discover myself, as a person, but also as a developer, are you ready?",
-  "experience": "with 3 years of experiences",
-  "letGetStarted": "Let's get Started",
-  "downlaodResume": "Download Resume"
+  "presentation": {
+    "title": "Salut  guys this is",
+    "name": "KOM WAFFO DANIEL PRINCE",
+    "role": "Creative Full Stack Web & Mobile Developer 🚀**",
+    "presentation": "Passionate about innovation and improving user interfaces. \nI design intuitive and aesthetic web and mobile solutions.",
+    "presentation_next": "Whether on a smartphone screen or on a browser, I make sure that each interaction is smooth and pleasant.",
+    "rendezvous": "📱💻 Open to consultations and collaborations for dynamic and ambitious projects",
+    "experience": "with 3 years of experiences",
+    "letGetStarted": "Let's get Started"
+  }
 }

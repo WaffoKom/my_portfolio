@@ -1,10 +1,12 @@
 {
-  "title": "Salut ",
-  "content": "Je m'appelle KOM WAFFO DANIEL PRINCE",
-  "role": "un Ingenieur Logiciel",
-  "presentation": "Je suis développeur web et mobile",
-  "presentation_next": "et je vous propose d'apprendre à me découvrir, en tant que personne, mais aussi en tant que développeur, êtes-vous prêt ?",
-  "experience": "avec  3 annees d'experiences",
-  "letGetStarted": "Commencons",
-  "DownlaodResume": "Download Resume"
+  "presentation": {
+    "title": "Salut  moi c'est",
+    "name": "KOM WAFFO DANIEL PRINCE",
+    "role": "Développeur Full Stack Web & Mobile créatif 🚀**",
+    "presentation": "Passionné par l'innovation et l'amélioration des interfaces utilisateurs . \nje conçois des solutions web et mobiles intuitives et esthétiques .",
+    "presentation_next": "Que ce soit sur un écran de smartphone ou sur navigateur, \nje m'assure que chaque interaction soit fluide et agréable .",
+    "rendezvous": "📱💻 Ouvert aux consultations et collaborations pour des projets dynamiques et ambitieux",
+    "myProjets": "Mes Realisations",
+    "useTech": "Les techologies utilisees"
+  }
 }
