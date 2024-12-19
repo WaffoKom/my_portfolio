@@ -13,8 +13,8 @@ i18n
     backend: {
       loadPath: "src/locales/{{lng}}/{{ns}}.json",
     },
-    ns: ["about", "navbar", "projet", "skills", "testimonials"],
-    interpolation: { escapeValue: false }, // Éviter d'échapper automatiquement les valeurs }
+    ns: ["about", "navbar", "projet", "skills", "testimonials", "experience"],
+    interpolation: { escapeValue: false },
   });
 
 export default i18n;
