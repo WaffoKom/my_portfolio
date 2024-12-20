@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 1,
-      author: "Mamadou Diallo",
+      author: "Melissa",
       post: t("testimo."),
       content: t("testimo.merlineMsg"),
       image: testimonial2,
