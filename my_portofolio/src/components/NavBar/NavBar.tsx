@@ -32,6 +32,14 @@ const NavBar: React.FC = () => {
       link: "/projets",
       icon: AiOutlineFolderOpen,
     },
+    {
+      link: "/testimonials",
+      icon: AiOutlineTool,
+    },
+    {
+      link: "/footer",
+      icon: AiOutlineTool,
+    },
   ];
   return (
     <nav className="nav-bar">
