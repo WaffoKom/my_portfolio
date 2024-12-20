@@ -7,6 +7,8 @@ import Career from "./components/career/Career.tsx";
 import Header from "./components/Header/Header.tsx";
 import NavBar from "./components/NavBar/NavBar.tsx";
 import Services from "./components/Services/Services.tsx";
+import Testimonials from "./components/Testimonials/Testimonials.tsx";
+import Footer from "./components/Footer/Footer.tsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -21,6 +23,8 @@ const App: React.FC = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projets" element={<Projets />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/footer" element={<Footer />} />
       </Routes>
     </BrowserRouter>
   );

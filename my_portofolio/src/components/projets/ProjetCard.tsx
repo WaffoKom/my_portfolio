@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BsGeo } from "react-icons/bs";
+import { AiOutlineGoogle } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import { ProjetCardProps } from "../../types/ProjetCard.ts";
 
@@ -27,7 +27,7 @@ const ProjetCard: React.FC<ProjetCardProps> = ({
       <img src={image} alt={name} />
       <img src={thumbnail} alt={`${name} thumbnail`} />
       <a href={demo} target="_blank" rel="noopener noreferrer">
-        Demo <BsGeo className="ml-2" />
+        Demo <AiOutlineGoogle className="" />
       </a>
       <a href={sourcecode} target="_blank" rel="noopener noreferrer">
         Code <AiOutlineGithub className="" />
