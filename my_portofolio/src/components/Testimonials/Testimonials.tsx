@@ -1,11 +1,11 @@
 import "./Testimonials.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import testimonial1 from "../../assets/testimonials/testimonial-1.jpg";
-import testimonial2 from "../../assets/testimonials/testimonial-2.jpg";
-import testimonial3 from "../../assets/testimonials/testimonial-3.jpg";
-import testimonial4 from "../../assets/testimonials/testimonial-4.jpg";
-import testimonail5 from "../../assets/testimonials/testimonial-5.jpg";
+import testimonial1 from "../../assets/testimonials/testimonial-1.png";
+import testimonial2 from "../../assets/testimonials/testimonial-2.png";
+import testimonial3 from "../../assets/testimonials/testimonial-3.png";
+import testimonial4 from "../../assets/testimonials/testimonial-4.png";
+import testimonail5 from "../../assets/testimonials/testimonial-5.png";
 
 const Testimonials: React.FC = () => {
   const { t } = useTranslation("testimonials");
