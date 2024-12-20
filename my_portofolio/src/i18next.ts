@@ -13,7 +13,15 @@ i18n
     backend: {
       loadPath: "src/locales/{{lng}}/{{ns}}.json",
     },
-    ns: ["about", "navbar", "projet", "skills", "testimonials", "experience"],
+    ns: [
+      "about",
+      "navbar",
+      "projet",
+      "skills",
+      "testimonials",
+      "experience",
+      "services",
+    ],
     interpolation: { escapeValue: false },
   });
 
