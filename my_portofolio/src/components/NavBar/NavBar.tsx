@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
       icon: FaBrain,
     },
     {
-      link: "/projects",
+      link: "/projets",
       icon: AiOutlineFolderOpen,
     },
   ];
