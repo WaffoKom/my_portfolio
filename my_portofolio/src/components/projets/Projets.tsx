@@ -1,6 +1,6 @@
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
+// import "swiper/swiper.min.css";
+// import "swiper/components/navigation/navigation.min.css";
+// import "swiper/components/pagination/pagination.min.css";
 
 import "./Projets.css";
 import React from "react";
@@ -189,10 +189,12 @@ const Projets: React.FC = () => {
 
       <div className="project-content">
         <Swiper
-          style={{
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
-          }}
+          style={
+            {
+              // "--swiper-navigation-color": "#fff",
+              // "--swiper-pagination-color": "#fff",
+            }
+          }
           speed={600}
           parallax={true}
           pagination={{
