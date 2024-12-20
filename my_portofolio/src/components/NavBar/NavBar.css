@@ -1,0 +1,23 @@
+.nav-bar{
+    background-color: #fff;
+    border-bottom: 3px solid #e0e0e0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    margin:  0 15px;
+    transition:color 0.3s ;
+}
+
+.nav-bar:hover{
+    color: #3498db;
+
+}
+
+.nav-bar a.nav-bar-minimalist.active { color: #3498db; } .nav-bar a svg { vertical-align: middle; }

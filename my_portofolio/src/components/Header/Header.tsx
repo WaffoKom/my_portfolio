@@ -3,8 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { setTheme } from "../../actions/themeActions";
 import { useAppSelector, useAppDispatch } from "../../hooks";
-import { Button, Navbar } from "flowbite-react";
-import { Link } from "react-router-dom";
 import { setLanguage } from "../../actions/languageAction";
 import fr from "../../assets/lang-img/fr.png";
 import en from "../../assets/lang-img/en.png";
@@ -25,36 +23,33 @@ const Header: React.FC = () => {
 
   return (
     <div>
-      <Navbar>
-        <Link to="" />
-        <Button
-          onClick={handleToggleTheme}
-          style={{
-            backgroundColor: `var(--buton-background)`,
-            color: `var(--button-text-color)`,
-          }}
-        >
-          {theme === "light" ? (
-            <FontAwesomeIcon icon={faMoon} />
-          ) : (
-            <FontAwesomeIcon icon={faSun} />
-          )}
-        </Button>
-        <Button
-          onClick={() => {
-            handleChangeLanguage("en");
-          }}
-        >
-          <img src={en} alt="English version" />
-        </Button>
-        <Button
-          onClick={() => {
-            handleChangeLanguage("fr");
-          }}
-        >
-          <img src={fr} alt="French Version" />
-        </Button>
-      </Navbar>
+      <button
+        onClick={handleToggleTheme}
+        style={{
+          backgroundColor: `var(--buton-background)`,
+          color: `var(--button-text-color)`,
+        }}
+      >
+        {theme === "light" ? (
+          <FontAwesomeIcon icon={faMoon} />
+        ) : (
+          <FontAwesomeIcon icon={faSun} />
+        )}
+      </button>
+      <button
+        onClick={() => {
+          handleChangeLanguage("en");
+        }}
+      >
+        <img src={en} alt="English version" />
+      </button>
+      <button
+        onClick={() => {
+          handleChangeLanguage("fr");
+        }}
+      >
+        <img src={fr} alt="French Version" />
+      </button>
     </div>
   );
 };

@@ -9,8 +9,10 @@ export type AppActions =
   | ThemeActionTypes
   | TranslationActionTypes
   | TestimonialsActionTypes;
+export type RootState = ReturnType<typeof reducer>;
 
 const store: Store<AppState, AppActions> = createStore(reducer);
-export type RootState = ReturnType<typeof reducer>;
+
 export type AppDispatch = typeof store.dispatch;
+
 export default store;

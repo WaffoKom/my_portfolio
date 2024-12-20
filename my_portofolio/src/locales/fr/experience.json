@@ -1,37 +1,42 @@
 {
-  "experience": "Experience Professionnelle",
-  "positions": {
-    "position_0": "Stagiaire Developpeur  Web",
-    "point_0": {
-      "description": "Découverte de l'emploi du HTML, CSS & JavaScript sur le site de l'entreprise",
-      "skills": "HTML, CSS, JavaScript, compréhension des meilleures pratiques en développement web"
-    },
-    "point_1": {
-      "description": "Apprendre à sertir les câbles réseau qui interconnectent les machines",
-      "skills": "Connaissance des types de câbles réseau, utilisation des outils de sertissage, compréhension des concepts de base du réseau"
-    },
-    "position_1": "Independant",
-    "point_2": {
-      "description": "Découverte de ReactJS, TailwindCSS, NodeJS",
-      "skills": "Compétences en ReactJS, TailwindCSS pour le design réactif, NodeJS pour le développement côté serveur"
-    },
-    "point_3": {
-      "description": "Réalisation de mes premiers projets avec ReactJS",
-      "skills": "Développement de composants React, gestion des états avec React, intégration avec des APIs"
-    },
-    "point_4": {
-      "description": "Développement et maintenance d'applications web en utilisant React.js et autres technologies connexes",
-      "skills": "Maîtrise de React.js, compréhension des technologies connexes (Redux, Zustand)"
-    },
+  "work": {
+    "experience": "Experience Professionnelle",
+    "positions": {
+      "position_0": "Stagiaire Developpeur  Web",
+      "point_0": {
+        "description": "Découverte de l'emploi du HTML, CSS & JavaScript sur le site de l'entreprise",
+        "skills": "HTML, CSS, JavaScript, compréhension des meilleures pratiques en développement web"
+      },
+      "point_1": {
+        "description": "Apprendre à sertir les câbles réseau qui interconnectent les machines",
+        "skills": "Connaissance des types de câbles réseau, utilisation des outils de sertissage, compréhension des concepts de base du réseau"
+      },
+      "position_1": "Independant",
+      "point_2": {
+        "description": "Découverte de ReactJS, TailwindCSS, NodeJS",
+        "skills": "Compétences en ReactJS, TailwindCSS pour le design réactif, NodeJS pour le développement côté serveur"
+      },
+      "point_3": {
+        "description": "Réalisation de mes premiers projets avec ReactJS",
+        "skills": "Développement de composants React, gestion des états avec React, intégration avec des APIs"
+      },
+      "point_4": {
+        "description": "Développement et maintenance d'applications web en utilisant React.js et autres technologies connexes",
+        "skills": "Maîtrise de React.js, compréhension des technologies connexes (Redux, Zustand)"
+      },
 
-    "position_2": "Freelance pour le compte de la startup Alt+",
-    "point_5": {
-      "description": "Collaboration avec des équipes multidisciplinaires incluant des concepteurs, chefs de produit et autres développeurs pour créer des produits de haute qualité",
-      "skills": "Compétences en travail d'équipe, capacité à comprendre et à intégrer les besoins des différentes parties prenantes"
+      "position_2": "Freelance pour le compte de la startup Alt+",
+      "point_5": {
+        "description": "Collaboration avec des équipes multidisciplinaires incluant des concepteurs, chefs de produit et autres développeurs pour créer des produits de haute qualité",
+        "skills": "Compétences en travail d'équipe, capacité à comprendre et à intégrer les besoins des différentes parties prenantes"
+      },
+      "point_6": {
+        "description": "Développeur Front end et Backend",
+        "skills": "Debut  avec les outils de test (Jest, Cypress), CI/CD (GitLab CI, Jenkins)"
+      }
     },
-    "point_6": {
-      "description": "Développeur Front end et Backend",
-      "skills": "Debut  avec les outils de test (Jest, Cypress), CI/CD (GitLab CI, Jenkins)"
+    "myResume": {
+      "youCan": "Telecharge mon CV"
     }
   }
 }

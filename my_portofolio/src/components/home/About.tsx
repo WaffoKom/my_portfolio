@@ -21,7 +21,7 @@ const About: React.FC = () => {
       </div>
       <div className="about-right">
         <img
-          src="./src/assets/images/danilo_img.jpg"
+          src="./src/assets/author/danilo_img.jpg"
           alt="image-description"
           className="about-image"
         />

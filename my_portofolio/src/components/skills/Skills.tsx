@@ -1,23 +1,55 @@
 import "./Skills.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import git from "../../assets/tech/git.png";
+import mongodb from "../../assets/tech/mongodb.png";
+import mysql from "../../assets/tech/mysql.png";
+import nodejs from "../../assets/tech/nodejs.png";
+import postgresql from "../../assets/tech/postresql.png";
+import tailwindcss from "../../assets/tech/tailwindcss.png";
+import typescript from "../../assets/tech/typescript.png";
+import flutter from "../../assets/tech/flutter.jpeg";
 
 const Skills: React.FC = () => {
+  const icons = [
+    {
+      name: "git",
+      icon: git,
+    },
+    { name: "MongoDB", icon: mongodb },
+    {
+      name: "mysql",
+      icon: mysql,
+    },
+    {
+      name: "nodejs",
+      icon: nodejs,
+    },
+    {
+      name: "postgresql",
+      icon: postgresql,
+    },
+    {
+      name: "tailwincss",
+      icon: tailwindcss,
+    },
+    { name: "typescript", icon: typescript },
+    {
+      name: "flutter",
+      icon: flutter,
+    },
+  ];
+
   const { t } = useTranslation("skills");
   return (
-    <section>
-      <div>
-        <h2>A propos de moi.</h2>
-        <p>
-          ---Développeur Full Stack Web & Mobile créatif 🚀** Passionné par
-          l'innovation et l'amélioration des interfaces utilisateurs, je conçois
-          des solutions web et mobiles intuitives et esthétiques. Que ce soit
-          sur un écran de smartphone ou de bureau, je m'assure que chaque
-          interaction soit fluide et agréable. 📱💻 Ouvert aux consultations et
-          collaborations pour des projets dynamiques et ambitieux. --- Dis-moi
-          si cela te convient ou si tu as d'autres préférences ! 😊
-        </p>
-      </div>
+    <section className="icon-grid-container">
+      <h1 className="skills-presentation">{t("technologies")}</h1>
+      {icons.map((item, index) => (
+        <div className="icon-grid" key={index}>
+          <img src={item.icon} alt="Tech icons" className="icon-tech" />
+          <p className="icon-skills-names">{item.name}</p>
+        </div>
+      ))}
     </section>
   );
 };

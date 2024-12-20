@@ -1,37 +1,42 @@
 {
-  "experience": "Professional Experience",
-  "positions": {
-    "position_0": "Web Developer Intern",
-    "point_0": {
-      "description": "Discovery of the use of HTML, CSS & JavaScript on the company's website",
-      "skills": "HTML, CSS, JavaScript, understanding of best practices in web development"
-    },
-    "point_1": {
-      "description": "Learn how to crimp network cables that interconnect machines",
-      "skills": "Knowledge of network cable types, use of crimping tools, understanding of basic network concepts"
-    },
-    "position_1": "Independent",
-    "point_2": {
-      "description": "Discovery of ReactJS, TailwindCSS, NodeJS",
-      "skills": "Skills in ReactJS, TailwindCSS for responsive design, NodeJS for side development server"
-    },
-    "point_3": {
-      "description": "Implemented my first projects with ReactJS",
-      "skills": "Development of React components, state management with React, integration with APIs"
-    },
-    "point_4": {
-      "description": "Development and maintenance of web applications using React.js and other related technologies",
-      "skills": "Mastery of React.js, understanding of related technologies (Redux, Zustand)"
-    },
+  "work": {
+    "experience": "Professional Experience",
+    "positions": {
+      "position_0": "Web Developer Intern",
+      "point_0": {
+        "description": "Discovery of the use of HTML, CSS & JavaScript on the company's website",
+        "skills": "HTML, CSS, JavaScript, understanding of best practices in web development"
+      },
+      "point_1": {
+        "description": "Learn how to crimp network cables that interconnect machines",
+        "skills": "Knowledge of network cable types, use of crimping tools, understanding of basic network concepts"
+      },
+      "position_1": "Independent",
+      "point_2": {
+        "description": "Discovery of ReactJS, TailwindCSS, NodeJS",
+        "skills": "Skills in ReactJS, TailwindCSS for responsive design, NodeJS for side development server"
+      },
+      "point_3": {
+        "description": "Implemented my first projects with ReactJS",
+        "skills": "Development of React components, state management with React, integration with APIs"
+      },
+      "point_4": {
+        "description": "Development and maintenance of web applications using React.js and other related technologies",
+        "skills": "Mastery of React.js, understanding of related technologies (Redux, Zustand)"
+      },
 
-    "position_2": "Freelance for the startup Alt+",
-    "point_5": {
-      "description": "Collaboration with multidisciplinary teams including designers, product managers and other developers to create high-quality products",
-      "skills": "Teamwork skills, ability to understand and integrate the needs of different stakeholders"
-    },
-    "point_6": {
-      "description": "Front end and Backend Developer",
-      "skills": "Beginner with testing tools (Jest, Cypress), CI/CD (GitLab CI, Jenkins)"
+      "position_2": "Freelance for the startup Alt+",
+      "point_5": {
+        "description": "Collaboration with multidisciplinary teams including designers, product managers and other developers to create high-quality products",
+        "skills": "Teamwork skills, ability to understand and integrate the needs of different stakeholders"
+      },
+      "point_6": {
+        "description": "Front end and Backend Developer",
+        "skills": "Beginner with testing tools (Jest, Cypress), CI/CD (GitLab CI, Jenkins)"
+      }
     }
+  },
+  "myResume": {
+    "youCan": "Downlaod my resume"
   }
 }
