@@ -5,7 +5,7 @@ import git from "../../assets/tech/git.png";
 import mongodb from "../../assets/tech/mongodb.png";
 import mysql from "../../assets/tech/mysql.png";
 import nodejs from "../../assets/tech/nodejs.png";
-import postgresql from "../../assets/tech/postresql.png";
+import postgresql from "../../assets/tech/postgresql.png";
 import tailwindcss from "../../assets/tech/tailwindcss.png";
 import typescript from "../../assets/tech/typescript.png";
 import flutter from "../../assets/tech/flutter.jpeg";
