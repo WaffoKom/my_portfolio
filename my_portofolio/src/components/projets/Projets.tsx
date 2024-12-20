@@ -206,15 +206,7 @@ const Projets: React.FC = () => {
         >
           {projects.slice(1).map((project, index) => (
             <SwiperSlide key={index}>
-              <ProjetCard
-                name={project.name}
-                description={project.description}
-                tags={project.tags}
-                image={project.image}
-                thumbnail={project.thumbnail}
-                demo={project.demo}
-                sourcecode={project.sourcecode}
-              />
+              <ProjetCard {...project} />
             </SwiperSlide>
           ))}
         </Swiper>
