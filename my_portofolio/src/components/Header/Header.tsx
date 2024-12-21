@@ -22,8 +22,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="header">
       <button
+        className="theme-toggle-button"
         onClick={handleToggleTheme}
         style={{
           backgroundColor: `var(--buton-background)`,
@@ -36,20 +37,26 @@ const Header: React.FC = () => {
           <FontAwesomeIcon icon={faSun} />
         )}
       </button>
-      <button
-        onClick={() => {
-          handleChangeLanguage("en");
-        }}
-      >
-        <img src={en} alt="English version" />
-      </button>
-      <button
-        onClick={() => {
-          handleChangeLanguage("fr");
-        }}
-      >
-        <img src={fr} alt="French Version" />
-      </button>
+
+      {currentLanguage !== "en" && (
+        <button
+          className="language-button"
+          onClick={() => {
+            handleChangeLanguage("en");
+          }}
+        >
+          <img src={en} alt="English version" />
+        </button>
+      )}
+      {currentLanguage !== "fr" && (
+        <button
+          onClick={() => {
+            handleChangeLanguage("fr");
+          }}
+        >
+          <img src={fr} alt="French Version" />
+        </button>
+      )}
     </div>
   );
 };
