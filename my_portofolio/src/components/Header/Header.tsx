@@ -1,5 +1,5 @@
 import "./Header.css";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoon,
@@ -33,65 +33,64 @@ const Header: React.FC = () => {
   const toggleNavBar = () => {
     setNavVisible(!navVisible);
   };
-  useEffect(() => {
-    const navbar = document.querySelector(".nav-bar");
-    if (navbar && !navVisible) {
-      navbar.remove();
-    }
-  }, [navVisible]);
 
   return (
     <div className="header">
-      <button
-        className="theme-toggle-button"
-        onClick={handleToggleTheme}
-        style={{
-          backgroundColor: `var(--buton-background)`,
-          color: `var(--button-text-color)`,
-        }}
-      >
-        {theme === "light" ? (
-          <FontAwesomeIcon icon={faMoon} />
-        ) : (
-          <FontAwesomeIcon icon={faSun} />
+      <div className="left">
+        <button className="nav-toggle-button" onClick={toggleNavBar}>
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
+      <div className="right">
+        <button
+          className="theme-toggle-button"
+          onClick={handleToggleTheme}
+          style={{
+            backgroundColor: `var(--buton-background)`,
+            color: `var(--button-text-color)`,
+          }}
+        >
+          {theme === "light" ? (
+            <FontAwesomeIcon icon={faMoon} />
+          ) : (
+            <FontAwesomeIcon icon={faSun} />
+          )}
+        </button>
+        <button
+          className="language-button"
+          onClick={() => setMenuVisible(!menuVisible)}
+        >
+          {currentLanguage === "en" ? "English" : "Francais"}
+          <FontAwesomeIcon icon={faChevronDown} style={{ marginLeft: "8px" }} />
+        </button>
+        {menuVisible && (
+          <div className="language-menu">
+            {currentLanguage !== "en" && (
+              <button
+                className="language-button"
+                onClick={() => {
+                  handleChangeLanguage("en");
+                }}
+              >
+                <img src={en} alt="English version" />
+                English
+              </button>
+            )}
+            {currentLanguage !== "fr" && (
+              <button
+                className="language-option"
+                onClick={() => {
+                  handleChangeLanguage("fr");
+                }}
+              >
+                <img src={fr} alt="French Version" />
+                Francais
+              </button>
+            )}
+          </div>
         )}
-      </button>
-      <button
-        className="language-button"
-        onClick={() => setMenuVisible(!menuVisible)}
-      >
-        {currentLanguage === "en" ? "English" : "Francais"}
-        <FontAwesomeIcon icon={faChevronDown} style={{ marginLeft: "8px" }} />
-      </button>
-      {menuVisible && (
-        <div className="language-menu">
-          {currentLanguage !== "en" && (
-            <button
-              className="language-button"
-              onClick={() => {
-                handleChangeLanguage("en");
-              }}
-            >
-              <img src={en} alt="English version" />
-              English
-            </button>
-          )}
-          {currentLanguage !== "fr" && (
-            <button
-              className="language-option"
-              onClick={() => {
-                handleChangeLanguage("fr");
-              }}
-            >
-              <img src={fr} alt="French Version" />
-              Francais
-            </button>
-          )}
-        </div>
-      )}
-      <button className="nav-toggle-button" onClick={toggleNavBar}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
+      </div>
+
       {navVisible && <NavBar />}
     </div>
   );
