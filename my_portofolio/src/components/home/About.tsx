@@ -11,12 +11,23 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const About: React.FC = () => {
   const { t } = useTranslation("about");
+  const backLine = (text: string) => {
+    return text.split("\n").map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        {index < text.split("\n").length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
   return (
     <section className={`about-container `}>
       <div className="about-letft">
-        <h1>{t("perso.title")}</h1> <h2>{t("perso.name")}</h2>{" "}
-        <h3>{t("perso.role")}</h3> <p>{t("perso.presentation")}</p>{" "}
-        <p>{t("perso.presentation_next")}</p> <p>{t("perso.rendezvous")}</p>{" "}
+        <h1>{t("perso.title")}</h1>
+        <h2>{t("perso.name")}</h2>
+        <h3>{t("perso.role")}</h3>
+        <p>{backLine(t("perso.presentation"))}</p>
+        <p>{backLine(t("perso.presentation_next"))}</p>
+        <p>{t("perso.rendezvous")}</p>{" "}
         <button>{t("perso.letGetStarted")}</button>
       </div>
       <div className="about-right">
