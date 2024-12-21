@@ -1,4 +1,3 @@
-import "./Career.css";
 import React from "react";
 import CareerCard from "./CareerCard";
 import { useTranslation } from "react-i18next";

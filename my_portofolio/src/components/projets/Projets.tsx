@@ -2,7 +2,6 @@
 // import "swiper/components/navigation/navigation.min.css";
 // import "swiper/components/pagination/pagination.min.css";
 
-import "./Projets.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import thumbAltplus from "../../assets/work/thumb_altplus.png";

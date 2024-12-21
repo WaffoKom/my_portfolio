@@ -1,4 +1,3 @@
-import "./NavBar.css";
 import {
   AiOutlineHome,
   AiOutlineBarChart,

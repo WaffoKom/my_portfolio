@@ -1,4 +1,3 @@
-import "./Services.css";
 import React from "react";
 import mobile from "../../assets/services/mobile-developer.png";
 import web from "../../assets/services/web-developer.png";
