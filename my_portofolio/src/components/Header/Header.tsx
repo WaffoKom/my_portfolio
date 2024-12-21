@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import "./Header.css";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoon,
   faSun,
   faChevronDown,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { setTheme } from "../../actions/themeActions";
 import { useAppSelector, useAppDispatch } from "../../hooks";
 import { setLanguage } from "../../actions/languageAction";
 import fr from "../../assets/lang-img/fr.png";
 import en from "../../assets/lang-img/en.png";
+import NavBar from "../NavBar/NavBar.tsx";
 
 const Header: React.FC = () => {
   const { theme } = useAppSelector((state) => state.theme);
@@ -20,10 +23,22 @@ const Header: React.FC = () => {
     dispatch(setTheme(newTheme));
   };
   const [menuVisible, setMenuVisible] = useState(false);
+  const [navVisible, setNavVisible] = useState(false);
   const handleChangeLanguage = (newLanguage: string) => {
     newLanguage = currentLanguage == "en" ? "fr" : "en";
     dispatch(setLanguage(newLanguage));
+    setMenuVisible(false);
   };
+
+  const toggleNavBar = () => {
+    setNavVisible(!navVisible);
+  };
+  useEffect(() => {
+    const navbar = document.querySelector(".nav-bar");
+    if (navbar && !navVisible) {
+      navbar.remove();
+    }
+  }, [navVisible]);
 
   return (
     <div className="header">
@@ -74,6 +89,10 @@ const Header: React.FC = () => {
           )}
         </div>
       )}
+      <button className="nav-toggle-button" onClick={toggleNavBar}>
+        <FontAwesomeIcon icon={faBars} />
+      </button>
+      {navVisible && <NavBar />}
     </div>
   );
 };
