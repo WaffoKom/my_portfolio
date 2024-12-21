@@ -13,14 +13,7 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <div className={theme}>
-      <div
-        style={{
-          backgroundColor: `var(--background-color)`,
-          color: `var(--text-color,)`,
-        }}
-      >
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 };
