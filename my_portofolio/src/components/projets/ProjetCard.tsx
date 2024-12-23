@@ -2,9 +2,9 @@ import React from "react";
 
 import { AiOutlineGoogle } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
-import { ProjetCardProps } from "../../types/ProjetCard.ts";
+import ProjetCardProps from "../../types/ProjetCard.ts";
 
-const ProjetCard: React.FC<ProjetCardProps> = ({
+const ProjetCard: React.FC<typeof ProjetCardProps> = ({
   name,
   description,
   tags,
