@@ -1,3 +1,4 @@
+import "./About.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,13 +21,15 @@ const About: React.FC = () => {
   };
   return (
     <section className={`about-container `}>
-      <div className="about-letft">
-        <h1>{t("perso.title")}</h1>
-        <h2>{t("perso.name")}</h2>
-        <h3>{t("perso.role")}</h3>
-        <p>{backLine(t("perso.presentation"))}</p>
-        <p>{backLine(t("perso.presentation_next"))}</p>
-        <p>{t("perso.rendezvous")}</p>{" "}
+      <div className="about-left">
+        <div className="about-text-presentation">
+          <h1>{t("perso.title")}</h1>
+          <h2>{t("perso.name")}</h2>
+          <h3>{t("perso.role")}</h3>
+          <p>{backLine(t("perso.presentation"))}</p>
+          <p>{backLine(t("perso.presentation_next"))}</p>
+          <p>{t("perso.rendezvous")}</p>{" "}
+        </div>
         <button>{t("perso.letGetStarted")}</button>
       </div>
       <div className="about-right">

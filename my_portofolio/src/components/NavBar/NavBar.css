@@ -1,0 +1,32 @@
+.nav-bar{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position:absolute;
+padding-right: 20px;
+transform: translateY(50%);
+top: 50%;
+right: 0;
+}
+
+
+.nav-item-home,
+.nav-item-services,
+.nav-item-career,
+.nav-item-skills,
+.nav-item-projects,
+.nav-item-contacts{
+    padding: 5px;
+    font-size: 25px;
+}
+
+
+.nav-item-home:hover,
+.nav-item-services:hover,
+.nav-item-career:hover,
+.nav-item-skills:hover,
+.nav-item-projects:hover,
+.nav-item-contacts:hover{
+    cursor: pointer;
+}

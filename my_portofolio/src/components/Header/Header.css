@@ -1,0 +1,59 @@
+.header{
+    display: flex;
+    border: 1px solid red;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.left button{
+cursor: pointer;
+font-size: 19px;
+}
+
+.right{
+margin: 15px 15px;
+border: 1px solid red;
+}
+
+.theme-toggle-button{
+    font-size: 20px;
+    border: none;
+}
+.language-menu{
+    
+    
+}
+.language-button{
+    font-size: 15px;
+    border: none;
+    font-weight: 500;
+    line-height: normal;
+}
+.language-button-image{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    width: 35px;
+    height: 35px;
+    /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.language-option{
+
+}

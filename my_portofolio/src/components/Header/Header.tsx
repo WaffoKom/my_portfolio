@@ -1,3 +1,4 @@
+import "./Header.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -30,7 +31,7 @@ const Header: React.FC = () => {
   };
 
   const toggleNavBar = () => {
-    setNavVisible(!navVisible);
+    setNavVisible((prev) => !prev);
   };
 
   return (
@@ -60,7 +61,10 @@ const Header: React.FC = () => {
           onClick={() => setMenuVisible(!menuVisible)}
         >
           {currentLanguage === "en" ? "English" : "Francais"}
-          <FontAwesomeIcon icon={faChevronDown} style={{ marginLeft: "8px" }} />
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            style={{ marginLeft: "10px" }}
+          />
         </button>
         {menuVisible && (
           <div className="language-menu">
@@ -71,7 +75,11 @@ const Header: React.FC = () => {
                   handleChangeLanguage("en");
                 }}
               >
-                <img src={en} alt="English version" />
+                <img
+                  src={en}
+                  alt="English version"
+                  className="language-button-image"
+                />
                 English
               </button>
             )}
@@ -82,15 +90,18 @@ const Header: React.FC = () => {
                   handleChangeLanguage("fr");
                 }}
               >
-                <img src={fr} alt="French Version" />
+                <img
+                  src={fr}
+                  alt="French Version"
+                  className="language-button-image"
+                />
                 Francais
               </button>
             )}
           </div>
         )}
+        {navVisible && <NavBar />}
       </div>
-
-      {navVisible && <NavBar />}
     </div>
   );
 };
