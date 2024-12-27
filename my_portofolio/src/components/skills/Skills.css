@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.icon-grid-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-presentation {
+  margin: 0;
+  flex-shrink: 0;
+  flex-basis: 1;
+  align-self: flex-start;
+  margin-bottom: 10rem;
+  margin-left: 2.5rem;
+  font-size: 30px;
+}
+.skills-presentations {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.icon-grid {
+  border: 0.1rem solid white;
+  border-radius: 2rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 1.6rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+}
+
+.skills-presentation {
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.icons-skills-names {
+}
+
+.icon-tech {
+  border-radius: 100%;
+}
+.icons-skills-names {
+}
+
+.external-link-github {
+  width: 10rem;
+  background-color: hsl(259, 64%, 58%);
+  padding: 7px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border: none;
+  align-self: flex-end;
+  margin-right: 6rem;
+  margin-top: 4.6rem;
+}
+
+.external-link-github:hover {
+  background-color: hsl(259, 47%, 48%);
+  transition-property: background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+#link-github {
+  background-color: hsl(259, 47%, 48%);
+  border: none;
+  font-size: 30px;
+  text-decoration: none;
+  color: hsl(0, 0%, 16%);
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}
+#link-github:hover {
+  background-color: hsl(259, 47%, 48%);
+  transition-property: background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+#link-github-description {
+  background-color: hsl(259, 47%, 44%);
+  color: whitesmoke;
+  border: none;
+  background: none;
+}
+
+/* Responsive part */
+
+@media (max-width: 768px) {
+  .skills-presentations {
+    display: grid;
+    grid-template-columns: repeat(3, 2.5rem);
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem;
+  }
+}

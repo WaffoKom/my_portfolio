@@ -1,19 +1,17 @@
-// import "swiper/swiper.min.css";
-// import "swiper/components/navigation/navigation.min.css";
-// import "swiper/components/pagination/pagination.min.css";
-
+import "./Project.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import thumbAltplus from "../../assets/work/thumb_altplus.png";
 import altplus from "../../assets/work/altplus.png";
-
 import ProjetCard from "./ProjetCard";
-
 import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 
-const Projets: React.FC = () => {
-  const { t } = useTranslation("projet");
+const Projects: React.FC = () => {
+  const { t } = useTranslation("project");
 
   const projects = [
     {
@@ -53,24 +51,16 @@ const Projets: React.FC = () => {
       description: t("work.project_description.docblog"),
       tags: [
         {
-          name: "",
-          color: "",
+          name: "javascript",
+          color: "blue-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "python",
+          color: "pink-text-gradient",
         },
         {
-          name: "",
-          color: "",
-        },
-        {
-          name: "",
-          color: "",
-        },
-        {
-          name: "",
-          color: "",
+          name: "css",
+          color: "pink-text-gradient",
         },
       ],
       image: "",
@@ -83,20 +73,16 @@ const Projets: React.FC = () => {
       description: t("work.project_description.mern-blog"),
       tags: [
         {
-          name: "",
-          color: "",
+          name: "reactjs",
+          color: "blue-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "redux",
+          color: "pink-text-gradient",
         },
         {
-          name: "",
-          color: "",
-        },
-        {
-          name: "",
-          color: "",
+          name: "expressjs",
+          color: "blue-text-gradient",
         },
       ],
       image: "",
@@ -109,16 +95,16 @@ const Projets: React.FC = () => {
       description: t("work.project_description.weather-app"),
       tags: [
         {
-          name: "",
-          color: "",
+          name: "reactjs",
+          color: "blue-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "css",
+          color: "pink-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "javascript",
+          color: "blue-text-gradient",
         },
       ],
       image: "",
@@ -131,16 +117,16 @@ const Projets: React.FC = () => {
       description: t("work.project_description.login-app"),
       tags: [
         {
-          name: "",
-          color: "",
+          name: "reactjs",
+          color: "blue-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "css",
+          color: "pink-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "javascript",
+          color: "blue-text-gradient",
         },
       ],
       image: "",
@@ -153,16 +139,16 @@ const Projets: React.FC = () => {
       description: t("work.project_description.skypey"),
       tags: [
         {
-          name: "",
-          color: "",
+          name: "reactjs",
+          color: "blue-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "css",
+          color: "pink-text-gradient",
         },
         {
-          name: "",
-          color: "",
+          name: "redux",
+          color: "blue-text-gradient",
         },
       ],
       image: "",
@@ -193,9 +179,12 @@ const Projets: React.FC = () => {
           pagination={{
             clickable: true,
           }}
+          cssMode={true}
           navigation={true}
+          mousewheel={true}
           modules={[Parallax, Pagination, Navigation]}
-          className=""
+          className="swiper-navigation"
+          keyboard={true}
         >
           {projects.slice(1).map((project, index) => (
             <SwiperSlide key={index}>
@@ -208,4 +197,4 @@ const Projets: React.FC = () => {
   );
 };
 
-export default Projets;
+export default Projects;

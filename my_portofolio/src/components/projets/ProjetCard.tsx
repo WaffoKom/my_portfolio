@@ -1,5 +1,5 @@
+import "./ProjectCard.css";
 import React from "react";
-
 import { AiOutlineGoogle } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import ProjetCardProps from "../../types/ProjetCard.ts";

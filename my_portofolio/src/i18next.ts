@@ -16,7 +16,7 @@ i18n
     ns: [
       "about",
       "navbar",
-      "projet",
+      "project",
       "skills",
       "testimonials",
       "experience",

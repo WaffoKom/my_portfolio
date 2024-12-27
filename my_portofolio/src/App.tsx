@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import About from "./components/home/About.tsx";
 import Skills from "./components/skills/Skills.tsx";
-import Projets from "./components/projets/Projets.tsx";
+import Projects from "./components/projets/Projects.tsx";
 import Career from "./components/career/Career.tsx";
 import Header from "./components/Header/Header.tsx";
 import NavBar from "./components/NavBar/NavBar.tsx";
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Route path="/" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/projets" element={<Projets />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/career" element={<Career />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/footer" element={<Footer />} />

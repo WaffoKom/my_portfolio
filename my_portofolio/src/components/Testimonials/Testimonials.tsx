@@ -1,3 +1,5 @@
+import "./Testimonials.css";
+
 import React from "react";
 import { useTranslation } from "react-i18next";
 import testimonial1 from "../../assets/testimonials/testimonial-1.png";

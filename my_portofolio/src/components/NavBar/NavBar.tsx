@@ -8,6 +8,7 @@ import { BiUser } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import { NavItem } from "../../types/NavItem.ts";
+import { Link } from "react-router-dom";
 // import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 import React, { createElement } from "react";
@@ -49,9 +50,9 @@ const NavBar: React.FC = () => {
   return (
     <nav className="nav-bar">
       {nav.map((item, index) => (
-        <a href={item.link} key={index} className={item.className}>
+        <Link to={item.link} key={index} className={item.className}>
           {createElement(item.icon)}
-        </a>
+        </Link>
       ))}
     </nav>
   );

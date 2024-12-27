@@ -1,0 +1,19 @@
+{
+  "work": {
+    "project": {
+      "title": "Projects",
+      "phr_0": "The upcoming projects highlight my skills and experience through concrete examples of my work.",
+      "phr_1": "Each project is briefly outlined with links to live demos.",
+      "phr_2": "This showcases my ability to tackle complex problems,",
+      "phr_3": "work with various technologies, and manage projects efficiently."
+    },
+    "project_description": {
+      "altplus": "The Alt+ website is an innovative platform that showcases the services and achievements of this dynamic startup. Alt+ pushes the boundaries of technology to provide personalized and high-quality IT solutions. The project involved designing and developing a responsive user interface, integrating robust backend services, and implementing advanced features to enhance the user experience.",
+      "docblog": "DocBlog is a blog developed with the Django framework, designed to share technical articles and updates on web development skills. The project includes user management, article creation and publication, as well as the integration of commenting and social media sharing features. This project demonstrates my ability to work with Django and create dynamic and secure web applications.",
+      "mern-blog": "MERN Blog is a complete blog project developed with the MERN stack (MongoDB, Express.js, React, Node.js). This project was designed to implement Google authentication using Firebase. It includes features such as post creation and management, real-time comments, and a modern, responsive user interface. This project illustrates my mastery of the MERN stack and the integration of third-party services like Firebase.",
+      "weather-app": "Weather App is a weather forecasting application that provides real-time information on current weather conditions and future forecasts. Developed with React and the OpenWeatherMap API, the application offers an intuitive and responsive user interface, allowing users to search for weather forecasts by city. This project demonstrates my ability to integrate external APIs and create interactive web applications.",
+      "login-app": "Login App is a user management application implementing OTP (One-Time Password) verification for authentication. This project was designed to enhance user login security by using OTP codes sent via email. The application includes features such as user registration, session management, and password recovery. This project illustrates my expertise in web application security and user authentication.",
+      "skypey": "Skypey is a real-time chat application developed with React and Redux. This project marked my first use of Redux for managing the global state of the application. Skypey allows users to sign up, log in, and chat in real-time with other users. The application includes features such as new message notifications, contact management, and a responsive user interface. This project demonstrates my ability to create real-time communication applications and use Redux for state management."
+    }
+  }
+}

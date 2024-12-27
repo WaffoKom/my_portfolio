@@ -1,3 +1,4 @@
+import "./Skills.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import git from "../../assets/tech/git.png";
@@ -8,6 +9,9 @@ import postgresql from "../../assets/tech/postgresql.png";
 import tailwindcss from "../../assets/tech/tailwindcss.png";
 import typescript from "../../assets/tech/typescript.png";
 import flutter from "../../assets/tech/flutter.jpeg";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Skills: React.FC = () => {
   const icons = [
@@ -43,12 +47,19 @@ const Skills: React.FC = () => {
   return (
     <section className="icon-grid-container">
       <h1 className="skills-presentation">{t("technologies")}</h1>
-      {icons.map((item, index) => (
-        <div className="icon-grid" key={index}>
-          <img src={item.icon} alt="Tech icons" className="icon-tech" />
-          <p className="icon-skills-names">{item.name}</p>
-        </div>
-      ))}
+      <div className="skills-presentations">
+        {icons.map((item, index) => (
+          <div className="icon-grid" key={index}>
+            <img src={item.icon} alt="Tech icons" className="icon-tech" />
+            <p className="icon-skills-names">{item.name}</p>
+          </div>
+        ))}
+      </div>
+
+      <Link to="https://github.com/WaffoKom/" className="external-link-github">
+        <span id="link-github-description">See More</span>
+        <FontAwesomeIcon icon={faGithub} id="link-github" />
+      </Link>
     </section>
   );
 };
