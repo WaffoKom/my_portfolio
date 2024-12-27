@@ -174,6 +174,12 @@ const Projects: React.FC = () => {
 
       <div className="project-content">
         <Swiper
+          style={
+            {
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            } as React.CSSProperties
+          }
           speed={600}
           parallax={true}
           pagination={{

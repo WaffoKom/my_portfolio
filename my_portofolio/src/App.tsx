@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import About from "./components/home/About.tsx";
 import Skills from "./components/skills/Skills.tsx";
 import Projects from "./components/projets/Projects.tsx";
@@ -11,8 +11,16 @@ import Testimonials from "./components/Testimonials/Testimonials.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const App: React.FC = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 350,
+      offset: 200,
+    });
+  }, []);
   return (
     <BrowserRouter>
       <Header />

@@ -13,6 +13,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
   demo,
   sourcecode,
 }) => {
+  const mobileDevice = window.matchMedia("(max-width: 640px)").matches;
   return (
     <div className="project-card">
       <h3>{name}</h3>
@@ -24,8 +25,14 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
           </span>
         ))}
       </div>
-      <img src={image} alt={name} />
-      <img src={thumbnail} alt={`${name} thumbnail`} />
+      <img
+        loading="lazy"
+        width={mobileDevice ? 768 : 1366}
+        height={mobileDevice ? 307 : 636}
+        src={mobileDevice ? thumbnail : image}
+        alt={name}
+        data-aos="fade-up"
+      />
       <a href={demo} target="_blank" rel="noopener noreferrer">
         Demo <AiOutlineGoogle className="" />
       </a>
