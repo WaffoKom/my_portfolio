@@ -56,7 +56,12 @@ const Skills: React.FC = () => {
         ))}
       </div>
 
-      <Link to="https://github.com/WaffoKom/" className="external-link-github">
+      <Link
+        to="https://github.com/WaffoKom/"
+        className="external-link-github"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <span id="link-github-description">See More</span>
         <FontAwesomeIcon icon={faGithub} id="link-github" />
       </Link>

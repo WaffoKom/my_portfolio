@@ -1,32 +1,37 @@
-.nav-bar{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-position:absolute;
-padding-right: 20px;
-transform: translateY(50%);
-top: 50%;
-right: 0;
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-right: 20px;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  border-radius: 3rem;
+  backdrop-filter: blur(10px);
+  background-color: whitesmoke;
 }
-
 
 .nav-item-home,
 .nav-item-services,
 .nav-item-career,
 .nav-item-skills,
 .nav-item-projects,
-.nav-item-contacts{
-    padding: 5px;
-    font-size: 25px;
+.nav-item-contacts {
+  font-size: 25px;
+  border: none;
+  border-radius: 100%;
+  padding: 7px 5px;
+  color: hsl(252, 50%, 4%);
+  background-color: whitesmoke;
 }
-
 
 .nav-item-home:hover,
 .nav-item-services:hover,
 .nav-item-career:hover,
 .nav-item-skills:hover,
 .nav-item-projects:hover,
-.nav-item-contacts:hover{
-    cursor: pointer;
+.nav-item-contacts:hover {
+  cursor: pointer;
 }

@@ -75,7 +75,7 @@
   transition-timing-function: ease-in-out;
 }
 #link-github {
-  background-color: hsl(259, 47%, 48%);
+  background-color: hsl(259, 64%, 58%);
   border: none;
   font-size: 30px;
   text-decoration: none;
@@ -92,7 +92,7 @@
 }
 
 #link-github-description {
-  background-color: hsl(259, 47%, 44%);
+  background-color: hsl(259, 64%, 58%);
   color: whitesmoke;
   border: none;
   background: none;

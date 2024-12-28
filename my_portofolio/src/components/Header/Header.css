@@ -1,59 +1,84 @@
-.header{
-    display: flex;
-    border: 1px solid red;
-    justify-content: space-between;
-    height: 100%;
+.header {
+  margin-top: 1.2rem;
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  height: 5.5rem;
 }
 
-.left button{
-cursor: pointer;
-font-size: 19px;
+.left button {
+  cursor: pointer;
+  font-size: 19px;
 }
 
-.right{
-margin: 15px 15px;
-border: 1px solid red;
+.right {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.theme-toggle-button{
-    font-size: 20px;
-    border: none;
+.theme-toggle-button {
+  width: 2.4rem;
+  border: none;
+  margin-bottom: 0.9rem;
 }
-.language-menu{
-    
-    
-}
-.language-button{
-    font-size: 15px;
-    border: none;
-    font-weight: 500;
-    line-height: normal;
-}
-.language-button-image{
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 25px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    width: 35px;
-    height: 35px;
-    /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+#faMoon,
+#faSun {
+  padding: 7px 7px;
+  width: 1.4rem;
+  border: none;
+  font-size: 20px;
+  border: 0.1rem solid white;
+  background-color: whitesmoke;
+  border-radius: 100%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 26px 0px inset,
+    rgba(17, 17, 26, 0.05) 0px 8px 40px 0px;
 }
-.language-option{
-
+.language-menu {
+}
+.language-icons {
+  height: 3rem;
+  width: 8rem;
+}
+.language-button {
+  font-size: 15px;
+  border: none;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.language-button-choice {
+  border: none;
+  border: 0.1rem solid white;
+  background-color: whitesmoke;
+  border-radius: 0.8rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+  padding: 5px 6px;
+  width: 8rem;
+}
+.language-button-image {
+  width: 2rem;
+  border: none;
+}
+.language-option {
+}
+.nav-toggle-button {
+  border: none;
+  border: 0.1rem solid white;
+  background-color: whitesmoke;
+  border-radius: 0.1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
+}
+#fabars {
+  font-size: 25px;
+  width: 2rem;
+  padding: 5px 5px;
+  border-radius: 0.1rem;
 }

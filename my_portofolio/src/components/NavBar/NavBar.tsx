@@ -13,7 +13,10 @@ import { Link } from "react-router-dom";
 
 import React, { createElement } from "react";
 
-const NavBar: React.FC = () => {
+const NavBar: React.FC<{ toggle: boolean; handleToggleNavBar: () => void }> = ({
+  handleToggleNavBar,
+  toggle,
+}) => {
   // const [active, setActive] = useState(0);
   const nav: NavItem[] = [
     {
@@ -48,12 +51,16 @@ const NavBar: React.FC = () => {
     },
   ];
   return (
-    <nav className="nav-bar">
-      {nav.map((item, index) => (
-        <Link to={item.link} key={index} className={item.className}>
-          {createElement(item.icon)}
-        </Link>
-      ))}
+    <nav className="nav-bar" onClick={handleToggleNavBar}>
+      {toggle && (
+        <>
+          {nav.map((item, index) => (
+            <Link to={item.link} key={index} className={item.className}>
+              {createElement(item.icon)}
+            </Link>
+          ))}
+        </>
+      )}
     </nav>
   );
 };

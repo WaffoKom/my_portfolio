@@ -23,7 +23,7 @@ const Header: React.FC = () => {
     dispatch(setTheme(newTheme));
   };
   const [menuVisible, setMenuVisible] = useState(false);
-  const [navVisible, setNavVisible] = useState(false);
+  const [navVisible, setNavVisible] = useState(true);
   const handleChangeLanguage = (newLanguage: string) => {
     newLanguage = currentLanguage == "en" ? "fr" : "en";
     dispatch(setLanguage(newLanguage));
@@ -38,69 +38,64 @@ const Header: React.FC = () => {
     <div className="header">
       <div className="left">
         <button className="nav-toggle-button" onClick={toggleNavBar}>
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon icon={faBars} id="fabars" />
         </button>
       </div>
       <div className="right">
-        <button
-          className="theme-toggle-button"
-          onClick={handleToggleTheme}
-          style={{
-            backgroundColor: `var(--buton-background)`,
-            color: `var(--button-text-color)`,
-          }}
-        >
+        <button className="theme-toggle-button" onClick={handleToggleTheme}>
           {theme === "light" ? (
-            <FontAwesomeIcon icon={faMoon} />
+            <FontAwesomeIcon icon={faMoon} id="faMoon" />
           ) : (
-            <FontAwesomeIcon icon={faSun} />
+            <FontAwesomeIcon icon={faSun} id="faSun" />
           )}
         </button>
-        <button
-          className="language-button"
-          onClick={() => setMenuVisible(!menuVisible)}
-        >
-          {currentLanguage === "en" ? "English" : "Francais"}
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            style={{ marginLeft: "10px" }}
-          />
-        </button>
-        {menuVisible && (
-          <div className="language-menu">
-            {currentLanguage !== "en" && (
-              <button
-                className="language-button"
-                onClick={() => {
-                  handleChangeLanguage("en");
-                }}
-              >
-                <img
-                  src={en}
-                  alt="English version"
-                  className="language-button-image"
-                />
-                English
-              </button>
-            )}
-            {currentLanguage !== "fr" && (
-              <button
-                className="language-option"
-                onClick={() => {
-                  handleChangeLanguage("fr");
-                }}
-              >
-                <img
-                  src={fr}
-                  alt="French Version"
-                  className="language-button-image"
-                />
-                Francais
-              </button>
-            )}
-          </div>
-        )}
-        {navVisible && <NavBar />}
+        <div className="language-icons">
+          <button
+            className="language-button-choice"
+            onClick={() => setMenuVisible(!menuVisible)}
+          >
+            {currentLanguage === "en" ? "English" : "Francais"}
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              style={{ marginLeft: "10px" }}
+            />
+          </button>
+          {menuVisible && (
+            <div className="language-menu">
+              {currentLanguage !== "en" && (
+                <button
+                  className="language-button"
+                  onClick={() => {
+                    handleChangeLanguage("en");
+                  }}
+                >
+                  <img
+                    src={en}
+                    alt="English version"
+                    className="language-button-image"
+                  />
+                  English
+                </button>
+              )}
+              {currentLanguage !== "fr" && (
+                <button
+                  className="language-button"
+                  onClick={() => {
+                    handleChangeLanguage("fr");
+                  }}
+                >
+                  <img
+                    src={fr}
+                    alt="French Version"
+                    className="language-button-image"
+                  />
+                  Francais
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+        {<NavBar toggle={navVisible} handleToggleNavBar={toggleNavBar} />}
       </div>
     </div>
   );

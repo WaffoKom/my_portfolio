@@ -1,1 +1,29 @@
-/*  */
+.download-resume {
+  width: 16rem;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: hsl(259, 64%, 58%);
+  color: whitesmoke;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-style: normal;
+  flex-grow: 0;
+  transition-property: background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+#icon-resume-download {
+  border: none;
+  font-size: 30px;
+  background-color: hsl(259, 64%, 58%);
+  color: hsl(0, 0%, 16%);
+  border-radius: 100%;
+  margin: 0;
+  padding: 0;
+}

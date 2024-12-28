@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useAppSelector } from "../../hooks.ts";
 import { RootState } from "../../store/store.ts";
 import { loadTheme } from "../../utils/themeLoader.ts";
-
+import "../../styles/darkTheme.css";
 const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
@@ -13,7 +13,7 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <div className={theme}>
-      <div>{children}</div>
+      <div className=""> {children}</div>
     </div>
   );
 };

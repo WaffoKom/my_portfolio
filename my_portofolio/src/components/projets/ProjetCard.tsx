@@ -3,6 +3,7 @@ import React from "react";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import ProjetCardProps from "../../types/ProjetCard.ts";
+import { Link } from "react-router-dom";
 
 const ProjetCard: React.FC<typeof ProjetCardProps> = ({
   name,
@@ -33,12 +34,12 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
         alt={name}
         data-aos="fade-up"
       />
-      <a href={demo} target="_blank" rel="noopener noreferrer">
+      <Link to={demo || "#"} target="_blank" rel="noopener noreferrer">
         Demo <AiOutlineGoogle className="" />
-      </a>
-      <a href={sourcecode} target="_blank" rel="noopener noreferrer">
+      </Link>
+      <Link to={sourcecode || "#"} target="_blank" rel="noopener noreferrer">
         Code <AiOutlineGithub className="" />
-      </a>
+      </Link>
     </div>
   );
 };

@@ -34,9 +34,9 @@
         "description": "Développeur Front end et Backend",
         "skills": "Debut  avec les outils de test (Jest, Cypress), CI/CD (GitLab CI, Jenkins)"
       }
-    },
-    "myResume": {
-      "youCan": "Telecharge mon CV"
     }
+  },
+  "myResume": {
+    "youCan": "Telecharge mon CV"
   }
 }
