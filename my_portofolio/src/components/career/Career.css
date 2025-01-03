@@ -27,3 +27,8 @@
   margin: 0;
   padding: 0;
 }
+
+.icon-timeline {
+  font-size: 40px;
+  border-radius: 100%;
+}

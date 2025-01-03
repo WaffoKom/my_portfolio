@@ -1,6 +1,11 @@
 /* Styles de base applicables à tous les thèmes */
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+body {
   font-family: Arial, sans-serif;
 }

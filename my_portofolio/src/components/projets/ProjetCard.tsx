@@ -33,6 +33,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
         src={mobileDevice ? thumbnail : image}
         alt={name}
         data-aos="fade-up"
+        id="img-project"
       />
       <Link to={demo || "#"} target="_blank" rel="noopener noreferrer">
         Demo <AiOutlineGoogle className="" />

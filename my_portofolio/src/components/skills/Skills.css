@@ -30,7 +30,7 @@
 .icon-grid {
   border: 0.1rem solid white;
   border-radius: 2rem;
-  width: 5rem;
+  width: 7.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,10 +39,8 @@
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset,
     rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
 }
-
-.skills-presentation {
-  flex-wrap: nowrap;
-  flex-shrink: 0;
+.icon-grid:hover {
+  cursor: pointer;
 }
 
 .icons-skills-names {

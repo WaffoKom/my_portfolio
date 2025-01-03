@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
       icon: postgresql,
     },
     {
-      name: "tailwincss",
+      name: "tailwindcss",
       icon: tailwindcss,
     },
     { name: "typescript", icon: typescript },

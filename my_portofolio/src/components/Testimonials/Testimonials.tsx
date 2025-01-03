@@ -52,30 +52,28 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="testimonials-section" id="testimonials">
+    <section className="testimonials-section">
+      {/* <div className="testimonials-overview">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam,
+        voluptatum? Vero accusamus accusantium aspernatur corporis aliquam odit
+        ipsam obcaecati facilis et in ut nulla asperiores quas quam, fuga,
+        debitis laborum doloremque quod corrupti consectetur? Temporibus, vel ex
+        distinctio minus nostrum quibusdam reprehenderit incidunt reiciendis
+        quasi, placeat perferendis impedit repellat illo quisquam praesentium
+        recusandae nisi nulla debitis.
+      </div> */}
       {testimonials.map((testimonial, index) => (
-        <div
-          className="testimonials-identify"
-          key={index}
-          style={
-            {
-              "--delay": `${index}`,
-            } as React.CSSProperties
-          }
-        >
-          <div className="testimonials-content">
-            <div className="testimonial-image-wrapper">
-              <img
-                src={testimonial.image}
-                alt={testimonial.author}
-                className="testimonial-image"
-              />
-            </div>
-            <div className="testimonial-text-content">
-              <span>{testimonial.author}</span>
-              <p className="testimonial-post">{testimonial.post}</p>
-              <p className="testimonial-content">{testimonial.content}</p>
-            </div>
+        <div className="testimonials-content" key={index}>
+          <img
+            src={testimonial.image}
+            alt={testimonial.author}
+            className="testimonial-image"
+          />
+
+          <div className="testimonial-text-content">
+            <span className="testimonial-author">{testimonial.author}</span>
+            <p className="testimonial-post">{testimonial.post}</p>
+            <p className="testimonial-content">{testimonial.content}</p>
           </div>
         </div>
       ))}
