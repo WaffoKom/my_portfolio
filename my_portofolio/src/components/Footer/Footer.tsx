@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           href="https://wa.me/+237656294240"
           target="_blank"
           rel="noopener noreferrer"
-          className="link-icon"
+          className="link-icons"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="icon-link" />
         </a>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           href="https://www.linkedin.com/in/daniel-kom-b4a861314/"
           target="_blank"
           rel="noopener noreferrer"
-          className="link-icon"
+          className="link-icons"
         >
           <FontAwesomeIcon icon={faLinkedin} className="icon-link" />
         </a>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           href="https://github.com/WaffoKom/"
           target="_blank"
           rel="noopener noreferrer"
-          className="link-icon"
+          className="link-icons"
         >
           <FontAwesomeIcon icon={faGithub} className="icon-link" />
         </a>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           href="mailTo:kwdparabic@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="link-icon"
+          className="link-icons"
         >
           <FontAwesomeIcon icon={faEnvelope} className="icon-link" />
         </a>

@@ -5,7 +5,6 @@ import thumbAltplus from "../../assets/work/thumb_altplus.png";
 import altplus from "../../assets/work/altplus.png";
 import ProjetCard from "./ProjetCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/swiper-bundle.css";
 
 import { Navigation, Pagination, Parallax } from "swiper/modules";
@@ -30,15 +29,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "javascript",
-          color: "blue-text-gradient",
+          color: "blue",
         },
         {
           name: "bootstrap",
-          color: "green-text-gradient",
+          color: "green",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "pink",
         },
       ],
       image: altplus,
@@ -52,15 +51,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "javascript",
-          color: "blue-text-gradient",
+          color: "blue",
         },
         {
           name: "python",
-          color: "pink-text-gradient",
+          color: "pink",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "pink",
         },
       ],
       image: "",
@@ -74,15 +73,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue-text-gradient",
+          color: "blue",
         },
         {
           name: "redux",
-          color: "pink-text-gradient",
+          color: "pink",
         },
         {
           name: "expressjs",
-          color: "blue-text-gradient",
+          color: "blue",
         },
       ],
       image: "",
@@ -96,15 +95,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue-text-gradient",
+          color: "blue",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "pink",
         },
         {
           name: "javascript",
-          color: "blue-text-gradient",
+          color: "blue",
         },
       ],
       image: "",
@@ -118,15 +117,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue-text-gradient",
+          color: "blue",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "pink",
         },
         {
           name: "javascript",
-          color: "blue-text-gradient",
+          color: "blue",
         },
       ],
       image: "",
@@ -140,15 +139,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue-text-gradient",
+          color: "blue",
         },
         {
           name: "css",
-          color: "pink-text-gradient",
+          color: "pink",
         },
         {
           name: "redux",
-          color: "blue-text-gradient",
+          color: "blue",
         },
       ],
       image: "",
@@ -159,7 +158,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects">
       <div className="project-presentation">
         <h1 className="project-header">{t("work.project.title")}</h1>
         {projects[0].work?.map((phrase, index) => (

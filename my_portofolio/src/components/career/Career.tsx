@@ -54,11 +54,37 @@ const Career: React.FC = () => {
 
   return (
     <section className="career" id="career">
-      <Chrono items={experiences} mode="VERTICAL_ALTERNATING">
+      <h2 className="experience-title">{t("work.experience")} </h2>
+      <Chrono
+        items={experiences}
+        mode="VERTICAL_ALTERNATING"
+        // vertical_aternating
+        enableOutline
+        // parseDetailsAsHTML
+        timelinePointDimension={40}
+        fontSizes={{
+          cardSubtitle: "1.02rem",
+          cardText: "0.9rem",
+          cardTitle: "1.4rem",
+          title: "1.2rem",
+        }}
+        theme={{
+          cardBgColor: "whitesmoke",
+          titleColor: "#24292e",
+          cardTitleColor: "#24292e",
+          toolbarTextColor: "#24292e",
+        }}
+      >
         <div className="chrono-icons">
-          <img src={altplus} alt="altplus" className="icon-timeline" />
-          <img src={free} alt="free" className="icon-timeline" />
-          <img src={scs} alt="scs" className="icon-timeline" />
+          <a href="">
+            <img src={scs} alt="scs" className="icon-timeline" />
+          </a>
+          <a href="">
+            <img src={free} alt="free" className="icon-timeline" />
+          </a>
+          <a href="">
+            <img src={altplus} alt="altplus" className="icon-timeline" />
+          </a>
         </div>
       </Chrono>
 

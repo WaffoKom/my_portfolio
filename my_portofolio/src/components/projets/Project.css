@@ -1,7 +1,8 @@
 .projects {
-  border: 1px solid red;
+  border: 1px solid black;
   position: relative;
   z-index: 0;
+  height: 40rem;
 }
 
 .project-presentation {

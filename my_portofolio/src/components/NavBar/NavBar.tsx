@@ -20,7 +20,7 @@ const NavBar: React.FC<{ toggle: boolean; handleToggleNavBar: () => void }> = ({
   // const [active, setActive] = useState(0);
   const nav: NavItem[] = [
     {
-      link: "/",
+      link: "",
       icon: () => <FontAwesomeIcon icon={faHome} />,
       className: "nav-item-home",
     },

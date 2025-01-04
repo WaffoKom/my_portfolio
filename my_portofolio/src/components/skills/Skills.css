@@ -5,7 +5,7 @@
 
 .icon-grid-container {
   width: 100%;
-  height: 100vh;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,12 +65,14 @@
   margin-right: 6rem;
   margin-top: 4.6rem;
 }
-
-.external-link-github:hover {
-  background-color: hsl(259, 47%, 48%);
+.external-link-github {
   transition-property: background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
+}
+
+.external-link-github:hover {
+  background-color: hsl(259, 47%, 48%);
 }
 #link-github {
   background-color: hsl(259, 64%, 58%);
@@ -82,11 +84,14 @@
   margin: 0;
   padding: 0;
 }
-#link-github:hover {
-  background-color: hsl(259, 47%, 48%);
+#link-github {
   transition-property: background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
+}
+#link-github:hover {
+  background-color: hsl(259, 47%, 48%);
+  transition-property: background-color;
 }
 
 #link-github-description {

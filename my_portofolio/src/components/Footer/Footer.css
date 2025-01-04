@@ -2,14 +2,12 @@
   /* border: 4px solid green; */
   display: flex;
   flex-direction: column;
-  margin: 1.5rem;
-  width: 100%;
-  height: 100%;
+  height: 300px;
 }
 
 .footer-contact {
   /* border: 4px solid blue; */
-  height: 7rem;
+  height: 7.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +25,8 @@
   color: hsl(0, 0%, 16%);
 }
 
-.link-icon {
+.link-icons {
+  text-decoration: none;
   padding: 1.5rem;
   font-size: 1rem;
   margin-inline: 2rem;
@@ -38,12 +37,12 @@
   -webkit-box-shadow: 9px 9px 40px -5px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 9px 9px 40px -5px rgba(0, 0, 0, 0.11);
 }
-.link-icon {
+.link-icons {
   transition-property: background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease;
 }
-.link-icon:hover {
+.link-icons:hover {
   box-shadow: 9px 9px 40px -5px rgba(0, 0, 0, 0.26) inset;
   -webkit-box-shadow: 9px 9px 40px -5px rgba(0, 0, 0, 0.26) inset;
   -moz-box-shadow: 9px 9px 40px -5px rgba(0, 0, 0, 0.26) inset;
@@ -56,4 +55,9 @@
   line-height: 1.4;
   font-style: normal;
   color: hsl(0, 0%, 16%);
+}
+
+.icon-link {
+  color: #151618;
+  border-radius: 100%;
 }
