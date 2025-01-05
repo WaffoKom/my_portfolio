@@ -2,7 +2,14 @@ import "./Project.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import thumbAltplus from "../../assets/work/thumb_altplus.png";
+import thumbSkypey from "../../assets/work/thumb_skypey.png";
+import thumbWeather from "../../assets/work/thumb_weather-app.png";
+import thumbIsis from "../../assets/work/Isis-blog.png";
+
 import altplus from "../../assets/work/altplus.png";
+import skypey from "../../assets/work/skypey.png";
+import isis from "../../assets/work/Isis-blog.png";
+import weather from "../../assets/work/weather-app.png";
 import ProjetCard from "./ProjetCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -84,8 +91,8 @@ const Projects: React.FC = () => {
           color: "blue",
         },
       ],
-      image: "",
-      thumbnail: "",
+      image: isis,
+      thumbnail: thumbIsis,
       demo: "",
       sourcecode: "",
     },
@@ -106,10 +113,10 @@ const Projects: React.FC = () => {
           color: "blue",
         },
       ],
-      image: "",
-      thumbnail: "",
-      demo: "",
-      sourcecode: "",
+      image: weather,
+      thumbnail: thumbWeather,
+      demo: "https://weather-react-app-ten-bice.vercel.app/",
+      sourcecode: "https://github.com/WaffoKom/weather-react-app",
     },
     {
       name: "login app",
@@ -150,10 +157,10 @@ const Projects: React.FC = () => {
           color: "blue",
         },
       ],
-      image: "",
-      thumbnail: "",
-      demo: "",
-      sourcecode: "",
+      image: skypey,
+      thumbnail: thumbSkypey,
+      demo: "https://skypey-kom.vercel.app/",
+      sourcecode: "https://github.com/WaffoKom/SKYPEY",
     },
   ];
 
