@@ -53,15 +53,6 @@ const Testimonials: React.FC = () => {
 
   return (
     <section className="testimonials-section">
-      {/* <div className="testimonials-overview">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam,
-        voluptatum? Vero accusamus accusantium aspernatur corporis aliquam odit
-        ipsam obcaecati facilis et in ut nulla asperiores quas quam, fuga,
-        debitis laborum doloremque quod corrupti consectetur? Temporibus, vel ex
-        distinctio minus nostrum quibusdam reprehenderit incidunt reiciendis
-        quasi, placeat perferendis impedit repellat illo quisquam praesentium
-        recusandae nisi nulla debitis.
-      </div> */}
       {testimonials.map((testimonial, index) => (
         <div className="testimonials-content" key={index}>
           <img
