@@ -1,12 +1,20 @@
 .header {
-  margin-top: 1.2rem;
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   justify-content: space-between;
-  height: 5.5rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+  height: 3.6rem;
 }
-
+.header.blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 .left button {
   cursor: pointer;
   font-size: 19px;
@@ -17,31 +25,43 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background: none;
+}
+.left {
+  background: none;
 }
 
 .theme-toggle-button {
   width: 2.4rem;
   border: none;
   margin-bottom: 0.9rem;
+  background: none;
 }
 
-#faMoon,
-#faSun {
+#faState {
   padding: 7px 7px;
   width: 1.4rem;
   border: none;
   font-size: 20px;
   border: 0.1rem solid white;
-  background-color: whitesmoke;
+  background: none;
   border-radius: 100%;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 26px 0px inset,
     rgba(17, 17, 26, 0.05) 0px 8px 40px 0px;
 }
 .language-menu {
+  width: 8rem;
+  height: 3.6rem;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .language-icons {
   height: 3rem;
   width: 8rem;
+  background: none;
 }
 .language-button {
   font-size: 15px;
@@ -51,22 +71,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
 }
 .language-button-choice {
   border: none;
   border: 0.1rem solid white;
-  background-color: whitesmoke;
+  background: none;
   border-radius: 0.8rem;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px 0px inset,
     rgba(17, 17, 26, 0.05) 0px 8px 32px 0px;
   padding: 5px 6px;
   width: 8rem;
 }
-.language-button-image {
-  width: 2rem;
+.language-button-image-d {
+  background-color: rgba(255, 255, 255, 1);
+  transition: color 0.4s ease;
+  color: #242424;
+}
+.language-button-image-d:hover {
+  color: hsl(259, 64%, 58%);
   border: none;
 }
-.language-option {
+.language-button-image {
+  width: 2rem;
+  background-color: rgba(255, 255, 255, 1);
 }
 .nav-toggle-button {
   border: none;
@@ -81,4 +109,21 @@
   width: 2rem;
   padding: 5px 5px;
   border-radius: 0.1rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 2.9rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.1rem;
+  }
+  #fabars {
+    font-size: 18px;
+    width: 1.6rem;
+  }
+  .nav-toggle-button {
+    position: relative;
+    top: -9px;
+    margin: 0.2rem;
+  }
 }

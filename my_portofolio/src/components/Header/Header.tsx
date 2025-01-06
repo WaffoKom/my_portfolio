@@ -33,9 +33,15 @@ const Header: React.FC = () => {
   const toggleNavBar = () => {
     setNavVisible((prev) => !prev);
   };
-
+  document.addEventListener("scroll", () => {
+    const element = document.querySelector(".header");
+    if (window.scrollY > 100) {
+      element?.classList.remove(".blur");
+    }
+    element?.classList.add(".blur");
+  });
   return (
-    <div className="header">
+    <div className="header blur">
       <div className="left">
         <button className="nav-toggle-button" onClick={toggleNavBar}>
           <FontAwesomeIcon icon={faBars} id="fabars" />
@@ -44,9 +50,9 @@ const Header: React.FC = () => {
       <div className="right">
         <button className="theme-toggle-button" onClick={handleToggleTheme}>
           {theme === "light" ? (
-            <FontAwesomeIcon icon={faMoon} id="faMoon" />
+            <FontAwesomeIcon icon={faMoon} id="faState" />
           ) : (
-            <FontAwesomeIcon icon={faSun} id="faSun" />
+            <FontAwesomeIcon icon={faSun} id="faState" />
           )}
         </button>
         <div className="language-icons">
@@ -55,6 +61,7 @@ const Header: React.FC = () => {
             onClick={() => setMenuVisible(!menuVisible)}
           >
             {currentLanguage === "en" ? "English" : "Francais"}
+
             <FontAwesomeIcon
               icon={faChevronDown}
               style={{ marginLeft: "10px" }}
@@ -74,7 +81,7 @@ const Header: React.FC = () => {
                     alt="English version"
                     className="language-button-image"
                   />
-                  English
+                  <span className="language-button-image-d">English</span>
                 </button>
               )}
               {currentLanguage !== "fr" && (
@@ -89,13 +96,13 @@ const Header: React.FC = () => {
                     alt="French Version"
                     className="language-button-image"
                   />
-                  Francais
+                  <span className="language-button-image-d">Francais</span>
                 </button>
               )}
             </div>
           )}
         </div>
-        {<NavBar toggle={navVisible} handleToggleNavBar={toggleNavBar} />}
+        {<NavBar toggle={navVisible} />}
       </div>
     </div>
   );
