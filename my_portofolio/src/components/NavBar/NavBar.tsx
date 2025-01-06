@@ -1,66 +1,57 @@
 import "./NavBar.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
-import { MdPermContactCalendar } from "react-icons/md";
-import { BiUser } from "react-icons/bi";
-import { RiServiceLine } from "react-icons/ri";
-import { faBrain } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faCode,
+  faContactBook,
+  faUser,
+  faBrain,
+} from "@fortawesome/free-solid-svg-icons";
+import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { NavItem } from "../../types/NavItem.ts";
 import { Link } from "react-router-dom";
-// import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-
 import React, { createElement } from "react";
-
-const NavBar: React.FC<{ toggle: boolean; handleToggleNavBar: () => void }> = ({
-  handleToggleNavBar,
-  toggle,
-}) => {
-  // const [active, setActive] = useState(0);
+const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
   const nav: NavItem[] = [
     {
       link: "",
       icon: () => <FontAwesomeIcon icon={faHome} />,
-      className: "nav-item-home",
+      iconClassName: "custom-icon-class",
     },
     {
       link: "/services",
-      icon: BiUser,
-      className: "nav-item-services",
+      icon: () => <FontAwesomeIcon icon={faUser} />,
+      iconClassName: "custom-icon-class",
     },
     {
       link: "/career",
-      icon: RiServiceLine,
-      className: "nav-item-career",
+      icon: () => <FontAwesomeIcon icon={faServicestack} />,
+      iconClassName: "custom-icon-class",
     },
     {
       link: "/skills",
       icon: () => <FontAwesomeIcon icon={faBrain} />,
-      className: "nav-item-skills",
+      iconClassName: "custom-icon-class",
     },
     {
       link: "./projects",
       icon: () => <FontAwesomeIcon icon={faCode} />,
-      className: "nav-item-projects",
+      iconClassName: "custom-icon-class",
     },
     {
       link: "/contact",
-      icon: MdPermContactCalendar,
-      className: "nav-item-contacts",
+      icon: () => <FontAwesomeIcon icon={faContactBook} />,
+      iconClassName: "custom-icon-class",
     },
   ];
   return (
-    <nav className="nav-bar" onClick={handleToggleNavBar}>
-      {toggle && (
-        <>
-          {nav.map((item, index) => (
-            <Link to={item.link} key={index} className={item.className}>
-              {createElement(item.icon)}
-            </Link>
-          ))}
-        </>
-      )}
+    <nav className={`nav-bar ${toggle ? "visible" : "hidden"}`}>
+      {nav.map((item, index) => (
+        <Link to={item.link} key={index} className="nav-item-link">
+          {createElement(item.icon, { className: nav[0].iconClassName })}
+        </Link>
+      ))}
     </nav>
   );
 };
