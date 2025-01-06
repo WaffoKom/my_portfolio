@@ -61,3 +61,23 @@
   color: #151618;
   border-radius: 100%;
 }
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .footer-contact {
+  }
+  .link-icons {
+    margin-inline: 1rem;
+    font-size: 1.1rem;
+    padding: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-icons {
+    margin-inline: 0.98rem;
+    font-size: 1.09rem;
+    padding: 1.23rem;
+  }
+}
