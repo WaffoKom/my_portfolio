@@ -1,21 +1,18 @@
 .project-card {
-  border: 4px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 28rem;
   width: 100%;
+  margin: 2rem;
 }
-
 .project-card-img {
   /* height: 15rem; */
-  border: 6px solid palegreen;
   width: 50%;
   height: 100%;
 }
 .project-card-description {
   /* height: 15rem; */
-  border: 6px solid brown;
   width: 50%;
   height: 100%;
   display: flex;
@@ -23,27 +20,67 @@
   align-items: flex-start;
   justify-content: space-around;
   color: #24292e;
+  margin-left: 1.3rem;
 }
 .externals-site-links {
+  display: flex;
 }
 .site-link {
-  text-decoration: none;
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #24292e;
-  padding: 0.7rem;
-  margin: 0.7rem;
-}
-.google {
-  background-color: hsl(259, 64%, 58%);
+  text-decoration: none;
   width: 8rem;
   padding: 0.7rem;
+  transition: background-color 0.4s, color 0.4s;
 }
-.google:hover {
+.site-link.google {
+  background-color: hsl(259, 64%, 58%);
+  color: whitesmoke;
+  margin-left: 1.2rem;
+}
+.site-link.google .google-blank {
+  color: hsl(259, 64%, 58%);
+  transition: color 0.4s;
+}
+.site-link.google:hover {
   background-color: hsl(259, 47%, 48%);
 }
-.tags {
+.site-link.google:hover .google-blank {
+  color: hsl(259, 47%, 48%);
+}
+.site-link.github {
+  background-color: #24292e;
+  color: whitesmoke;
+  margin-left: 1.2rem;
+}
+.site-link.github .github-blank {
+  color: #24292e;
+  transition: color 0.4s;
+}
+.site-link.github:hover {
+  background-color: #24292a;
+  color: whitesmoke;
+}
+.site-link.github:hover .github-blank {
+  color: #24292a;
+}
+
+.site-link span {
+  color: whitesmoke;
+  background-color: transparent;
+}
+.site-link:hover span {
+  color: whitesmoke;
+  background-color: transparent;
+}
+.site-blank {
+  border-radius: 100%;
+  border: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: 0;
+  margin: 0;
 }
 
 #site-name {
@@ -51,7 +88,7 @@
   font-weight: bold;
 }
 #site-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4;
 }
 #tags-unique {
@@ -59,21 +96,7 @@
   font-size: 1.04rem;
   line-height: 1.3;
 }
-.site-blank {
-  color: #24292e;
-  font-size: 30px;
-  border-radius: 100%;
-  background-color: hsl(259, 64%, 58%);
-}
 
-.google {
-  background-color: hsl(259, 64%, 58%);
-}
-.google-blank:hover {
-  background-color: hsl(259, 47%, 48%);
-}
-.github {
-}
 #project-img {
   width: 100%;
   height: 100%;

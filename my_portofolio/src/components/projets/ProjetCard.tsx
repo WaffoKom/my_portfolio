@@ -15,12 +15,13 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
   sourcecode,
 }) => {
   const mobileDevice = window.matchMedia("(max-width: 640px)").matches;
+
   return (
     <div className="project-card">
       <div className="project-card-img">
         <img
           loading="lazy"
-          width={mobileDevice ? 768 : 1080}
+          width={mobileDevice ? 720 : 1080}
           height={mobileDevice ? 307 : 636}
           src={mobileDevice ? thumbnail : image}
           alt={name}
@@ -51,7 +52,8 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
             rel="noopener noreferrer"
             className="site-link google"
           >
-            Demo <AiOutlineGoogle className="site-blank google-blank" />
+            <span>Demo</span>{" "}
+            <AiOutlineGoogle className="site-blank google-blank" />
           </Link>
           <Link
             to={sourcecode || "#"}
@@ -59,7 +61,8 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
             rel="noopener noreferrer"
             className="site-link github"
           >
-            Code <AiOutlineGithub className="site-blank github-blank" />
+            <span>Code</span>{" "}
+            <AiOutlineGithub className="site-blank github-blank" />
           </Link>
         </div>
       </div>

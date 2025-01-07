@@ -88,8 +88,14 @@
   .link-icon {
     font-size: 25px;
   }
+  .about-image {
+    width: 420px;
+    margin-left: 2rem;
+  }
+  .about-left a {
+    margin-top: 16px;
+  }
 }
-
 @media (max-width: 480px) {
   .about-left {
     font-size: 16px;
