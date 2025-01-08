@@ -52,22 +52,24 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="testimonials-section">
-      {testimonials.map((testimonial, index) => (
-        <div className="testimonials-content" key={index}>
-          <img
-            src={testimonial.image}
-            alt={testimonial.author}
-            className="testimonial-image"
-          />
-
-          <div className="testimonial-text-content">
-            <span className="testimonial-author">{testimonial.author}</span>
-            <p className="testimonial-post">{testimonial.post}</p>
-            <p className="testimonial-content">{testimonial.content}</p>
+    <section className="testimonials-secgment">
+      <h2 className="people-talk">{t("people.talk")}</h2>
+      <div className="testimonials-section">
+        {testimonials.map((testimonial, index) => (
+          <div className="testimonials-content" key={index}>
+            <img
+              src={testimonial.image}
+              alt={testimonial.author}
+              className="testimonial-image"
+            />
+            <div className="testimonial-text-content">
+              <span className="testimonial-author">{testimonial.author}</span>
+              <p className="testimonial-post">{testimonial.post}</p>
+              <p className="testimonial-content">{testimonial.content}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };
