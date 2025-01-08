@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
 
     {
       id: 4,
-      author: "Charles Koffi",
+      author: "Dimitri Mabom",
       post: t("testimo.devFront"),
       content: t("testimo.dimiMsg"),
       image: testimonail5,
