@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section className="testimonials-secgment">
-      <h2 className="people-talk">{t("people.talk")}</h2>
+      <h1 className="people-talk">{t("people.talk")}</h1>
       <div className="testimonials-section">
         {testimonials.map((testimonial, index) => (
           <div className="testimonials-content" key={index}>

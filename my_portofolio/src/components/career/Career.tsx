@@ -1,5 +1,5 @@
 import "./Career.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Chrono } from "react-chrono";
 import { useTranslation } from "react-i18next";
 import { CgSoftwareDownload } from "react-icons/cg";
@@ -9,7 +9,17 @@ import scs from "../../assets/company/scs.jpg";
 import { Link } from "react-router-dom";
 
 const Career: React.FC = () => {
-  const { t } = useTranslation("experience");
+  const { t, i18n } = useTranslation("experience");
+  const [key, setKey] = useState(0);
+
+  // Écoute les changements de langue et force la mise à jour de la clé
+  useEffect(() => {
+    const handleLanguageChange = () => setKey((prevKey) => prevKey + 1);
+    i18n.on("languageChanged", handleLanguageChange);
+    return () => {
+      i18n.off("languageChanged", handleLanguageChange);
+    };
+  }, [i18n]);
 
   const experiences = [
     {
@@ -25,7 +35,7 @@ const Career: React.FC = () => {
       ],
     },
     {
-      title: "2022-2023",
+      title: "2021-2023",
       cardTitle: t("work.positions.position_1"),
       cardSubtitle: [
         t("work.positions.point_2.description"),
@@ -39,7 +49,7 @@ const Career: React.FC = () => {
       ],
     },
     {
-      title: "2023-2024",
+      title: "2021-2024",
       cardTitle: t("work.positions.position_2"),
       cardSubtitle: [
         t("work.positions.point_5.description"),
@@ -56,12 +66,11 @@ const Career: React.FC = () => {
     <section className="career" id="career">
       <h2 className="experience-title">{t("work.experience")} </h2>
       <Chrono
+        key={key} // Force le re-rendu lorsque la clé change
         items={experiences}
         mode="VERTICAL_ALTERNATING"
-        // vertical_aternating
         enableOutline
-        // parseDetailsAsHTML
-        timelinePointDimension={40}
+        timelinePointDimension={45}
         fontSizes={{
           cardSubtitle: "1.02rem",
           cardText: "0.9rem",
@@ -100,4 +109,5 @@ const Career: React.FC = () => {
     </section>
   );
 };
+
 export default Career;
