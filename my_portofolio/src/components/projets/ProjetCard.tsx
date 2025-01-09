@@ -21,8 +21,8 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
       <div className="project-card-img">
         <img
           loading="lazy"
-          width={mobileDevice ? 720 : 1080}
-          height={mobileDevice ? 307 : 636}
+          width={mobileDevice ? 307 : 640}
+          height={mobileDevice ? 720 : 1024}
           src={mobileDevice ? thumbnail : image}
           alt={name}
           data-aos="fade-up"

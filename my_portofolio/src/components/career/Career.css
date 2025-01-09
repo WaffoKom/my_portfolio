@@ -8,7 +8,6 @@
   justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
-  font-weight: bold;
   font-size: 20px;
   background-color: hsl(259, 64%, 58%);
   color: whitesmoke;
@@ -19,11 +18,11 @@
   transition-property: background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
+  margin-left: 3rem;
 }
 
 #icon-resume-download {
   border: none;
-  font-size: 30px;
   background-color: hsl(259, 64%, 58%);
   color: hsl(0, 0%, 16%);
   border-radius: 100%;
@@ -39,5 +38,35 @@
 .experience-title {
   margin-left: 2rem;
   text-decoration: none;
-  font-size: medium;
+  font-size: 30px;
+}
+
+/* XS: Très petits appareils (moins de 640px) */
+@media (max-width: 639px) {
+  /* Ajoute ici tes styles pour les très petits écrans */
+}
+
+/* SM: Petits appareils (640px et plus) */
+@media (min-width: 640px) {
+  /* Ajoute ici tes styles pour les petits écrans */
+}
+
+/* MD: Appareils de taille moyenne (768px et plus) */
+@media (min-width: 768px) {
+  /* Ajoute ici tes styles pour les écrans de taille moyenne */
+}
+
+/* LG: Grands appareils (1024px et plus) */
+@media (min-width: 1024px) {
+  /* Ajoute ici tes styles pour les grands écrans */
+}
+
+/* XL: Très grands appareils (1280px et plus) */
+@media (min-width: 1280px) {
+  /* Ajoute ici tes styles pour les très grands écrans */
+}
+
+/* FULL: Appareils pleine largeur */
+@media (min-width: 1536px) {
+  /* Ajoute ici tes styles pour les écrans en pleine largeur */
 }
