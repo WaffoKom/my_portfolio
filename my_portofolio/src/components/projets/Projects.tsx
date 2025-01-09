@@ -178,33 +178,31 @@ const Projects: React.FC = () => {
         ))}
       </div>
 
-      <div className="project-content">
-        <Swiper
-          style={
-            {
-              "--swiper-navigation-color": "#fff",
-              "--swiper-pagination-color": "#fff",
-            } as React.CSSProperties
-          }
-          speed={600}
-          parallax={true}
-          pagination={{
-            clickable: true,
-          }}
-          cssMode={true}
-          navigation={true}
-          mousewheel={true}
-          modules={[Parallax, Pagination, Navigation]}
-          className="swiper-navigation"
-          keyboard={true}
-        >
-          {projects.slice(1).map((project, index) => (
-            <SwiperSlide key={index}>
-              <ProjetCard {...project} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Swiper
+        style={
+          {
+            "--swiper-navigation-color": "#2424",
+            "--swiper-pagination-color": "#2424",
+          } as React.CSSProperties
+        }
+        speed={600}
+        parallax={true}
+        pagination={{
+          clickable: true,
+        }}
+        cssMode={true}
+        navigation={true}
+        mousewheel={true}
+        modules={[Parallax, Pagination, Navigation]}
+        className="swiper-navigation"
+        keyboard={true}
+      >
+        {projects.slice(1).map((project, index) => (
+          <SwiperSlide key={index}>
+            <ProjetCard {...project} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };
