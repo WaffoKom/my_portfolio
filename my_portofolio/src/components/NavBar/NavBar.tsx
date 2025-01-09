@@ -20,27 +20,27 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
       iconClassName: "custom-icon-class",
     },
     {
-      link: "/services",
+      link: "services",
       icon: () => <FontAwesomeIcon icon={faUser} />,
       iconClassName: "custom-icon-class",
     },
     {
-      link: "/career",
+      link: "career",
       icon: () => <FontAwesomeIcon icon={faServicestack} />,
       iconClassName: "custom-icon-class",
     },
     {
-      link: "/skills",
+      link: "skills",
       icon: () => <FontAwesomeIcon icon={faBrain} />,
       iconClassName: "custom-icon-class",
     },
     {
-      link: "./projects",
+      link: "projects",
       icon: () => <FontAwesomeIcon icon={faCode} />,
       iconClassName: "custom-icon-class",
     },
     {
-      link: "/contact",
+      link: "contact",
       icon: () => <FontAwesomeIcon icon={faContactBook} />,
       iconClassName: "custom-icon-class",
     },
