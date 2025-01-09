@@ -31,7 +31,9 @@ const About: React.FC = () => {
           <p>{backLine(t("perso.presentation_next"))}</p>
           <p>{t("perso.rendezvous")}</p>{" "}
         </div>
-        <Link to="/services">{t("perso.letGetStarted")}</Link>
+        <Link to="services" id="start">
+          {t("perso.letGetStarted")}
+        </Link>
       </div>
       <div className="about-right">
         <img

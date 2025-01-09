@@ -2,11 +2,11 @@
   background-color: whitesmoke;
 }
 .about-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: flex-start;
   width: 100%;
-  height: 500px;
-  justify-content: space-between;
-  padding-top: 30px;
+  margin-top: 8rem;
 }
 .about-right {
   display: flex;
@@ -21,8 +21,6 @@
 }
 .about-left a {
   text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
   background-color: hsl(259, 64%, 58%);
   color: whitesmoke;
   padding: 10px 15px;
@@ -43,8 +41,12 @@
 }
 .about-text-presentation {
   flex-grow: 1;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
   margin-left: 0;
+  text-decoration: none;
+}
+p {
+  font-size: 17px;
 }
 .external-links .link-icon {
   padding: 10px;
@@ -55,54 +57,37 @@
   color: #151618;
 }
 .about-image {
-  width: 400px;
-  all: unset;
-  margin-right: 30px;
-}
-
-.about-image {
-  width: 450px;
+  width: 500px;
 }
 
 /* Responsive part  */
-@media (max-width: 1024px) {
+
+/* XS: Très petits appareils (moins de 640px) */
+@media (max-width: 639px) {
+  /* Ajoute ici tes styles pour les très petits écrans */
   .about-container {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "about-left" "about-right";
+    row-gap: 0rem;
     align-items: center;
-  }
-  .about-right,
-  .about-left {
-    width: 90%;
-    margin: 20px 0;
   }
   .about-image {
     width: 100%;
+    height: 80%;
   }
-}
-
-@media (max-width: 768px) {
   .about-left {
-    font-size: 18px;
-    padding: 8px 12px;
+    order: 2;
+  }
+  .about-right {
+    order: 1;
+  }
+  .about-left {
+    font-size: 16px;
+    padding: 10px 15px;
   }
   .link-icon {
     font-size: 25px;
-  }
-  .about-image {
-    width: 420px;
-    margin-left: 2rem;
-  }
-  .about-left a {
-    margin-top: 16px;
-  }
-}
-@media (max-width: 480px) {
-  .about-left {
-    font-size: 16px;
-    padding: 6px 10px;
-  }
-  .link-icon {
-    font-size: 20px;
   }
   .about-left,
   .about-right {
@@ -114,5 +99,238 @@
   }
   .external-links .link-icon {
     padding: 10px;
+  }
+  #start {
+    margin-top: 2rem;
+  }
+}
+
+/* SM: Petits appareils (640px et plus) */
+@media (min-width: 640px) {
+  /* Ajoute ici tes styles pour les petits écrans */
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "about-left" "about-right";
+    row-gap: 0rem;
+    align-items: center;
+  }
+  .about-image {
+    width: 100%;
+    height: 80%;
+  }
+  .about-left {
+    order: 2;
+  }
+  .about-right {
+    order: 1;
+  }
+  .about-left {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .link-icon {
+    font-size: 25px;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .about-text-presentation {
+    margin-bottom: 5px;
+  }
+  .external-links .link-icon {
+    padding: 10px;
+  }
+  #start {
+    margin-top: 2rem;
+  }
+}
+
+/* MD: Appareils de taille moyenne (768px et plus) */
+@media (min-width: 768px) {
+  /* Ajoute ici tes styles pour les écrans de taille moyenne */
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "about-left" "about-right";
+    row-gap: 0rem;
+    column-gap: 2rem;
+    align-items: flex-start;
+  }
+  .about-image {
+    width: 80%;
+    height: 80%;
+    margin-right: 2rem;
+    border-radius: 5px;
+  }
+  .about-left {
+    order: 1;
+  }
+  .about-right {
+    order: 2;
+  }
+  .about-left {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .link-icon {
+    font-size: 25px;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .about-text-presentation {
+    margin-bottom: 5px;
+  }
+  .external-links .link-icon {
+    padding: 10px;
+  }
+  #start {
+    margin-top: 9rem;
+  }
+}
+
+/* LG: Grands appareils (1024px et plus) */
+@media (min-width: 1024px) {
+  /* Ajoute ici tes styles pour les grands écrans */
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "about-left" "about-right";
+    row-gap: 0rem;
+    column-gap: 2rem;
+    align-items: flex-start;
+  }
+  .about-image {
+    width: 80%;
+    height: 80%;
+    margin-right: 2rem;
+    border-radius: 5px;
+  }
+  .about-left {
+    order: 1;
+  }
+  .about-right {
+    order: 2;
+  }
+  .about-left {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .link-icon {
+    font-size: 25px;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .about-text-presentation {
+    margin-bottom: 5px;
+  }
+  .external-links .link-icon {
+    padding: 10px;
+  }
+  #start {
+    margin-top: 12rem;
+  }
+}
+
+/* XL: Très grands appareils (1280px et plus) */
+@media (min-width: 1280px) {
+  /* Ajoute ici tes styles pour les très grands écrans */
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "about-left" "about-right";
+    row-gap: 0rem;
+    column-gap: 2rem;
+    justify-items: flex-start;
+    align-items: flex-start;
+  }
+  .about-image {
+    width: 80%;
+    height: 80%;
+    margin-right: 2rem;
+    border-radius: 5px;
+  }
+  .about-left {
+    order: 1;
+  }
+  .about-right {
+    order: 2;
+  }
+  .about-left {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .link-icon {
+    font-size: 25px;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .about-text-presentation {
+    margin-bottom: 5px;
+  }
+  .external-links .link-icon {
+    padding: 10px;
+  }
+  #start {
+    margin-top: 15rem;
+  }
+}
+
+/* FULL: Appareils pleine largeur */
+@media (min-width: 1536px) {
+  /* Ajoute ici tes styles pour les écrans en pleine largeur */
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "about-left" "about-right";
+    row-gap: 0rem;
+    column-gap: 2rem;
+    align-items: flex-start;
+    margin-left: 4.75rem;
+  }
+  .about-image {
+    width: 450px;
+    height: 450px;
+    margin-right: 2rem;
+    border-radius: 5px;
+  }
+  .about-left {
+    order: 1;
+  }
+  .about-right {
+    order: 2;
+  }
+  .about-left {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin-left: 0;
+  }
+  .link-icon {
+    font-size: 27px;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .about-text-presentation {
+    margin-bottom: 5px;
+  }
+  .external-links .link-icon {
+    padding: 10px;
+  }
+  #start {
+    margin-top: 15rem;
   }
 }
