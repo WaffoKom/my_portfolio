@@ -2,17 +2,25 @@
   position: relative;
   z-index: 0;
   height: 100%;
+  width: 100%;
   align-items: center;
   margin: auto;
+  /* border: 5px solid red; */
 }
 
 .project-presentation {
-  background-color: hsl(160, 9%, 94%);
+  /* border: 8px solid yellow; */
+  height: 300px;
 }
-
+.swiper-container {
+  /* border: 8px solid green; */
+  display: flex;
+  height: 500px;
+  width: 100%;
+}
 .project-header {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 55px;
   padding: 1.7rem;
 }
 
@@ -23,8 +31,28 @@
 }
 
 .project-content {
-  border: 4px solid blue;
+  /* border: 4px solid blue; */
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background: none;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
 /* .swiper-navigation {
   background-size: cover;
   background-repeat: no-repeat;

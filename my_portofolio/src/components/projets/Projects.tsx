@@ -180,29 +180,21 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-      <div
-        style={
-          {
-            width: "100%",
-            height: "100%",
-          } as React.CSSProperties
-        }
-      >
+      <div className="swiper-container">
         <Swiper
-          style={
-            {
-              "--swiper-navigation-color": "#2424",
-              "--swiper-pagination-color": "#2424",
-            } as React.CSSProperties
-          }
+          direction="horizontal"
           speed={600}
           parallax={true}
           pagination={{
             clickable: true,
           }}
           cssMode={true}
-          navigation={true}
+          navigation={{
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          }}
           mousewheel={true}
+          preventInteractionOnTransition={true}
           modules={[Parallax, Pagination, Navigation]}
           className={` swiper-navigation ${
             theme === "light"
