@@ -21,8 +21,8 @@ const Career: React.FC = () => {
       company_name: "SCS",
       icon: scs,
       iconBg: "#EEE",
-      date: "oct 2021",
-      link: "",
+      date: t("dateWork.date-0"),
+      link: "https://staroilscs.com",
       points: [
         t("work.positions.point_0.description"),
         t("work.positions.point_1.description"),
@@ -37,8 +37,8 @@ const Career: React.FC = () => {
       company_name: "INDEPENDENT",
       icon: free,
       iconBg: "#EEE",
-      date: "",
-      link: "",
+      date: t("dateWork.date-1"),
+      link: "#",
       points: [
         t("work.positions.point_2.description"),
         t("work.positions.point_3.description"),
@@ -55,8 +55,8 @@ const Career: React.FC = () => {
       company_name: "Alt+",
       icon: altplus,
       iconBg: "#EEEEEE",
-      date: "",
-      link: "",
+      date: t("dateWork.date-2"),
+      link: "https://altplus.dev",
       points: [
         t("work.positions.point_5.description"),
         t("work.positions.point_6.description"),
@@ -73,6 +73,7 @@ const Career: React.FC = () => {
       <h1 className="experience-title">{t("work.experience")} </h1>
       <div className="vertical-timeline-container">
         <VerticalTimeline
+          className="verticalTimeLine"
           lineColor={theme === "dark" ? "#915EFF50" : "#FFFFFF"}
         >
           {experiences.map((experience, index) => (
