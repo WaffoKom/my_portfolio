@@ -2,7 +2,7 @@
   "work": {
     "experience": "Professional Experience",
     "positions": {
-      "position_0": "Web Developer",
+      "position_0": "Web Developer Intern",
       "point_0": {
         "description": "Discovery of the use of HTML, CSS & JavaScript on the company's website",
         "skills": "HTML, CSS, JavaScript, understanding of best practices in web development"
@@ -38,5 +38,10 @@
   },
   "myResume": {
     "youCan": "Download my resume"
+  },
+  "dateWork": {
+    "date-0": "May 2021 - July 2021",
+    "date-1": "Nov 2021 - Dec 2023",
+    "date-2": "Oct 2021 - Nov 2024"
   }
 }
