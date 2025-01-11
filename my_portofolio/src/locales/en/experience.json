@@ -2,7 +2,7 @@
   "work": {
     "experience": "Professional Experience",
     "positions": {
-      "position_0": "Web Developer Intern at SCS",
+      "position_0": "Web Developer",
       "point_0": {
         "description": "Discovery of the use of HTML, CSS & JavaScript on the company's website",
         "skills": "HTML, CSS, JavaScript, understanding of best practices in web development"
@@ -25,7 +25,7 @@
         "skills": "Mastery of React.js, understanding of related technologies (Redux, Zustand)"
       },
 
-      "position_2": "Freelance for the startup Alt+",
+      "position_2": "Freelance",
       "point_5": {
         "description": "Collaboration with multidisciplinary teams including designers, product managers and other developers to create high-quality products",
         "skills": "Teamwork skills, ability to understand and integrate the needs of different stakeholders"

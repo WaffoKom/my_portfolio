@@ -1,9 +1,10 @@
 export interface Experience {
-  position: string;
-  company: string;
-  logo: string;
-  link: string;
+  title: string;
+  company_name: string;
+  icon: string;
+  iconBg: string;
   date: string;
-  description: string[];
-  skills: string[];
+  link: string;
+  points: string[];
+  point_skills: string[];
 }

@@ -2,7 +2,7 @@
   "work": {
     "experience": "Experience Professionnelle",
     "positions": {
-      "position_0": "Stagiaire Developpeur  Web chez SCS",
+      "position_0": "Stagiaire Developpeur  Web",
       "point_0": {
         "description": "Découverte de l'emploi du HTML, CSS & JavaScript sur le site de l'entreprise",
         "skills": "HTML, CSS, JavaScript, compréhension des meilleures pratiques en développement web"
@@ -12,6 +12,7 @@
         "skills": "Connaissance des types de câbles réseau, utilisation des outils de sertissage, compréhension des concepts de base du réseau"
       },
       "position_1": "Independant",
+
       "point_2": {
         "description": "Découverte de ReactJS, TailwindCSS, NodeJS",
         "skills": "Compétences en ReactJS, TailwindCSS pour le design réactif, NodeJS pour le développement côté serveur"
@@ -25,7 +26,7 @@
         "skills": "Maîtrise de React.js, compréhension des technologies connexes (Redux, Zustand)"
       },
 
-      "position_2": "Freelance pour le compte de la startup Alt+",
+      "position_2": "Freelance",
       "point_5": {
         "description": "Collaboration avec des équipes multidisciplinaires incluant des concepteurs, chefs de produit et autres développeurs pour créer des produits de haute qualité",
         "skills": "Compétences en travail d'équipe, capacité à comprendre et à intégrer les besoins des différentes parties prenantes"
