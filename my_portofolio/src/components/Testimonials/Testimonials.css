@@ -57,7 +57,7 @@
   text-align: center;
   padding-top: 4.5rem;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 55px;
 }
 /* Responsive */
 
@@ -74,6 +74,9 @@
     border-radius: 15px;
     padding: 0.7rem;
   }
+  .people-talk {
+    font-size: 30px;
+  }
 }
 
 /* SM: Petits appareils (640px et plus) */
@@ -88,6 +91,9 @@
   .testimonials-content {
     border-radius: 15px;
     padding: 0.7rem;
+  }
+  .people-talk {
+    font-size: 37px;
   }
 }
 
@@ -104,6 +110,9 @@
     border-radius: 14px;
     padding: 0.8rem;
   }
+  .people-talk {
+    font-size: 40px;
+  }
 }
 
 /* LG: Grands appareils (1024px et plus) */
@@ -118,6 +127,9 @@
   .testimonials-content {
     border-radius: 15px;
     padding: 0.9rem;
+  }
+  .people-talk {
+    font-size: 40px;
   }
 }
 
@@ -134,6 +146,9 @@
     border-radius: 14.5px;
     padding: 0.9rem;
   }
+  .people-talk {
+    font-size: 55px;
+  }
 }
 
 /* FULL: Appareils pleine largeur */
@@ -149,5 +164,8 @@
   .testimonials-content {
     border-radius: 15px;
     padding: 2rem;
+  }
+  .people-talk {
+    font-size: 55px;
   }
 }

@@ -49,35 +49,55 @@
 .experience-title {
   margin-left: 2rem;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 55px;
+  flex-wrap: nowrap;
 }
 
 /* XS: Très petits appareils (moins de 640px) */
 @media (max-width: 639px) {
   /* Ajoute ici tes styles pour les très petits écrans */
+  .experience-title {
+    font-size: 35px;
+  }
 }
 
 /* SM: Petits appareils (640px et plus) */
 @media (min-width: 640px) {
   /* Ajoute ici tes styles pour les petits écrans */
+  .experience-title {
+    font-size: 37px;
+    flex-wrap: nowrap;
+  }
 }
 
 /* MD: Appareils de taille moyenne (768px et plus) */
 @media (min-width: 768px) {
   /* Ajoute ici tes styles pour les écrans de taille moyenne */
+  .experience-title {
+    font-size: 38px;
+  }
 }
 
 /* LG: Grands appareils (1024px et plus) */
 @media (min-width: 1024px) {
   /* Ajoute ici tes styles pour les grands écrans */
+  .experience-title {
+    font-size: 43px;
+  }
 }
 
 /* XL: Très grands appareils (1280px et plus) */
 @media (min-width: 1280px) {
   /* Ajoute ici tes styles pour les très grands écrans */
+  .experience-title {
+    font-size: 55px;
+  }
 }
 
 /* FULL: Appareils pleine largeur */
 @media (min-width: 1536px) {
   /* Ajoute ici tes styles pour les écrans en pleine largeur */
+  .experience-title {
+    font-size: 55px;
+  }
 }

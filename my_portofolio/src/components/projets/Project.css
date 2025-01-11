@@ -22,12 +22,16 @@
   font-weight: bold;
   font-size: 55px;
   padding: 1.7rem;
+  margin-left: 10.3rem;
 }
 
 .project-phrases {
-  font-size: 1.11rem;
   padding-bottom: 1.5rem;
   padding-left: 1.7rem;
+  margin-left: 10.3rem;
+}
+.project-phrases p {
+  font-size: 18px;
 }
 
 .project-content {
@@ -51,6 +55,133 @@
 
 .swiper-button-prev {
   left: 10px;
+}
+@media (max-width: 639px) {
+  .project-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 0;
+  }
+  .project-phrases {
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+  .project-phrases p {
+    font-size: 15px;
+  }
+}
+
+/* SM: Petits appareils ( 640px et plus) */
+@media (min-width: 640px) {
+  /* Ajoute ici tes styles pour les petits écrans */
+  .project-header {
+    font-size: 37px;
+    font-weight: bold;
+    margin-left: 0;
+  }
+  .project-phrases {
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+  .project-phrases p {
+    font-size: 15.5px;
+  }
+}
+
+@media (min-width: 720px) {
+  .project-header {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 4.3rem;
+  }
+  .project-phrases {
+    padding-bottom: 0.7rem;
+    padding-left: 0.8rem;
+    margin-left: 5rem;
+  }
+  .project-phrases p {
+    font-size: 17px;
+  }
+}
+
+/* MD: Appareils de taille moyenne (768px et plus) */
+@media (min-width: 768px) {
+  /* Ajoute ici tes styles pour les écrans de taille moyenne */
+  .project-header {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 10rem;
+  }
+  .project-phrases {
+    padding-bottom: 1rem;
+    padding-left: 1.1rem;
+    margin-left: 10rem;
+  }
+  .project-phrases p {
+    font-size: 17px;
+  }
+}
+
+/* LG: Grands appareils (1024px et plus) */
+@media (min-width: 1024px) {
+  /* Ajoute ici tes styles pour les grands écrans */
+  .project-header {
+    font-weight: bold;
+    font-size: 45px;
+    padding: 1.5rem;
+    margin-left: 10.2rem;
+  }
+
+  .project-phrases {
+    padding-bottom: 1.3rem;
+    padding-left: 1.3rem;
+    margin-left: 10.2rem;
+  }
+  .project-phrases p {
+    font-size: 18px;
+  }
+}
+
+/* XL: Très grands appareils (1280px et plus) */
+@media (min-width: 1280px) {
+  /* Ajoute ici tes styles pour les très grands écrans */
+  .project-header {
+    font-weight: bold;
+    font-size: 50px;
+    padding: 1.6rem;
+    margin-left: 10.25rem;
+  }
+
+  .project-phrases {
+    padding-bottom: 1.4rem;
+    padding-left: 1.6rem;
+    margin-left: 10.2rem;
+  }
+  .project-phrases p {
+    font-size: 18px;
+  }
+}
+
+/* FULL: Appareils pleine largeur */
+@media (min-width: 1536px) {
+  /* Ajoute ici tes styles pour les écrans en pleine largeur */
+  .project-header {
+    font-weight: bold;
+    font-size: 55px;
+    padding: 1.7rem;
+    margin-left: 10.3rem;
+  }
+
+  .project-phrases {
+    padding-bottom: 1.5rem;
+    padding-left: 1.7rem;
+    margin-left: 10.3rem;
+  }
+  .project-phrases p {
+    font-size: 18px;
+  }
 }
 
 /* .swiper-navigation {

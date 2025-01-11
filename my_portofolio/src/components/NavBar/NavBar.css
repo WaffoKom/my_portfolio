@@ -1,67 +1,79 @@
+/* Variables pour centraliser les couleurs */
+:root {
+  --nav-bg: hsl(160, 9%, 94%);
+  --nav-hover: hsl(259, 64%, 58%);
+  --icon-color: hsl(252, 50%, 4%);
+}
+
+/* Styles principaux de la navbar */
 .nav-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  pointer-events: none;
-  right: -100px;
-  padding: 0.6rem;
   align-items: center;
-  border-radius: 3rem;
-  margin-right: 1.1rem;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(50%);
   width: 3.6rem;
-  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+  padding: 0.6rem;
+  border-radius: 3rem;
+  background-color: var(--nav-bg);
+  border: 2px solid white;
+  box-shadow: inset 2px -4px 12px -7px rgba(0, 0, 0, 0.71);
+  transition: transform 0.3s ease, right 0.5s ease, backdrop-filter 0.3s ease;
   backdrop-filter: blur(3px) saturate(180%);
   -webkit-backdrop-filter: blur(3px) saturate(180%);
   z-index: 999;
 }
-.nav-bar {
-  position: fixed;
-  top: 360%;
-  background-color: hsl(160, 9%, 94%);
-  border: 2px solid white;
-  box-shadow: 2px -4px 12px -7px rgba(0, 0, 0, 0.71) inset;
-  -webkit-box-shadow: 2px -4px 12px -7px rgba(0, 0, 0, 0.71) inset;
-  -moz-box-shadow: 2px -4px 12px -7px rgba(0, 0, 0, 0.71) inset;
-  transition: transform 0.3s ease;
-  transition-property: right 0.5s ease;
-}
 
+/* États visible et caché de la navbar */
 .nav-bar.visible {
-  transform: translateX(-100px);
+  right: 30px;
   pointer-events: auto;
 }
+
 .nav-bar.hidden {
-  transform: translateX(100px);
+  right: -300px;
+  pointer-events: none;
 }
+
+/* Styles pour les liens de la navbar */
 .nav-item-link {
-  font-size: 1.18rem;
+  font-size: 1rem;
   border-radius: 100%;
-  padding: 7px 5px;
-  color: hsl(252, 50%, 4%);
-  background-color: hsl(160, 9%, 94%);
+  padding: 10px;
+  color: var(--icon-color);
+  background-color: var(--nav-bg);
   border: none;
-  stroke: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-/* .nav-item-link:hover {
-  background-color: hsl(259, 64%, 58%);
-} */
 
+.nav-item-link:hover {
+  background-color: var(--nav-hover);
+}
+
+/* Styles pour les icônes */
 .custom-icon-class {
+  font-size: 24px;
   background-color: transparent;
-  stroke: none;
+  transition: color 0.4s ease;
 }
 
-.nav-bar .custom-icon-class {
-  transition: color 0.4s ease, background-color 0.4s ease;
-}
 /* Responsive navbar */
-
 @media (max-width: 768px) {
   .nav-bar {
-    width: 3rem;
+    width: 3.5rem;
+    top: 100%;
+    right: 10px;
   }
+
   .nav-item-link {
-    padding: 6px 3px;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .custom-icon-class {
+    font-size: 20px;
   }
 }
