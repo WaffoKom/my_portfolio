@@ -1,5 +1,5 @@
 import "./Header.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoon,
@@ -24,6 +24,18 @@ const Header: React.FC = () => {
   };
   const [menuVisible, setMenuVisible] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 500); // Change 50 to adjust scroll threshold
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleChangeLanguage = (newLanguage: string) => {
     newLanguage = currentLanguage == "en" ? "fr" : "en";
     dispatch(setLanguage(newLanguage));
@@ -35,7 +47,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className="header blur">
+    <div className={`header ${isScrolled ? "blur" : ""}`}>
       <div className="left">
         <button className="nav-toggle-button" onClick={toggleNavBar}>
           <FontAwesomeIcon icon={faBars} id="fabars" />

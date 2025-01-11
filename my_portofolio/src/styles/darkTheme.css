@@ -8,16 +8,34 @@
 }
 /* Header Section */
 .dark-theme .header {
-  --backgroud-color: transparent;
-  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+  --backgroud-color: hsla(252, 50%, 4%, 0.4);
+  backdrop-filter: blur(5px); /* Flou de 5px */
+  -webkit-backdrop-filter: blur(5px);
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease,
+    var(--background-color) 0.3s ease;
+}
+
+.dark-theme .header.blur {
+  background-color: hsla(252, 50%, 4%, 0.8); /* Légèrement plus opaque */
+  backdrop-filter: blur(10px) saturate(5%); /* Augmentation du flou */
+  -webkit-backdrop-filter: blur(10px) saturate(5%);
+}
+.dark-theme .header .right {
+  background: none;
+}
+.dark-theme .header .left {
+  background: none;
+}
+.dark-theme .theme-toggle-button {
+  background: none;
 }
 .dark-theme #faState {
+  background: none;
   --border-color: #171717;
   border: 0.1rem solid var(--border-color);
 }
-.dark-theme .header.blur {
-  backdrop-filter: blur(3px) saturate(180%);
-  -webkit-backdrop-filter: blur(3px) saturate(180%);
+.dark-theme .language-icons {
+  background: none;
 }
 .dark-theme .language-menu {
   --background-color: hsl(206, 51%, 9%);
@@ -26,6 +44,7 @@
   --background-color: hsl(206, 51%, 9%);
 }
 .dark-theme .language-button-choice {
+  background: none;
   --border-color: #171717;
   border: 0.1rem solid var(--border-color);
 }
@@ -36,12 +55,16 @@
   --background-color: hsl(206, 51%, 9%);
 }
 .dark-theme .nav-toggle-button {
+  --backgroud-color: hsla(252, 50%, 4%, 0.4);
   --border-color: #171717;
   border: 0.1rem solid var(--border-color);
   border-radius: 8px;
-  /*--background-color: hsl(206, 51%, 9%); */
 }
-
+/* Career Section */
+.dark-theme .verticalTimeElement {
+  --background-color: none;
+  --text-color: none;
+}
 /* Navbar Section */
 .dark-theme .nav-bar {
   --border-color: #171717;

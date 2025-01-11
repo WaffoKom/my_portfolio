@@ -7,14 +7,18 @@
   z-index: 1000;
   width: 100%;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+
+  background-color: whitesmoke;
+  backdrop-filter: blur(3px) saturate(110%);
+  -webkit-backdrop-filter: blur(3px) saturate(110%);
+  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s,
+    background-color 0.3s ease;
   height: 3.8rem;
 }
 .header.blur {
-  backdrop-filter: blur(3px) saturate(180%);
-  -webkit-backdrop-filter: blur(3px) saturate(180%);
-  z-index: 999;
+  backdrop-filter: blur(10px) saturate(150%); /* Augmentation du flou */
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement plus opaque */
 }
 .left button {
   cursor: pointer;
