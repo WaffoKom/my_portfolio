@@ -1,7 +1,10 @@
 .list-realization {
   list-style-type: disc;
 }
-
+.verticalTimeElement {
+  background: none;
+  color: none;
+}
 .list-realization > * + * {
   margin-top: 0.5rem;
 }
@@ -23,19 +26,19 @@
   font-size: 24px;
   font-weight: bold;
 }
-.dark-theme .timeline-container-experience {
+/* .dark-theme .timeline-container-experience {
   color: #ffffff;
-}
+} */
 
 .link-timeline-description {
   display: block;
-  color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin: 0;
+  color: hsl(259, 100%, 68%);
 }
 .dark-theme .link-timeline-description {
-  color: #ffffff;
+  color: hsl(259, 100%, 68%);
 }

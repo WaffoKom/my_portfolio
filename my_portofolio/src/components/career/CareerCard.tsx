@@ -23,6 +23,7 @@ export const CareerCard: React.FC<{ experience: Experience }> = ({
   };
   return (
     <VerticalTimelineElement
+      className="verticalTimeElement"
       contentStyle={theme === "light" ? light : dark}
       contentArrowStyle={{
         borderRight:
