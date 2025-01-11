@@ -25,9 +25,20 @@
 .project-content {
   border: 4px solid blue;
 }
-
-.swiper-navigation {
+/* .swiper-navigation {
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  background-position: center;
+  background-attachment: fixed;
 }
+.swiper-navigation-light {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.swiper-navigation-dark {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+} */

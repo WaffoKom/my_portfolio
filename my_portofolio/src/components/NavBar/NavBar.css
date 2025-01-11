@@ -9,8 +9,11 @@
   border-radius: 3rem;
   margin-right: 1.1rem;
   width: 3.6rem;
+  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  z-index: 999;
 }
-
 .nav-bar {
   position: fixed;
   top: 360%;
@@ -22,6 +25,7 @@
   transition: transform 0.3s ease;
   transition-property: right 0.5s ease;
 }
+
 .nav-bar.visible {
   transform: translateX(-100px);
   pointer-events: auto;
@@ -38,8 +42,9 @@
   border: none;
   stroke: none;
 }
-.nav-item-link:hover {
-}
+/* .nav-item-link:hover {
+  background-color: hsl(259, 64%, 58%);
+} */
 
 .custom-icon-class {
   background-color: transparent;

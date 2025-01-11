@@ -33,13 +33,7 @@ const Header: React.FC = () => {
   const toggleNavBar = () => {
     setNavVisible((prev) => !prev);
   };
-  document.addEventListener("scroll", () => {
-    const element = document.querySelector(".header");
-    if (window.scrollY > 100) {
-      element?.classList.remove(".blur");
-    }
-    element?.classList.add(".blur");
-  });
+
   return (
     <div className="header blur">
       <div className="left">

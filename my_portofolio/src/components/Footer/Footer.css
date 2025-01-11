@@ -28,7 +28,7 @@
 .link-icons {
   text-decoration: none;
   padding: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-inline: 2rem;
   border-radius: 100%;
   background-color: whitesmoke;
@@ -60,6 +60,7 @@
 .icon-link {
   color: #151618;
   border-radius: 100%;
+  font-size: 1.15rem;
 }
 
 /* Responsive */

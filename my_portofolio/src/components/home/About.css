@@ -1,7 +1,5 @@
-* {
-  background-color: whitesmoke;
-}
 .about-container {
+  background-color: whitesmoke;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: flex-start;

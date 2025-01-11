@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: #24292e;
+  color: #24292e !important;
   flex-wrap: wrap;
   padding: 0.2rem;
   margin: 0;
@@ -34,44 +34,44 @@
   transition: background-color 0.4s, color 0.4s;
 }
 .site-link.google {
-  background-color: hsl(259, 64%, 58%);
-  color: whitesmoke;
+  background-color: hsl(259, 64%, 58%) !important;
+  color: whitesmoke !important;
   margin-left: 1.2rem;
 }
 .site-link.google .google-blank {
-  color: hsl(259, 64%, 58%);
+  color: hsl(259, 64%, 58%) !important;
   transition: color 0.4s;
 }
 .site-link.google:hover {
-  background-color: hsl(259, 47%, 48%);
+  background-color: hsl(259, 47%, 48%) !important;
 }
 .site-link.google:hover .google-blank {
-  color: hsl(259, 47%, 48%);
+  color: hsl(259, 47%, 48%) !important;
 }
 .site-link.github {
-  background-color: #24292e;
-  color: whitesmoke;
+  background-color: #24292e !important;
+  color: whitesmoke !important;
   margin-left: 1.2rem;
 }
 .site-link.github .github-blank {
-  color: #24292e;
+  color: #24292e !important;
   transition: color 0.4s;
 }
 .site-link.github:hover {
-  background-color: #24292a;
-  color: whitesmoke;
+  background-color: #24292a !important;
+  color: whitesmoke !important;
 }
 .site-link.github:hover .github-blank {
-  color: #24292a;
+  color: #24292a !important;
 }
 
 .site-link span {
-  color: whitesmoke;
-  background-color: transparent;
+  color: whitesmoke !important;
+  background-color: transparent !important;
 }
 .site-link:hover span {
-  color: whitesmoke;
-  background-color: transparent;
+  color: whitesmoke !important;
+  background-color: transparent !important;
 }
 .site-blank {
   border-radius: 100%;
@@ -93,7 +93,7 @@
 }
 #tags-unique {
   margin: 0.3rem;
-  font-size: 1.04rem;
+  font-size: 1.2rem;
   line-height: 1.3;
 }
 
@@ -101,7 +101,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 2px solid whitesmoke;
+  border: 2px solid whitesmoke !important;
 }
 
 /* Responsive */
@@ -120,6 +120,10 @@
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
   }
   .project-card-description {
     display: flex;
@@ -133,6 +137,7 @@
   #tags-unique {
     /* border: 4px solid green; */
     padding: 0.2rem;
+    font-size: 1.04rem;
   }
   .site-link {
     width: 8rem;
@@ -161,6 +166,8 @@
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+    padding: 4.5rem;
+    padding-left: 0;
   }
   .project-card-description {
     display: flex;
@@ -174,6 +181,7 @@
   #tags-unique {
     /* border: 4px solid green; */
     padding: 0.2rem;
+    font-size: 1.04rem;
   }
   .site-link {
     width: 8rem;
@@ -202,13 +210,14 @@
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+    padding: 4.5rem;
   }
   .project-card-description {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    color: #24292e;
+    color: #24292e !important;
     flex-wrap: wrap;
     padding-top: 1rem;
     height: 100%;
@@ -231,6 +240,7 @@
   #tags-unique {
     /* border: 4px solid green; */
     padding: 0.2rem;
+    font-size: 1.04rem;
   }
   .site-link {
     width: 8rem;
@@ -261,13 +271,16 @@
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+    padding: 6rem;
+    padding-left: 0;
+    padding-right: 0;
   }
   .project-card-description {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    color: #24292e;
+    color: #24292e !important;
     flex-wrap: wrap;
     padding: 0.5rem;
     width: 80%;
@@ -284,6 +297,11 @@
     width: 7rem;
     padding: 0.5rem;
     transition: background-color 0.4s, color 0.4s;
+  }
+  #tags-unique {
+    /* border: 4px solid green; */
+    padding: 0.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -302,6 +320,9 @@
     width: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+    padding: 6rem;
+    padding-left: 0;
+    padding-right: 0;
   }
   .project-card-description {
     display: flex;
@@ -326,6 +347,11 @@
     padding: 0.7rem;
     transition: background-color 0.4s, color 0.4s;
   }
+  #tags-unique {
+    /* border: 4px solid green; */
+    padding: 0.4rem;
+    font-size: 1.2rem;
+  }
 }
 
 /* FULL: Appareils pleine largeur */
@@ -344,13 +370,16 @@
     background-repeat: no-repeat;
     object-fit: cover;
     margin-left: 8rem;
+    padding: 6rem;
+    padding-left: 0;
+    padding-right: 0;
   }
   .project-card-description {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    color: #24292e;
+    color: #24292e !important;
     flex-wrap: wrap;
     padding: 0.5rem;
     width: 80%;
@@ -367,5 +396,10 @@
     width: 7rem;
     padding: 0.7rem;
     transition: background-color 0.4s, color 0.4s;
+  }
+  #tags-unique {
+    /* border: 4px solid green; */
+    padding: 0.4rem;
+    font-size: 1.2rem;
   }
 }

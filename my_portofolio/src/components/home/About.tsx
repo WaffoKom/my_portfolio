@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   const { t } = useTranslation("about");
+
   const backLine = (text: string) => {
     return text.split("\n").map((line, index) => (
       <React.Fragment key={index}>
@@ -20,8 +21,9 @@ const About: React.FC = () => {
       </React.Fragment>
     ));
   };
+
   return (
-    <section className={`about-container `}>
+    <section className="about-container">
       <div className="about-left">
         <div className="about-text-presentation">
           <h1>{t("perso.title")}</h1>

@@ -67,22 +67,22 @@
   margin-top: 4.6rem;
 }
 .external-link-github {
-  background-color: hsl(259, 64%, 58%);
+  background-color: hsl(259, 64%, 58%) !important;
   color: whitesmoke;
   transition-property: background-color, color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
 .external-link-github #link-github {
-  background-color: hsl(259, 64%, 58%);
+  background-color: hsl(259, 64%, 58%) !important;
   color: hsl(0, 0%, 16%);
   transition: background-color 0.4s, color 0.4s;
 }
 .external-link-github:hover {
-  background-color: hsl(259, 47%, 48%);
+  background-color: hsl(259, 47%, 48%) !important;
 }
 .external-link-github:hover #link-github {
-  background-color: hsl(259, 47%, 48%);
+  background-color: hsl(259, 47%, 48%) !important;
   color: hsl(0, 0%, 16%);
 }
 
@@ -108,7 +108,7 @@
 /* Responsive part */
 
 /* XS: Très petits appareils (moins de 640px) */
-@media (max-width: 639px) {
+@media (max-width: 546px) {
   /* Ajoute ici tes styles pour les très petits écrans */
   .icon-grid-container {
     width: 100%;
@@ -117,14 +117,29 @@
   }
   .skills-presentations {
     display: grid;
-    grid-template-columns: repeat(3, 2rem);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1rem);
     justify-items: center;
-    row-gap: 0.4rem;
+    row-gap: 1.5rem;
     column-gap: 1rem;
   }
 }
 
+@media (min-width: 547px) {
+  /* Ajoute ici tes styles pour les très petits écrans */
+  .icon-grid-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .skills-presentations {
+    display: grid;
+    grid-template-columns: repeat(3, 1.7rem);
+    grid-template-rows: repeat(2, auto);
+    justify-items: center;
+    row-gap: 1.5rem;
+    column-gap: 0.5rem;
+  }
+}
 /* SM: Petits appareils (640px et plus) */
 @media (min-width: 640px) {
   /* Ajoute ici tes styles pour les petits écrans */

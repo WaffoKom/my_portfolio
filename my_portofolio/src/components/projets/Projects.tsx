@@ -12,11 +12,14 @@ import isis from "../../assets/work/Isis-blog.png";
 import weather from "../../assets/work/weather-app.png";
 import ProjetCard from "./ProjetCard";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useAppSelector } from "../../hooks";
 import "swiper/swiper-bundle.css";
 
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 
 const Projects: React.FC = () => {
+  const { theme } = useAppSelector((state) => state.theme);
+
   const { t } = useTranslation("project");
 
   const projects = [
@@ -36,21 +39,21 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "javascript",
-          color: "blue",
+          color: "#f4a874",
         },
         {
           name: "bootstrap",
-          color: "green",
+          color: "#7b4fd8",
         },
         {
           name: "css",
-          color: "pink",
+          color: "#a33686",
         },
       ],
       image: altplus,
       thumbnail: thumbAltplus,
-      demo: "",
-      sourcecode: "",
+      demo: "https://altplus.dev/",
+      sourcecode: "https://github.com/artsiders",
     },
     {
       name: "docblog",
@@ -58,15 +61,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "javascript",
-          color: "blue",
+          color: "#f4a874",
         },
         {
           name: "python",
-          color: "pink",
+          color: "#0288d1",
         },
         {
           name: "css",
-          color: "pink",
+          color: "#a33686",
         },
       ],
       image: "",
@@ -80,15 +83,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue",
+          color: "#087ea4",
         },
         {
           name: "redux",
-          color: "pink",
+          color: "#764abc",
         },
         {
           name: "expressjs",
-          color: "blue",
+          color: "#ff6c37",
         },
       ],
       image: isis,
@@ -102,15 +105,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue",
+          color: "#087ea4",
         },
         {
           name: "css",
-          color: "pink",
+          color: "#a33686",
         },
         {
           name: "javascript",
-          color: "blue",
+          color: "#f4a874",
         },
       ],
       image: weather,
@@ -124,15 +127,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue",
+          color: "#087ea4",
         },
         {
           name: "css",
-          color: "pink",
+          color: "#a33686",
         },
         {
           name: "javascript",
-          color: "blue",
+          color: "#f4a874",
         },
       ],
       image: "",
@@ -146,15 +149,15 @@ const Projects: React.FC = () => {
       tags: [
         {
           name: "reactjs",
-          color: "blue",
+          color: "#087ea4",
         },
         {
           name: "css",
-          color: "pink",
+          color: "#a33686",
         },
         {
           name: "redux",
-          color: "blue",
+          color: "#764abc",
         },
       ],
       image: skypey,
@@ -177,32 +180,43 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-
-      <Swiper
+      <div
         style={
           {
-            "--swiper-navigation-color": "#2424",
-            "--swiper-pagination-color": "#2424",
+            width: "100%",
+            height: "100%",
           } as React.CSSProperties
         }
-        speed={600}
-        parallax={true}
-        pagination={{
-          clickable: true,
-        }}
-        cssMode={true}
-        navigation={true}
-        mousewheel={true}
-        modules={[Parallax, Pagination, Navigation]}
-        className="swiper-navigation"
-        keyboard={true}
       >
-        {projects.slice(1).map((project, index) => (
-          <SwiperSlide key={index}>
-            <ProjetCard {...project} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          style={
+            {
+              "--swiper-navigation-color": "#2424",
+              "--swiper-pagination-color": "#2424",
+            } as React.CSSProperties
+          }
+          speed={600}
+          parallax={true}
+          pagination={{
+            clickable: true,
+          }}
+          cssMode={true}
+          navigation={true}
+          mousewheel={true}
+          modules={[Parallax, Pagination, Navigation]}
+          className={` swiper-navigation ${
+            theme === "light"
+              ? "swiper-navigation-light"
+              : "swiper-navigation-dark"
+          }`}
+        >
+          {projects.slice(1).map((project, index) => (
+            <SwiperSlide key={index}>
+              <ProjetCard {...project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 };
