@@ -19,7 +19,6 @@ export default function theme(
         ...state,
         theme: action.payload,
       };
-
     default:
       return state;
   }

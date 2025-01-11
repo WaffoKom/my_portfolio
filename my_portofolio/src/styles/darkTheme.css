@@ -1,0 +1,114 @@
+.dark-theme {
+  --background-color: hsl(252, 50%, 4%);
+  --text-color: hsl(255, 46%, 95%);
+}
+.dark-theme * {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+/* Header Section */
+.dark-theme .header {
+  --backgroud-color: transparent;
+  transition: backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+}
+.dark-theme #faState {
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+.dark-theme .header.blur {
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+}
+.dark-theme .language-menu {
+  --background-color: hsl(206, 51%, 9%);
+}
+.dark-theme .language-button {
+  --background-color: hsl(206, 51%, 9%);
+}
+.dark-theme .language-button-choice {
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+.dark-theme .language-button-image-d {
+  --background-color: hsl(206, 51%, 9%);
+}
+.dark-theme .language-button-image {
+  --background-color: hsl(206, 51%, 9%);
+}
+.dark-theme .nav-toggle-button {
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+  border-radius: 8px;
+  /*--background-color: hsl(206, 51%, 9%); */
+}
+
+/* Navbar Section */
+.dark-theme .nav-bar {
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+  /* transition: box-shadow 0.3s ease-in-out; /* Pour une transition douce */
+  box-shadow: 2px -4px 12px -7px hsl(252, 50%, 4%) inset;
+  -webkit-box-shadow: 2px -4px 12px -7px hsl(252, 50%, 4%) inset;
+  -moz-box-shadow: 2px -4px 12px -7px hsl(252, 50%, 4%) inset;
+  outline: none;
+}
+*/ .dark-theme .nav-bar:hover {
+  box-shadow: 0 4px 8px 0 hsl(206, 51%, 9%), 0 6px 20px 0 hsl(206, 51%, 9%);
+}
+/* About section */
+
+/* Overview Section */
+.dark-theme .services-types {
+  --background-color: hsl(249, 50%, 13%);
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+
+/* Skills Section */
+.dark-theme .icon-grid {
+  --background-color: hsl(249, 50%, 13%);
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+
+/* Projects Section */
+.dark-theme .projects {
+  --background-color: hsl(208, 50%, 9%);
+}
+.dark-theme .project-presentation {
+  --background-color: hsl(252, 50%, 4%);
+}
+
+/* Testimonial Section */
+
+.dark-theme .testimonials-content {
+  --background-color: hsl(249, 50%, 13%);
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+.dark-theme .testimonials-content:hover {
+  box-shadow: -4px -1px 4px -4px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: -4px -1px 4px -4px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: -4px -1px 4px -4px rgba(0, 0, 0, 0.83);
+}
+.dark-theme .testimonial-post {
+  --text-color: gray;
+}
+
+/* Footer Section */
+.dark-theme .footer-contact {
+  --background-color: hsl(249, 50%, 13%);
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+
+.dark-theme .link-icons {
+  --background-color: hsl(252, 50%, 4%);
+  --border-color: #171717;
+  border: 0.1rem solid var(--border-color);
+}
+.dark-theme .link-icons:hover {
+  box-shadow: -7px 16px 53px -3px rgba(11, 25, 35, 0.35) inset;
+  -webkit-box-shadow: -7px 16px 53px -3px rgba(11, 25, 35, 0.35) inset;
+  -moz-box-shadow: -7px 16px 53px -3px rgba(11, 25, 35, 0.35) inset;
+}

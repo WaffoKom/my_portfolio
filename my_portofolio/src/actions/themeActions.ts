@@ -4,7 +4,6 @@ export interface SetThemeAction {
   type: typeof SET_THEME;
   payload: "light" | "dark";
 }
-
 export type ThemeActionTypes = SetThemeAction;
 
 // Action creator for change theme

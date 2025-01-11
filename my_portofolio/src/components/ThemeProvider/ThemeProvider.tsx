@@ -11,11 +11,7 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     loadTheme(theme);
   }, [theme]);
 
-  return (
-    <div className={theme}>
-      <div className=""> {children}</div>
-    </div>
-  );
+  return <> {children}</>;
 };
 
 export default ThemeProvider;
