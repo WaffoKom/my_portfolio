@@ -25,8 +25,8 @@ function renderApp() {
 }
 
 function fancyLog() {
-  console.log("%c Rendered with👌👍", "background: purple; color: #fff");
-  console.log(store.getState());
+  // console.log("%c Rendered with👌👍", "background: purple; color: #fff");
+  // console.log(store.getState());
 }
 
 renderApp();
