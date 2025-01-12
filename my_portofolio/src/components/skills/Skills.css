@@ -75,7 +75,7 @@
 }
 .external-link-github #link-github {
   background-color: hsl(259, 64%, 58%) !important;
-  color: hsl(0, 0%, 16%);
+  color: hsl(0, 0%, 16%) !important;
   transition: background-color 0.4s, color 0.4s;
 }
 .external-link-github:hover {

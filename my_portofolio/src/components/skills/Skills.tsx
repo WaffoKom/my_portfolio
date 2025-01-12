@@ -11,7 +11,7 @@ import typescript from "../../assets/tech/typescript.png";
 import flutter from "../../assets/tech/flutter.jpeg";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Skills: React.FC = () => {
   const icons = [
@@ -56,7 +56,7 @@ const Skills: React.FC = () => {
         ))}
       </div>
 
-      <Link
+      <NavLink
         to="https://github.com/WaffoKom/"
         className="external-link-github"
         target="_blank"
@@ -64,7 +64,7 @@ const Skills: React.FC = () => {
       >
         <span id="link-github-description">See More</span>
         <FontAwesomeIcon icon={faGithub} id="link-github" />
-      </Link>
+      </NavLink>
     </section>
   );
 };
