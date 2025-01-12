@@ -40,7 +40,7 @@ const About: React.FC = () => {
       </div>
       <div className="about-right">
         <img
-          src="./src/assets/author/danilo_img.jpg"
+          src="/author/danilo_img.jpg"
           alt="image-description"
           className="about-image"
         />
