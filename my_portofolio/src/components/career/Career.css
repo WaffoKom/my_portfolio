@@ -32,14 +32,26 @@
   cursor: pointer;
   font-style: normal;
   flex-grow: 0;
-  transition-property: background-color;
+  transition-property: background-color, color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
   margin-left: 3rem;
 }
+
+.download-resume #icon-resume-download {
+  background-color: hsl(259, 64%, 58%) !important;
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.download-resume:hover {
+  background-color: hsl(259, 47%, 48%) !important;
+}
+.download-resume:hover #icon-resume-download {
+  background-color: hsl(259, 47%, 48%) !important;
+}
 #icon-resume-download {
   border: none;
-  background-color: hsl(259, 64%, 58%) !important;
   color: hsl(0, 0%, 16%) !important;
   border-radius: 100%;
   margin: 0;

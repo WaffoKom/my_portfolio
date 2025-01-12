@@ -55,7 +55,7 @@
   --background-color: hsl(206, 51%, 9%);
 }
 .dark-theme .nav-toggle-button {
-  --backgroud-color: hsla(252, 50%, 4%, 0.4);
+  --background-color: hsla(252, 50%, 4%, 0.4);
   --border-color: #171717;
   border: 0.1rem solid var(--border-color);
   border-radius: 8px;
@@ -69,14 +69,20 @@
 .dark-theme .nav-bar {
   --border-color: #171717;
   border: 0.1rem solid var(--border-color);
-  /* transition: box-shadow 0.3s ease-in-out; /* Pour une transition douce */
-  box-shadow: 2px -4px 12px -7px hsl(252, 50%, 4%) inset;
-  -webkit-box-shadow: 2px -4px 12px -7px hsl(252, 50%, 4%) inset;
-  -moz-box-shadow: 2px -4px 12px -7px hsl(252, 50%, 4%) inset;
-  outline: none;
+  background: hsl(252, 50%, 4%);
 }
-*/ .dark-theme .nav-bar:hover {
-  box-shadow: 0 4px 8px 0 hsl(206, 51%, 9%), 0 6px 20px 0 hsl(206, 51%, 9%);
+
+.dark-theme .nav-item-link {
+  --background-color: hsl(252, 50%, 4%);
+  --icon-color: hsl(255, 46%, 95%);
+  background-color: var(--backgroud-color);
+  color: var(--icon-color);
+  border: none;
+  border-radius: 8rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dark-theme .nav-item-link:hover {
+  background: hsl(259, 64%, 58%);
 }
 /* About section */
 
@@ -101,6 +107,7 @@
 .dark-theme .project-presentation {
   --background-color: hsl(252, 50%, 4%);
 }
+/* ProjectCard Section */
 
 /* Testimonial Section */
 
