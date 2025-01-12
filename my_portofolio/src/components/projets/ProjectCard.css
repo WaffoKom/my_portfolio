@@ -5,6 +5,8 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
   z-index: 0;
 }
 .project-card-img {
@@ -52,11 +54,11 @@
 .site-link.github {
   background-color: #24292e !important;
   color: whitesmoke !important;
-  margin-left: 1.2rem !important;
+  margin-left: 1.2rem;
 }
 .site-link.github .github-blank {
   color: #24292e !important;
-  transition: color 0.4s !important;
+  transition: color 0.4s;
 }
 .site-link.github:hover {
   background-color: #24292a !important;
@@ -72,7 +74,7 @@
 }
 .site-link:hover span {
   color: whitesmoke !important;
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
 }
 .site-blank {
   border-radius: 100%;
