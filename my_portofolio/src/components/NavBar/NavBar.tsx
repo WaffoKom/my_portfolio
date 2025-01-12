@@ -53,7 +53,7 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
         <Link
           to={item.link}
           key={index}
-          className="nav-item-link "
+          className="nav-item-link"
           spy={true}
           offset={-80}
           smooth={true}
