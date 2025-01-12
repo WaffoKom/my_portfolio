@@ -9,6 +9,7 @@
 }
 
 .project-presentation {
+  background: white;
   /* border: 8px solid yellow; */
   height: 300px;
 }
@@ -38,24 +39,6 @@
   /* border: 4px solid blue; */
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  background: none;
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.swiper-button-next {
-  right: 10px;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
 @media (max-width: 639px) {
   .project-header {
     font-size: 30px;

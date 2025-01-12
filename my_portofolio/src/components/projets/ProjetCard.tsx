@@ -3,7 +3,7 @@ import React from "react";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { AiOutlineGithub } from "react-icons/ai";
 import ProjetCardProps from "../../types/ProjetCard.ts";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ProjetCard: React.FC<typeof ProjetCardProps> = ({
   name,
@@ -46,7 +46,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
           ))}
         </div>
         <div className="externals-site-links">
-          <Link
+          <NavLink
             to={demo || "#"}
             target="_blank"
             rel="noopener noreferrer"
@@ -54,8 +54,8 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
           >
             <span>Demo</span>{" "}
             <AiOutlineGoogle className="site-blank google-blank" />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to={sourcecode || "#"}
             target="_blank"
             rel="noopener noreferrer"
@@ -63,7 +63,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
           >
             <span>Code</span>{" "}
             <AiOutlineGithub className="site-blank github-blank" />
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>

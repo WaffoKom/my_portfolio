@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   // Detect scrolling
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 500); // Change 50 to adjust scroll threshold
+      setIsScrolled(window.scrollY > 100); // Change 100 to adjust scroll threshold
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className={`header ${isScrolled ? "blur" : ""}`}>
+    <div className={`header ${isScrolled ? "blur" : "header"}`}>
       <div className="left">
         <button className="nav-toggle-button" onClick={toggleNavBar}>
           <FontAwesomeIcon icon={faBars} id="fabars" />

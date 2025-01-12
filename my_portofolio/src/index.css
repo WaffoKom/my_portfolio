@@ -22,9 +22,10 @@ html,
 /* Dark Generalization */
 .dark-theme {
   background-color: hsl(252, 50%, 4%);
+  color: hsl(255, 46%, 95%);
   transition-property: background-color, color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  transition-duration: 01.2s;
+  transition-timing-function: ease-in-out;
 }
 .dark-theme html {
   background-color: hsl(252, 50%, 4%);

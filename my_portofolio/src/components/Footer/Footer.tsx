@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           target="_blank"
           rel="noreferrer noopener"
           id="footer-link-copyright"
-          href="/"
+          href="/about"
         >
           <strong>DaniloWaffis - WaffoKom</strong>
         </a>

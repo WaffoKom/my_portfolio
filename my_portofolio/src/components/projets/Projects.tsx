@@ -12,14 +12,11 @@ import isis from "../../assets/work/Isis-blog.png";
 import weather from "../../assets/work/weather-app.png";
 import ProjetCard from "./ProjetCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useAppSelector } from "../../hooks";
-import "swiper/swiper-bundle.css";
 
+import "swiper/swiper-bundle.css";
 import { Navigation, Pagination, Parallax } from "swiper/modules";
 
 const Projects: React.FC = () => {
-  const { theme } = useAppSelector((state) => state.theme);
-
   const { t } = useTranslation("project");
 
   const projects = [
@@ -188,19 +185,14 @@ const Projects: React.FC = () => {
           pagination={{
             clickable: true,
           }}
-          cssMode={true}
           navigation={{
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
           }}
+          cssMode={true}
           mousewheel={true}
           preventInteractionOnTransition={true}
           modules={[Parallax, Pagination, Navigation]}
-          className={` swiper-navigation ${
-            theme === "light"
-              ? "swiper-navigation-light"
-              : "swiper-navigation-dark"
-          }`}
         >
           {projects.slice(1).map((project, index) => (
             <SwiperSlide key={index}>

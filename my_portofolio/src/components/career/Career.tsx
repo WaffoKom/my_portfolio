@@ -5,7 +5,6 @@ import { CgSoftwareDownload } from "react-icons/cg";
 import altplus from "../../assets/company/altplus.png";
 import free from "../../assets/company/free.png";
 import scs from "../../assets/company/scs.jpg";
-import { Link } from "react-router-dom";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import CareerCard from "./CareerCard";
 import { useAppSelector } from "../../hooks";
@@ -81,15 +80,16 @@ const Career: React.FC = () => {
           ))}
         </VerticalTimeline>
       </div>
-      <Link
-        to="./document/CV-Daniel_Prince_KOM_WAFFO.pdf"
+      <a
+        href="./document/CV-Daniel_Prince_KOM_WAFFO.pdf"
+        download="CV-Daniel_Prince_KOM_WAFFO.pdf"
         className="download-resume"
         target="_blank"
         rel="noopener noreferrer"
       >
         {t("myResume.youCan")}
         <CgSoftwareDownload id="icon-resume-download" size={20} />
-      </Link>
+      </a>
     </section>
   );
 };

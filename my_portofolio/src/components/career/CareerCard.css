@@ -39,6 +39,9 @@
   margin: 0;
   color: hsl(259, 100%, 68%);
 }
+.link-timeline-description:hover {
+  text-decoration: underline;
+}
 .dark-theme .link-timeline-description {
   color: hsl(259, 100%, 68%);
 }
