@@ -61,7 +61,7 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
           smooth={true}
           duration={400}
           activeClass="active"
-          onSetActive={() => navigate(`/${item.link}`)}
+          onSetActive={() => navigate(`/#${item.link}`)}
         >
           {createElement(item.icon, { className: item.iconClassName })}
         </Link>
