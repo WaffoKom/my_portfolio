@@ -8,7 +8,8 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const About: React.FC = () => {
   const { t } = useTranslation("about");
@@ -44,34 +45,34 @@ const About: React.FC = () => {
           className="about-image"
         />
         <div className="external-links">
-          <Link
+          <NavLink
             to="https://wa.me/+237656294240"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faWhatsapp} className="link-icon" />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="https://www.linkedin.com/in/daniel-kom-b4a861314/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} className="link-icon" />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="https://github.com/WaffoKom/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} className="link-icon" />
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="mailTo:kwdparabic@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faEnvelope} className="link-icon" />
-          </Link>
+          </NavLink>
         </div>
       </div>
     </section>
