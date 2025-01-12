@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# DaniloWaffis Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is my personal portfolio, created using `React`, `Redux` and `CSS`. It showcases my skills as a developer and highlights some of my projects.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dark mode
+- Multilingual support
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js and npm installed on your machine
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone this code repository to your machine
+2. Open a terminal in the project folder and run the command `pnpm install`  to install the dependencies
+3. Run the command `pnpm run dev`  to launch the application in development mode
+4. Open your browser and visit http://localhost:5173 to see the application in action
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+## Scripts
+
+The following scripts are available in this project:
+
+- `dev`: Launches the application in development mode using Vite.
+- `build`: Compiles the JavaScript code and builds the application for production.
+- `lint`: Runs ESLint to detect and fix errors in the TypeScript code.
+- `preview`: Launches a preview version of the application using Vite.
+
+To run a script, open a terminal and type `npm run script-name`, for example:
+
+- `pnpm run dev` This will launch the application in development mode using Vite.
