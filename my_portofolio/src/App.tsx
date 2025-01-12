@@ -13,8 +13,8 @@ import { BrowserRouter } from "react-router-dom";
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Header />
       <main>
+        <Header />
         <section id="about">
           <About />
         </section>
@@ -30,8 +30,8 @@ const App: React.FC = () => {
         </section>
         <section id="contact">
           <Testimonials />
-          <Footer />
         </section>
+        <Footer />
       </main>
     </BrowserRouter>
   );

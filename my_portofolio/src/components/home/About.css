@@ -4,7 +4,7 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: flex-start;
   width: 100%;
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 .about-right {
   display: flex;
@@ -29,6 +29,7 @@
   transition-property: background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
+  margin-bottom: 5rem;
 }
 .about-container a:focus {
   outline: none;
