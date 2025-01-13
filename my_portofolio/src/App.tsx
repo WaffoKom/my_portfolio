@@ -28,7 +28,7 @@ const App: React.FC = () => {
           <Skills />
           <Projects />
         </section>
-        <section id="contact">
+        <section id="testimonials">
           <Testimonials />
         </section>
         <Footer />
