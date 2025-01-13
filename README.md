@@ -30,6 +30,6 @@ The following scripts are available in this project:
 - `lint`: Runs ESLint to detect and fix errors in the TypeScript code.
 - `preview`: Launches a preview version of the application using Vite.
 
-To run a script, open a terminal and type `npm run script-name`, for example:
+To run a script, open a terminal and type `pnpm run script-name`, for example:
 
 - `pnpm run dev` This will launch the application in development mode using Vite.
