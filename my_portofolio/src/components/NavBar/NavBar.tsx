@@ -43,7 +43,7 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
     //   iconClassName: "custom-icon-class",
     // },
     {
-      link: "contact",
+      link: "testimonials",
       icon: () => <FontAwesomeIcon icon={faContactBook} />,
       iconClassName: "custom-icon-class",
     },
