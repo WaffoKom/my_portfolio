@@ -6,7 +6,7 @@ const savedTheme =
   (localStorage.getItem("theme") as "light" | "dark") || "light";
 // Initial State
 const initialState: ThemState = {
-  theme: savedTheme ? savedTheme : "light",
+  theme: savedTheme ? savedTheme : "dark",
 };
 
 export default function theme(

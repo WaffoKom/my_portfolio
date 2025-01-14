@@ -27,55 +27,64 @@
   display: flex;
   margin-bottom: 1.2rem;
 }
+
 .site-link {
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Centré pour un alignement plus équilibré */
   align-items: center;
   text-decoration: none;
   width: 7rem;
   padding: 0.7rem;
-  transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
+
 .site-link.google {
-  background-color: hsl(259, 64%, 58%) !important;
-  color: whitesmoke !important;
+  background-color: hsl(259, 64%, 58%);
+  color: whitesmoke;
   margin-left: 1.2rem;
 }
-.site-link.google .google-blank {
-  color: hsl(259, 64%, 58%) !important;
-  transition: color 0.4s !important;
-}
+
 .site-link.google:hover {
-  background-color: hsl(259, 47%, 48%) !important;
+  background-color: hsl(259, 47%, 48%);
 }
+
+.site-link.google .google-blank {
+  color: hsl(259, 64%, 58%);
+  transition: color 0.4s ease;
+}
+
 .site-link.google:hover .google-blank {
-  color: hsl(259, 47%, 48%) !important;
+  color: hsl(259, 47%, 48%);
 }
+
 .site-link.github {
-  background-color: #24292e !important;
-  color: whitesmoke !important;
+  background-color: #24292e;
+  color: whitesmoke;
   margin-left: 1.2rem;
 }
-.site-link.github .github-blank {
-  color: #24292e !important;
-  transition: color 0.4s;
-}
+
 .site-link.github:hover {
-  background-color: #24292a !important;
-  color: whitesmoke !important;
+  background-color: #24292a;
 }
+
+.site-link.github .github-blank {
+  color: #24292e;
+  transition: color 0.4s ease;
+}
+
 .site-link.github:hover .github-blank {
-  color: #24292a !important;
+  color: #24292a;
 }
 
 .site-link span {
-  color: whitesmoke !important;
-  background-color: transparent !important;
+  color: whitesmoke;
+  background-color: transparent;
 }
+
 .site-link:hover span {
-  color: whitesmoke !important;
-  /* background-color: transparent !important; */
+  color: whitesmoke;
 }
+
 .site-blank {
   border-radius: 100%;
   border: none;
@@ -279,7 +288,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    color: #24292e !important;
+    color: #24292e;
     flex-wrap: wrap;
     padding: 0.5rem;
     width: 80%;
@@ -295,7 +304,7 @@
     text-decoration: none;
     width: 7rem;
     padding: 0.5rem;
-    transition: background-color 0.4s, color 0.4s !important;
+    transition: background-color 0.4s, color 0.4s;
   }
   #tags-unique {
     /* border: 4px solid green; */
@@ -376,7 +385,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    color: #24292e !important;
+    color: #24292e;
     flex-wrap: wrap;
     padding: 0.5rem;
     width: 80%;
@@ -392,7 +401,7 @@
     text-decoration: none;
     width: 7rem;
     padding: 0.7rem;
-    transition: background-color 0.4s, color 0.4s !important;
+    transition: background-color 0.4s, color 0.4s;
   }
   #tags-unique {
     /* border: 4px solid green; */
