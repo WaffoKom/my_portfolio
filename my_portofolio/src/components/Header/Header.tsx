@@ -55,10 +55,10 @@ const Header: React.FC = () => {
       </div>
       <div className="right">
         <button className="theme-toggle-button" onClick={handleToggleTheme}>
-          {theme === "light" ? (
-            <FontAwesomeIcon icon={faMoon} id="faState" />
-          ) : (
+          {theme === "dark" ? (
             <FontAwesomeIcon icon={faSun} id="faState" />
+          ) : (
+            <FontAwesomeIcon icon={faMoon} id="faState" />
           )}
         </button>
         <div className="language-icons">
