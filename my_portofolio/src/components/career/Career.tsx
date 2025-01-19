@@ -81,7 +81,7 @@ const Career: React.FC = () => {
         </VerticalTimeline>
       </div>
       <a
-        href="./document/CV-Daniel_Prince_KOM_WAFFO.pdf"
+        href="./document/kom-waffo-daniel-prince.pdf"
         download="kom-waffo-daniel-prince.pdf"
         className="download-resume"
         target="_blank"
