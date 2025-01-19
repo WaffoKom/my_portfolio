@@ -82,7 +82,7 @@ const Career: React.FC = () => {
       </div>
       <a
         href="./document/CV-Daniel_Prince_KOM_WAFFO.pdf"
-        download="CV-Daniel_Prince_KOM_WAFFO.pdf"
+        download="kom-waffo-daniel-prince.pdf"
         className="download-resume"
         target="_blank"
         rel="noopener noreferrer"

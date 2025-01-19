@@ -36,7 +36,10 @@ const Skills: React.FC = () => {
       name: "tailwindcss",
       icon: tailwindcss,
     },
-    { name: "typescript", icon: typescript },
+    {
+      name: "typescript",
+      icon: typescript,
+    },
     {
       name: "flutter",
       icon: flutter,
