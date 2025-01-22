@@ -160,6 +160,7 @@ p {
     row-gap: 0rem;
     column-gap: 2rem;
     align-items: flex-start;
+    margin-left: 1.5rem;
   }
   .about-image {
     width: 80%;
@@ -206,6 +207,7 @@ p {
     row-gap: 0rem;
     column-gap: 2rem;
     align-items: flex-start;
+    margin-left: 2rem;
   }
   .about-image {
     width: 80%;
@@ -253,6 +255,7 @@ p {
     column-gap: 2rem;
     justify-items: flex-start;
     align-items: flex-start;
+    margin-left: 3.75rem;
   }
   .about-image {
     width: 80%;
