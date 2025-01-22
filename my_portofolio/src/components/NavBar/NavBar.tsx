@@ -11,10 +11,8 @@ import {
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { NavItem } from "../../types/NavItem.ts";
 import { Link } from "react-scroll";
-import { useNavigate } from "react-router-dom";
 import React, { createElement } from "react";
 const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
-  const navigate = useNavigate();
   const nav: NavItem[] = [
     {
       link: "about",
@@ -61,7 +59,9 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
           smooth={true}
           duration={400}
           activeClass="active"
-          onSetActive={() => navigate(`/#${item.link}`)}
+          onSetActive={() =>
+            window.history.replaceState(null, "", `/#${item.link}`)
+          }
         >
           {createElement(item.icon, { className: item.iconClassName })}
         </Link>
