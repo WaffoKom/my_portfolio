@@ -56,7 +56,10 @@ p {
   color: #151618;
 }
 .about-image {
-  width: 500px;
+  max-width: 500px;
+  max-height: 500px;
+  width: 450px;
+  height: 450px;
 }
 
 /* Responsive part  */
