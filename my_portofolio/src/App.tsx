@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import About from "./components/home/About.tsx";
 import Skills from "./components/skills/Skills.tsx";
