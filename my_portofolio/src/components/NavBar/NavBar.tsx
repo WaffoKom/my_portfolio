@@ -1,5 +1,5 @@
 import "./NavBar.css";
-
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -11,7 +11,7 @@ import {
 import { faServicestack } from "@fortawesome/free-brands-svg-icons";
 import { NavItem } from "../../types/NavItem.ts";
 import { Link } from "react-scroll";
-import React, { createElement } from "react";
+
 const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
   const nav: NavItem[] = [
     {
@@ -63,7 +63,7 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
             window.history.replaceState(null, "", `/#${item.link}`)
           }
         >
-          {createElement(item.icon, { className: item.iconClassName })}
+          {React.createElement(item.icon, { className: item.iconClassName })}
         </Link>
       ))}
     </nav>
