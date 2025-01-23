@@ -1,18 +1,26 @@
+.about {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
 .about-container {
   background-color: whitesmoke;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: flex-start;
-  width: 100%;
-  margin-top: 5rem;
+  max-width: 1532px;
+  border: 6px solid red;
+  place-items: center;
 }
 .about-right {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 10rem;
 }
 .about-left {
-  margin: 30px;
+  margin-left: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -83,6 +91,7 @@ p {
   }
   .about-right {
     order: 1;
+    padding-left: 0;
   }
   .about-left {
     font-size: 16px;
@@ -126,6 +135,7 @@ p {
   }
   .about-right {
     order: 1;
+    padding-left: 0;
   }
   .about-left {
     font-size: 16px;
@@ -158,25 +168,27 @@ p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "about-left" "about-right";
     row-gap: 0rem;
-    column-gap: 2rem;
+    column-gap: 0rem;
     align-items: flex-start;
-    margin-left: 1.5rem;
+    padding: 2rem;
   }
   .about-image {
-    width: 80%;
-    height: 80%;
-    margin-right: 2rem;
+    width: 370px;
+    height: 370px;
     border-radius: 5px;
   }
   .about-left {
     order: 1;
+    padding: 0;
+    margin: 0;
   }
   .about-right {
     order: 2;
+    padding-left: 8rem;
   }
+
   .about-left {
     font-size: 16px;
-    padding: 10px 15px;
   }
   .link-icon {
     font-size: 25px;
@@ -184,10 +196,11 @@ p {
   .about-left,
   .about-right {
     width: 100%;
-    margin: 10px 0;
   }
   .about-text-presentation {
     margin-bottom: 5px;
+    padding: 0;
+    margin: 0;
   }
   .external-links .link-icon {
     padding: 10px;
@@ -201,40 +214,44 @@ p {
 @media (min-width: 1024px) {
   /* Ajoute ici tes styles pour les grands écrans */
   .about-container {
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1532px;
+    place-items: center;
     grid-template-areas: "about-left" "about-right";
-    row-gap: 0rem;
-    column-gap: 2rem;
+    padding: 2rem;
     align-items: flex-start;
-    margin-left: 2rem;
   }
   .about-image {
-    width: 80%;
-    height: 80%;
-    margin-right: 2rem;
+    width: 400px;
+    height: 400px;
+    /* margin-right: 2rem; */
     border-radius: 5px;
   }
   .about-left {
     order: 1;
+    padding: 0;
+    margin: 0;
   }
   .about-right {
     order: 2;
+    padding-left: 10rem;
   }
   .about-left {
     font-size: 16px;
-    padding: 10px 15px;
   }
   .link-icon {
-    font-size: 25px;
+    font-size: 30px;
   }
   .about-left,
   .about-right {
     width: 100%;
-    margin: 10px 0;
   }
   .about-text-presentation {
     margin-bottom: 5px;
+    padding: 0;
+    margin: 0;
   }
   .external-links .link-icon {
     padding: 10px;
@@ -248,30 +265,32 @@ p {
 @media (min-width: 1280px) {
   /* Ajoute ici tes styles pour les très grands écrans */
   .about-container {
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1532px;
+    place-items: center;
     grid-template-areas: "about-left" "about-right";
-    row-gap: 0rem;
-    column-gap: 2rem;
-    justify-items: flex-start;
-    align-items: flex-start;
-    margin-left: 3.75rem;
+    padding: 2rem;
   }
   .about-image {
-    width: 80%;
-    height: 80%;
-    margin-right: 2rem;
+    width: 450px;
+    height: 450px;
+    /* margin-right: 2rem; */
     border-radius: 5px;
   }
   .about-left {
     order: 1;
+    padding: 0;
+    margin: 0;
   }
   .about-right {
     order: 2;
+    padding-left: 10rem;
+    margin: 0;
   }
   .about-left {
     font-size: 16px;
-    padding: 10px 15px;
   }
   .link-icon {
     font-size: 25px;
@@ -279,10 +298,11 @@ p {
   .about-left,
   .about-right {
     width: 100%;
-    margin: 10px 0;
   }
   .about-text-presentation {
     margin-bottom: 5px;
+    padding: 0;
+    margin: 0;
   }
   .external-links .link-icon {
     padding: 10px;
@@ -296,30 +316,36 @@ p {
 @media (min-width: 1536px) {
   /* Ajoute ici tes styles pour les écrans en pleine largeur */
   .about-container {
+    background-color: whitesmoke;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1532px;
+    place-items: center;
     grid-template-areas: "about-left" "about-right";
-    row-gap: 0rem;
-    column-gap: 2rem;
-    align-items: flex-start;
-    margin-left: 4.75rem;
+    padding: 2rem;
   }
   .about-image {
     width: 450px;
     height: 450px;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     border-radius: 5px;
   }
   .about-left {
     order: 1;
+    padding: 0;
+    margin: 0;
   }
   .about-right {
     order: 2;
+    padding-left: 18rem;
   }
   .about-left {
     font-size: 16px;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     margin-left: 0;
+  }
+  .about-right {
+    margin-right: 0;
   }
   .link-icon {
     font-size: 27px;
@@ -327,10 +353,12 @@ p {
   .about-left,
   .about-right {
     width: 100%;
-    margin: 10px 0;
   }
+
   .about-text-presentation {
     margin-bottom: 5px;
+    padding: 0;
+    margin: 0;
   }
   .external-links .link-icon {
     padding: 10px;

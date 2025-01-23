@@ -24,58 +24,60 @@ const About: React.FC = () => {
   };
 
   return (
-    <section className="about-container">
-      <div className="about-left">
-        <div className="about-text-presentation">
-          <h1>{t("perso.title")}</h1>
-          <h2>{t("perso.name")}</h2>
-          <h3>{t("perso.role")}</h3>
-          <p>{backLine(t("perso.presentation"))}</p>
-          <p>{backLine(t("perso.presentation_next"))}</p>
-          <p>{t("perso.rendezvous")}</p>{" "}
+    <div className="about">
+      <section className="about-container">
+        <div className="about-left">
+          <div className="about-text-presentation">
+            <h1>{t("perso.title")}</h1>
+            <h2>{t("perso.name")}</h2>
+            <h3>{t("perso.role")}</h3>
+            <p>{backLine(t("perso.presentation"))}</p>
+            <p>{backLine(t("perso.presentation_next"))}</p>
+            <p>{t("perso.rendezvous")}</p>{" "}
+          </div>
+          <Link to="services" id="start">
+            {t("perso.letGetStarted")}
+          </Link>
         </div>
-        <Link to="services" id="start">
-          {t("perso.letGetStarted")}
-        </Link>
-      </div>
-      <div className="about-right">
-        <img
-          src="/author/danilo_img.jpg"
-          alt="image-description"
-          className="about-image"
-        />
-        <div className="external-links">
-          <NavLink
-            to="https://wa.me/+237656294240"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faWhatsapp} className="link-icon" />
-          </NavLink>
-          <NavLink
-            to="https://www.linkedin.com/in/daniel-kom-b4a861314/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="link-icon" />
-          </NavLink>
-          <NavLink
-            to="https://github.com/WaffoKom/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} className="link-icon" />
-          </NavLink>
-          <NavLink
-            to="mailTo:kwdparabic@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faEnvelope} className="link-icon" />
-          </NavLink>
+        <div className="about-right">
+          <img
+            src="/author/danilo_img.jpg"
+            alt="image-description"
+            className="about-image"
+          />
+          <div className="external-links">
+            <NavLink
+              to="https://wa.me/+237656294240"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} className="link-icon" />
+            </NavLink>
+            <NavLink
+              to="https://www.linkedin.com/in/daniel-kom-b4a861314/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="link-icon" />
+            </NavLink>
+            <NavLink
+              to="https://github.com/WaffoKom/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="link-icon" />
+            </NavLink>
+            <NavLink
+              to="mailTo:kwdparabic@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faEnvelope} className="link-icon" />
+            </NavLink>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
