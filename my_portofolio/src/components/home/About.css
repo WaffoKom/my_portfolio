@@ -3,14 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8rem;
+  margin-top: 9rem;
 }
 .about-container {
   background-color: whitesmoke;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 1532px;
-  border: 6px solid red;
+  /* border: 6px solid red; */
   place-items: center;
 }
 .about-right {
