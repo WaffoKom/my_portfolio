@@ -60,11 +60,13 @@
   border: 0.1rem solid var(--border-color);
   border-radius: 8px;
 }
+
 /* Career Section */
 .dark-theme .verticalTimeElement {
   --background-color: none;
   --text-color: none;
 }
+
 /* Navbar Section */
 .dark-theme .nav-bar {
   --border-color: #171717;
@@ -83,6 +85,17 @@
 .dark-theme .nav-item-link:hover {
   background: hsl(259, 64%, 58%);
 }
+.dark-theme .nav-item-link:hover,
+.nav-item-link.active {
+  background-color: var(--nav-hover);
+  color: var(--nav-bg);
+  transition: none;
+  transform: scale(1.1);
+}
+.dark-theme .nav-item-link:focus {
+  outline: 2px solid var(--nav-hover);
+}
+
 /* About section */
 
 /* Overview Section */
