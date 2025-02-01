@@ -3,7 +3,7 @@ import { SET_THEME } from "../constants/actionTypes.ts";
 import { ThemeActionTypes } from "../actions/themeActions.ts";
 
 const savedTheme =
-  (localStorage.getItem("theme") as "light" | "dark") || "light";
+  (localStorage.getItem("theme") as "light" | "dark") || "dark";
 // Initial State
 const initialState: ThemState = {
   theme: savedTheme ? savedTheme : "dark",
