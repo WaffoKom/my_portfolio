@@ -9,54 +9,55 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer-container">
       <div className="footer-contact">
-        <a
-          href="https://wa.me/+237656294240"
+        <Link
+          to="https://wa.me/+237656294240"
           target="_blank"
           rel="noopener noreferrer"
           className="link-icons"
         >
           <FontAwesomeIcon icon={faWhatsapp} className="icon-link" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/daniel-kom-b4a861314/"
+        </Link>
+        <Link
+          to="https://www.linkedin.com/in/daniel-kom-b4a861314/"
           target="_blank"
           rel="noopener noreferrer"
           className="link-icons"
         >
           <FontAwesomeIcon icon={faLinkedin} className="icon-link" />
-        </a>
-        <a
-          href="https://github.com/WaffoKom/"
+        </Link>
+        <Link
+          to="https://github.com/WaffoKom/"
           target="_blank"
           rel="noopener noreferrer"
           className="link-icons"
         >
           <FontAwesomeIcon icon={faGithub} className="icon-link" />
-        </a>
-        <a
-          href="mailTo:kwdparabic@gmail.com"
+        </Link>
+        <Link
+          to="mailTo:kwdparabic@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="link-icons"
         >
           <FontAwesomeIcon icon={faEnvelope} className="icon-link" />
-        </a>
+        </Link>
       </div>
       <div className="footer-copyright">
         © 2025 Copyright :
-        <a
+        <Link
           target="_blank"
           rel="noreferrer noopener"
           id="footer-link-copyright"
-          href="/#about"
+          to="/#about"
         >
           <strong>DaniloWaffis - WaffoKom</strong>
-        </a>
+        </Link>
       </div>
     </footer>
   );
