@@ -34,6 +34,7 @@
 }
 .left {
   background: none;
+  margin-left: 1rem;
 }
 
 .theme-toggle-button {
@@ -134,5 +135,13 @@
     position: relative;
     top: -9px;
     margin: 0.2rem;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Ajoute ici tes styles pour les très petits écrans */
+
+  .left {
+    margin-top: 0.3rem;
   }
 }

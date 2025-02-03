@@ -50,7 +50,11 @@ const Header: React.FC = () => {
     <div className={`header ${isScrolled ? "blur" : "header"}`}>
       <div className="left">
         <button className="nav-toggle-button" onClick={toggleNavBar}>
-          <FontAwesomeIcon icon={faBars} id="fabars" />
+          <FontAwesomeIcon
+            icon={faBars}
+            id="fabars"
+            style={{ backgroundColor: "transparent" }}
+          />
         </button>
       </div>
       <div className="right">
@@ -70,7 +74,7 @@ const Header: React.FC = () => {
 
             <FontAwesomeIcon
               icon={faChevronDown}
-              style={{ marginLeft: "10px" }}
+              style={{ marginLeft: "10px", backgroundColor: "transparent" }}
             />
           </button>
           {menuVisible && (
