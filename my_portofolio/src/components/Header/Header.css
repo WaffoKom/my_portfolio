@@ -31,6 +31,7 @@
   align-items: center;
   justify-content: space-evenly;
   background: none;
+  margin-top: 0.6rem;
 }
 .left {
   background: none;
@@ -124,8 +125,16 @@
   width: 2rem;
   padding: 5px 5px;
   border-radius: 0.1rem;
+  background-color: none;
 }
 
+.nav-toggle-button #fabars {
+  position: relative;
+  border: none;
+}
+.left {
+  padding-bottom: 1.5rem;
+}
 @media (min-width: 768px) {
   .header {
     height: 2.9rem;
