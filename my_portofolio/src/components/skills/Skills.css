@@ -124,6 +124,7 @@
   }
   .skills-presentation {
     font-size: 27px;
+    margin-inline: auto;
   }
 }
 
@@ -144,6 +145,7 @@
   }
   .skills-presentation {
     font-size: 31px;
+    position: center;
   }
 }
 /* SM: Petits appareils (640px et plus) */
