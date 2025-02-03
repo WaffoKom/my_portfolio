@@ -34,18 +34,19 @@
 }
 .left {
   background: none;
-  margin-left: 0.9rem;
+  margin-left: 0.5rem;
   color: transparent;
-  margin-bottom: 0.25rem;
+  margin-top: 0;
 }
 
 #fabars {
   background-color: none;
+  padding: 0;
 }
 .theme-toggle-button {
   width: 2.4rem;
   border: none;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.5rem;
   background: none;
   cursor: pointer;
 }
@@ -154,6 +155,6 @@
     margin: 0.5rem;
   }
   .left {
-    margin-top: 0.28rem;
+    margin-top: 0.25rem;
   }
 }
