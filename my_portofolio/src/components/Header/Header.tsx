@@ -58,7 +58,11 @@ const Header: React.FC = () => {
         </button>
       </div>
       <div className="right">
-        <button className="theme-toggle-button" onClick={handleToggleTheme}>
+        <button
+          className="theme-toggle-button"
+          onClick={handleToggleTheme}
+          style={{ marginBottom: "15px" }}
+        >
           {theme === "dark" ? (
             <FontAwesomeIcon icon={faSun} id="faState" />
           ) : (
