@@ -10,10 +10,11 @@
 }
 
 .services-container h1 {
-  margin-left: 10.3rem;
-  font-size: 55px;
+  font-size: 35px;
   flex-wrap: nowrap;
   /* border: 4px solid yellow; */
+  text-align: center;
+  width: 100%;
 }
 .services-types-container {
   /* border: 4px solid blue; */
@@ -80,10 +81,9 @@
     flex-direction: column;
   }
   .services-container h1 {
-    position: relative;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    font-size: 33px;
     flex-wrap: nowrap;
+    text-align: center;
   }
 }
 
@@ -103,8 +103,7 @@
   .services-container h1 {
     font-size: 33px;
     flex-wrap: nowrap;
-    width: 100%;
-    justify-self: center;
+    text-align: center;
     /* border: 4px solid yellow; */
   }
 }
@@ -118,7 +117,6 @@
     flex-wrap: nowrap;
     width: 100%;
     margin-inline: auto;
-    margin-left: 3.2rem;
     /* border: 4px solid yellow; */
   }
 }

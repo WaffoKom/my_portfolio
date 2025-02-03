@@ -124,7 +124,7 @@
   }
   .skills-presentation {
     font-size: 35px;
-    margin-inline: auto;
+    text-align: center;
   }
 }
 
@@ -144,8 +144,8 @@
     column-gap: 0.5rem;
   }
   .skills-presentation {
-    font-size: 31px;
-    margin-inline: auto;
+    font-size: 35px;
+    text-align: center;
   }
 }
 /* SM: Petits appareils (640px et plus) */
@@ -166,7 +166,7 @@
     column-gap: 1.2rem;
   }
   .skills-presentation {
-    font-size: 32px;
+    font-size: 35px;
   }
 }
 
@@ -187,7 +187,7 @@
     column-gap: 1.4rem;
   }
   .skills-presentation {
-    font-size: 36px;
+    font-size: 35px;
   }
 }
 
