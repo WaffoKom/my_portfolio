@@ -35,8 +35,13 @@
 .left {
   background: none;
   margin-left: 0.9rem;
+  color: transparent;
+  margin-bottom: 0.25rem;
 }
 
+#fabars {
+  background-color: none;
+}
 .theme-toggle-button {
   width: 2.4rem;
   border: none;
