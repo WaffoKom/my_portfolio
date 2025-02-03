@@ -31,16 +31,27 @@
   align-items: center;
   justify-content: space-evenly;
   background: none;
+  margin-top: 0.6rem;
 }
 .left {
   background: none;
+<<<<<<< HEAD
   margin-left: 1rem;
+=======
+  margin-left: 0.5rem;
+  color: transparent;
+  margin-top: 0;
+>>>>>>> test
 }
 
+#fabars {
+  background-color: none;
+  padding: 0;
+}
 .theme-toggle-button {
   width: 2.4rem;
   border: none;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.5rem;
   background: none;
   cursor: pointer;
 }
@@ -107,7 +118,6 @@
   cursor: pointer;
 }
 .nav-toggle-button {
-  border: none;
   border: 0.1rem solid white;
   background-color: whitesmoke;
   border-radius: 0.1rem;
@@ -119,8 +129,16 @@
   width: 2rem;
   padding: 5px 5px;
   border-radius: 0.1rem;
+  background-color: none;
 }
 
+.nav-toggle-button #fabars {
+  position: relative;
+  border: none;
+}
+.left {
+  padding-bottom: 1.5rem;
+}
 @media (min-width: 768px) {
   .header {
     height: 2.9rem;
@@ -128,13 +146,29 @@
     padding-bottom: 0.1rem;
   }
   #fabars {
+    background-color: none;
     font-size: 18px;
     width: 1.6rem;
   }
   .nav-toggle-button {
     position: relative;
     top: -9px;
-    margin: 0.2rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Ajoute ici tes styles pour les très petits écrans */
+  #fabars {
+    background-color: none;
+  }
+  .nav-toggle-button {
+    position: relative;
+    top: -9px;
+    margin: 0.5rem;
+  }
+  .left {
+    margin-top: 0.25rem;
   }
 }
 
