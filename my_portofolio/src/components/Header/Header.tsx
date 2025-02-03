@@ -70,7 +70,7 @@ const Header: React.FC = () => {
 
             <FontAwesomeIcon
               icon={faChevronDown}
-              style={{ marginLeft: "10px" }}
+              style={{ marginLeft: "1rem", backgroundColor: "transparent" }}
             />
           </button>
           {menuVisible && (
