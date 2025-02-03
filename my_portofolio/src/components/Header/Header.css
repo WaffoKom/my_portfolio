@@ -132,12 +132,28 @@
     padding-bottom: 0.1rem;
   }
   #fabars {
+    background-color: none;
     font-size: 18px;
     width: 1.6rem;
   }
   .nav-toggle-button {
     position: relative;
     top: -9px;
-    margin: 0.2rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  /* Ajoute ici tes styles pour les très petits écrans */
+  #fabars {
+    background-color: none;
+  }
+  .nav-toggle-button {
+    position: relative;
+    top: -9px;
+    margin: 0.5rem;
+  }
+  .left {
+    margin-top: 0.28rem;
   }
 }

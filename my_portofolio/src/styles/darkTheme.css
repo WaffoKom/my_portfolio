@@ -26,6 +26,10 @@
 .dark-theme .header .left {
   background: none;
 }
+.dark-theme .header .nav-toggle-button #fabars {
+  color: transparent;
+  background: none;
+}
 .dark-theme .theme-toggle-button {
   background: none;
 }
