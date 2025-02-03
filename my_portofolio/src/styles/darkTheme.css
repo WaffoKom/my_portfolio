@@ -28,8 +28,8 @@
   color: none;
 }
 .dark-theme .header .nav-toggle-button #fabars {
-  color: transparent;
-  background: none;
+  color: none;
+  background: transparent;
 }
 .dark-theme .theme-toggle-button {
   background: none;
