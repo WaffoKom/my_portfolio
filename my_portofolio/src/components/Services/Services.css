@@ -12,6 +12,7 @@
 .services-container h1 {
   margin-left: 10.3rem;
   font-size: 55px;
+  flex-wrap: nowrap;
   /* border: 4px solid yellow; */
 }
 .services-types-container {
@@ -82,6 +83,7 @@
     position: relative;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    flex-wrap: nowrap;
   }
 }
 
@@ -112,6 +114,7 @@
     font-size: 37px;
     padding: 0;
     margin-left: 8rem;
+    flex-wrap: nowrap;
     /* border: 4px solid yellow; */
   }
 }
@@ -121,6 +124,7 @@
   /* Ajoute ici tes styles pour les petits écrans */
   .services-container h1 {
     font-size: 38px;
+    flex-wrap: nowrap;
     /* border: 4px solid yellow; */
   }
 }
@@ -130,6 +134,7 @@
   /* Ajoute ici tes styles pour les écrans de taille moyenne */
   .services-container h1 {
     font-size: 37px;
+    flex-wrap: nowrap;
     /* border: 4px solid yellow; */
   }
 }
@@ -139,6 +144,7 @@
   /* Ajoute ici tes styles pour les grands écrans */
   .services-container h1 {
     font-size: 40px;
+    flex-wrap: nowrap;
     /* border: 4px solid yellow; */
   }
 }
@@ -148,6 +154,7 @@
   /* Ajoute ici tes styles pour les très grands écrans */
   .services-container h1 {
     font-size: 55px;
+    flex-wrap: nowrap;
     /* border: 4px solid yellow; */
   }
 }
@@ -157,6 +164,7 @@
   /* Ajoute ici tes styles pour les écrans en pleine largeur */
   .services-container h1 {
     font-size: 55px;
+    flex-wrap: nowrap;
     /* border: 4px solid yellow; */
   }
 }
