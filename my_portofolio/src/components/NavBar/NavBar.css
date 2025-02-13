@@ -15,6 +15,7 @@
   position: fixed;
   top: 50%;
   right: 0;
+  margin-top: 7rem;
   transform: translateY(77%);
   width: 3.6rem;
   padding: 0.6rem;
@@ -41,7 +42,7 @@
 /* Styles pour les liens de la navbar */
 .nav-item-link {
   font-size: 1rem;
-  border-radius: 100rem;
+  border-radius: 100%;
   cursor: pointer;
   /* padding: 10px; */
   padding-left: 13px;
@@ -70,6 +71,7 @@
     width: 3.5rem;
     top: 100%;
     right: 10px;
+    margin-top: 4rem;
   }
 
   .nav-item-link {
