@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
       ],
       image: altplus,
       thumbnail: thumbAltplus,
-      demo: "https://altplus.dev/",
+      demo: "https://www.altplus.dev/",
       sourcecode: "https://github.com/artsiders",
     },
     {
