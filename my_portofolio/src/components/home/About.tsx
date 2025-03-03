@@ -54,7 +54,7 @@ const About: React.FC = () => {
               <FontAwesomeIcon icon={faWhatsapp} className="link-icon" />
             </NavLink>
             <NavLink
-              to="https://www.linkedin.com/in/daniel-prince-kom-waffo-a37ab1353/"
+              to="https://www.linkedin.com/in/waffokom-daniel-kom-24151a354/"
               target="_blank"
               rel="noopener noreferrer"
             >
