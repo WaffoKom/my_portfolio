@@ -41,7 +41,20 @@
 #fabars {
   background-color: none;
   padding: 0;
+  /* animation: slide .4s ease-in  iteration-count direction fill-mode; */
 }
+#fabars:active {
+  transform: scale(90%);
+}
+/* @keyframes slide{
+  0%{
+    transform: translateX(-300px);
+  }
+  100%{
+    transform: translateX(-700px);
+  }
+  
+} */
 .theme-toggle-button {
   width: 2.4rem;
   border: none;
