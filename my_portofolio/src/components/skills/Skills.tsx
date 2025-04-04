@@ -65,7 +65,7 @@ const Skills: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span id="link-github-description">See More</span>
+        <span id="link-github-description">{t("seeMore")}</span>
         <FontAwesomeIcon icon={faGithub} id="link-github" />
       </NavLink>
     </section>
