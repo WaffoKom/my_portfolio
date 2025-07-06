@@ -10,6 +10,7 @@ import altplus from "../../assets/work/altplus.png";
 import skypey from "../../assets/work/skypey.png";
 import isis from "../../assets/work/Isis-blog.png";
 import weather from "../../assets/work/weather-app.png";
+import we_travel from "../../assets/work/we_travel.png";
 import ProjetCard from "./ProjetCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -93,8 +94,34 @@ const Projects: React.FC = () => {
       ],
       image: isis,
       thumbnail: thumbIsis,
-      demo: "",
-      sourcecode: "",
+      demo: "https://mern-blog-nu-fawn.vercel.app",
+      sourcecode: "https://github.com/WaffoKom/mern-blog",
+    },
+    {
+      name: "we_travel app",
+      description: t("work.project_description.we_travel"),
+      tags: [
+        {
+          name: "reactjs(Nextjs)",
+          color: "#087ea4",
+        },
+        {
+          name: "css(Tailwindcss)",
+          color: "#a33686",
+        },
+        {
+          name: "javascript",
+          color: "#f4a874",
+        },
+        {
+          name: "python(FASTAPI)",
+          color: "#f4a874",
+        },
+      ],
+      image: we_travel,
+      thumbnail: thumbWeather,
+      demo: "https://we-travel-zeta.vercel.app/",
+      sourcecode: "https://github.com/WaffoKom?tab=repositories",
     },
     {
       name: "weather app",
@@ -114,7 +141,7 @@ const Projects: React.FC = () => {
         },
       ],
       image: weather,
-      thumbnail: thumbWeather,
+      thumbnail: "",
       demo: "https://weather-react-app-ten-bice.vercel.app/",
       sourcecode: "https://github.com/WaffoKom/weather-react-app",
     },
