@@ -1,41 +1,563 @@
-/* Styles de base applicables à tous les thèmes */
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&display=swap');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-style: normal;
-  scroll-behavior: smooth;
-  font-family: "Popins", "Roboto", sans-serif;
-  /* background-color: whitesmoke; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth overflow-x-hidden;
+    @apply antialiased;
+  }
+
+  body {
+    @apply font-sans overflow-x-hidden;
+    @apply bg-light-bg text-gray-900;
+    @apply dark:bg-dark-bg dark:text-gray-100;
+    @apply transition-colors duration-500 ease-in-out;
+  }
+
+  /* Professional scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-500/30 rounded-full;
+    @apply hover:bg-primary-500/50;
+    @apply transition-colors duration-200;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary-500/30 text-primary-900;
+  }
+
+  ::-moz-selection {
+    @apply bg-primary-500/30 text-primary-900;
+  }
+
+  /* Focus visible for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+    @apply ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  /* Typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+    @apply text-gray-900 dark:text-gray-50;
+    @apply tracking-tight;
+  }
+
+  h1 {
+    @apply text-5xl sm:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  h3 {
+    @apply text-3xl sm:text-4xl lg:text-5xl;
+  }
+
+  h4 {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+    @apply hover:text-primary-500;
+  }
 }
 
-body,
-html,
-#root {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  width: 100vw;
-  background-color: whitesmoke;
+@layer components {
+  /* Glass morphism effects */
+  .glass {
+    @apply backdrop-blur-xl bg-white/70 dark:bg-dark-card/70;
+    @apply border border-white/20 dark:border-white/10;
+    @apply shadow-glass;
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-2xl bg-white/80 dark:bg-dark-card/80;
+    @apply border border-white/30 dark:border-white/20;
+    @apply shadow-glass-lg;
+  }
+
+  /* Card components */
+  .card {
+    @apply rounded-3xl p-6;
+    @apply bg-white dark:bg-dark-card;
+    @apply border border-light-border dark:border-dark-border;
+    @apply shadow-lg;
+    @apply transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card;
+    @apply hover:shadow-2xl hover:-translate-y-2;
+    @apply hover:border-primary-500/50;
+  }
+
+  .card-glow {
+    @apply card;
+    @apply hover:shadow-glow;
+    @apply hover:border-primary-500;
+  }
+
+  .card-interactive {
+    @apply card-hover;
+    @apply cursor-pointer;
+    @apply active:scale-[0.98];
+  }
+
+  /* Button components */
+  .btn {
+    @apply px-6 py-3 rounded-xl;
+    @apply font-semibold text-base;
+    @apply transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply btn;
+    @apply bg-gradient-to-r from-primary-500 to-primary-700;
+    @apply text-white;
+    @apply hover:from-primary-600 hover:to-primary-800;
+    @apply hover:shadow-lg hover:shadow-primary-500/50;
+    @apply focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn;
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-700;
+    @apply text-white;
+    @apply hover:from-secondary-600 hover:to-secondary-800;
+    @apply hover:shadow-lg hover:shadow-secondary-500/50;
+    @apply focus:ring-secondary-500;
+  }
+
+  .btn-outline {
+    @apply btn;
+    @apply border-2 border-primary-500;
+    @apply text-primary-500 dark:text-primary-400;
+    @apply hover:bg-primary-500 hover:text-white;
+    @apply focus:ring-primary-500;
+  }
+
+  .btn-ghost {
+    @apply btn;
+    @apply bg-transparent;
+    @apply text-gray-700 dark:text-gray-300;
+    @apply hover:bg-gray-100 dark:hover:bg-dark-hover;
+  }
+
+  /* Gradient text effects */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 via-primary-600 to-purple-600;
+    @apply bg-clip-text text-transparent;
+    @apply animate-gradient;
+    background-size: 200% auto;
+  }
+
+  .gradient-text-vibrant {
+    @apply bg-gradient-to-r from-primary-400 via-accent-500 to-secondary-400;
+    @apply bg-clip-text text-transparent;
+    @apply animate-gradient;
+    background-size: 200% auto;
+  }
+
+  /* Badge components */
+  .badge {
+    @apply inline-flex items-center justify-center;
+    @apply px-3 py-1 rounded-full;
+    @apply text-xs font-semibold;
+    @apply transition-all duration-200;
+  }
+
+  .badge-primary {
+    @apply badge;
+    @apply bg-primary-100 text-primary-700;
+    @apply dark:bg-primary-900/30 dark:text-primary-300;
+  }
+
+  .badge-success {
+    @apply badge;
+    @apply bg-success-100 text-success-700;
+    @apply dark:bg-success-900/30 dark:text-success-300;
+  }
+
+  .badge-warning {
+    @apply badge;
+    @apply bg-warning-100 text-warning-700;
+    @apply dark:bg-warning-900/30 dark:text-warning-300;
+  }
+
+  .badge-danger {
+    @apply badge;
+    @apply bg-danger-100 text-danger-700;
+    @apply dark:bg-danger-900/30 dark:text-danger-300;
+  }
+
+  /* Section container */
+  .section {
+    @apply min-h-screen;
+    @apply px-4 sm:px-6 lg:px-8;
+    @apply py-20 lg:py-32;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Decorative elements */
+  .glow-effect {
+    @apply relative;
+  }
+
+  .glow-effect::before {
+    content: '';
+    @apply absolute inset-0 -z-10;
+    @apply bg-gradient-to-r from-primary-500/20 to-purple-500/20;
+    @apply blur-3xl opacity-0;
+    @apply transition-opacity duration-500;
+  }
+
+  .glow-effect:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Shimmer effect for loading states */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    @apply absolute inset-0;
+    @apply bg-gradient-shine;
+    @apply animate-shimmer;
+  }
+
+  /* Skeleton loaders */
+  .skeleton {
+    @apply animate-pulse bg-gray-200 dark:bg-dark-muted;
+    @apply rounded;
+  }
 }
 
-/* Dark Generalization */
-.dark-theme {
-  background-color: hsl(252, 50%, 4%);
-  color: hsl(255, 46%, 95%);
-  transition-property: background-color, color;
-  transition-duration: 01.2s;
-  transition-timing-function: ease-in-out;
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animation delays */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* Custom backdrop filters */
+  .backdrop-saturate {
+    backdrop-filter: saturate(180%);
+  }
+
+  /* Safe area padding for mobile */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
 }
-.dark-theme html {
-  background-color: hsl(252, 50%, 4%);
+
+/* React Calendar - Professional & Clear Styles */
+.react-calendar {
+  @apply w-full border-none font-sans;
+  @apply p-6 rounded-3xl;
+  @apply bg-white dark:bg-dark-card;
+  @apply shadow-2xl;
+  @apply border-2 border-gray-100 dark:border-dark-border;
 }
-.dark-theme body {
-  background-color: hsl(252, 50%, 4%);
+
+/* Navigation Header - Clean & Bold */
+.react-calendar__navigation {
+  @apply mb-6 flex items-center justify-between gap-3;
+  @apply pb-4 border-b-2 border-gray-100 dark:border-dark-border;
 }
-.dark-theme #root {
-  background-color: hsl(252, 50%, 4%);
+
+.react-calendar__navigation button {
+  @apply min-w-[44px] h-12;
+  @apply bg-gradient-to-br from-primary-500 to-primary-600;
+  @apply dark:from-primary-600 dark:to-primary-700;
+  @apply rounded-xl px-5 py-2;
+  @apply font-bold text-white;
+  @apply transition-all duration-300;
+  @apply hover:from-primary-600 hover:to-primary-700;
+  @apply dark:hover:from-primary-700 dark:hover:to-primary-800;
+  @apply hover:scale-105 hover:shadow-lg hover:shadow-primary-500/50;
+  @apply active:scale-95;
 }
-::webkit-scrollbar {
-  width: 1rem;
+
+.react-calendar__navigation button:enabled:hover {
+  @apply shadow-xl shadow-primary-500/60;
+}
+
+.react-calendar__navigation button:disabled {
+  @apply opacity-40 cursor-not-allowed;
+  @apply hover:scale-100 hover:shadow-none;
+  @apply from-primary-300 to-purple-300;
+  @apply dark:from-primary-800 dark:to-purple-800;
+}
+
+.react-calendar__navigation__label {
+  @apply flex-grow font-display text-base font-bold;
+  @apply text-primary-600 dark:text-primary-400;
+  @apply px-10 py-4;
+  @apply bg-primary-50 dark:bg-primary-900/20;
+  @apply hover:bg-primary-100 dark:hover:bg-primary-900/30;
+  @apply border-2 border-primary-200 dark:border-primary-800;
+  @apply hover:border-primary-400 dark:hover:border-primary-600;
+  @apply rounded-xl;
+  @apply transition-all duration-300;
+  @apply min-h-[52px];
+  @apply shadow-md hover:shadow-lg hover:shadow-primary-500/30;
+  @apply hover:scale-[1.02];
+  @apply active:scale-95;
+}
+
+/* Weekday Headers - Clear & Visible */
+.react-calendar__month-view__weekdays {
+  @apply text-center mb-4 mt-2;
+  @apply bg-gradient-to-r from-primary-50 to-purple-50;
+  @apply dark:from-primary-900/30 dark:to-purple-900/30;
+  @apply rounded-xl p-3;
+  @apply border border-primary-200 dark:border-primary-800;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  @apply py-2 px-1;
+  @apply text-sm font-bold uppercase tracking-wide;
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  @apply no-underline;
+  @apply cursor-default;
+}
+
+/* Day Tiles - Interactive & Beautiful */
+.react-calendar__month-view__days {
+  @apply gap-2;
+}
+
+.react-calendar__tile {
+  @apply relative;
+  @apply p-0 h-14;
+  @apply flex items-center justify-center;
+  @apply rounded-xl;
+  @apply font-semibold text-base;
+  @apply transition-all duration-300;
+  @apply cursor-pointer;
+}
+
+.react-calendar__month-view__days__day {
+  @apply bg-white;
+  @apply dark:bg-dark-card;
+  @apply text-gray-900 dark:text-gray-100;
+  @apply border-2 border-gray-300 dark:border-gray-700;
+  @apply hover:border-primary-500 dark:hover:border-primary-400;
+  @apply hover:bg-gradient-to-br hover:from-primary-100 hover:to-purple-100;
+  @apply dark:hover:from-primary-900/40 dark:hover:to-purple-900/40;
+  @apply hover:scale-110 hover:shadow-2xl hover:shadow-primary-500/30 hover:z-10;
+  @apply active:scale-95;
+  @apply font-bold;
+}
+
+/* Weekend Days - Subtle Highlight */
+.react-calendar__month-view__days__day--weekend {
+  @apply text-primary-700 dark:text-primary-300;
+  @apply font-extrabold;
+  @apply bg-gradient-to-br from-primary-50 to-purple-50;
+  @apply dark:from-primary-900/20 dark:to-purple-900/20;
+}
+
+/* Neighboring Month Days - Muted */
+.react-calendar__month-view__days__day--neighboringMonth {
+  @apply text-gray-400 dark:text-gray-500;
+  @apply opacity-50;
+  @apply hover:opacity-80;
+  @apply border-gray-100 dark:border-gray-800;
+}
+
+/* Today - Special Indicator */
+.react-calendar__tile--now {
+  @apply bg-gradient-to-br from-amber-100 to-orange-100;
+  @apply dark:from-amber-900/40 dark:to-orange-900/40;
+  @apply border-2 border-amber-500 dark:border-amber-400;
+  @apply shadow-lg shadow-amber-500/30;
+  @apply font-extrabold;
+  @apply text-amber-900 dark:text-amber-100;
+}
+
+.react-calendar__tile--now:hover {
+  @apply from-amber-200 to-orange-200;
+  @apply dark:from-amber-900/60 dark:to-orange-900/60;
+  @apply scale-110 shadow-2xl shadow-amber-500/50;
+  @apply border-amber-600 dark:border-amber-300;
+}
+
+.react-calendar__tile--now::after {
+  content: '';
+  @apply absolute bottom-2 left-1/2 -translate-x-1/2;
+  @apply w-2 h-2 rounded-full;
+  @apply bg-amber-600 dark:bg-amber-300;
+  @apply animate-pulse;
+  @apply shadow-lg shadow-amber-500/50;
+}
+
+/* Selected Date - Prominent & Attractive */
+.react-calendar__tile--active {
+  @apply bg-gradient-to-br from-primary-600 via-purple-600 to-pink-600;
+  @apply text-white font-extrabold;
+  @apply border-2 border-primary-300 dark:border-primary-400;
+  @apply shadow-2xl shadow-primary-500/60;
+  @apply scale-110;
+  @apply z-20;
+}
+
+.react-calendar__tile--active:enabled:hover {
+  @apply from-primary-700 via-purple-700 to-pink-700;
+  @apply shadow-2xl shadow-primary-700/70;
+  @apply border-white dark:border-gray-100;
+  transform: scale(1.15);
+}
+
+.react-calendar__tile--active::before {
+  content: '';
+  @apply absolute inset-0;
+  @apply bg-white/30;
+  @apply rounded-xl;
+  @apply animate-pulse;
+}
+
+/* Disabled Dates - Clear Visual Feedback */
+.react-calendar__tile:disabled {
+  @apply opacity-30 cursor-not-allowed;
+  @apply bg-gray-100 dark:bg-gray-800/50;
+  @apply text-gray-400 dark:text-gray-600;
+  @apply border border-gray-200 dark:border-gray-700;
+  @apply hover:scale-100 hover:border-gray-200 dark:hover:border-gray-700 hover:shadow-none;
+}
+
+/* Hover State for Enabled Tiles */
+.react-calendar__tile:enabled:hover {
+  @apply transform;
+}
+
+/* Focus States for Accessibility */
+.react-calendar__tile:enabled:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  @apply dark:ring-offset-dark-bg;
+}
+
+/* Year/Decade/Century View - Month/Year Selector Tiles */
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  @apply px-5 py-5 m-2;
+  @apply bg-gradient-to-br from-gray-50 to-gray-100;
+  @apply dark:bg-dark-card;
+  @apply text-primary-700 dark:text-gray-200;
+  @apply border-2 border-gray-400 dark:border-gray-700;
+  @apply rounded-xl;
+  @apply font-bold text-lg;
+  @apply transition-all duration-300;
+  @apply shadow-lg;
+  @apply hover:bg-gradient-to-br hover:from-primary-100 hover:to-purple-100;
+  @apply dark:hover:bg-primary-900/20;
+  @apply hover:border-primary-500 dark:hover:border-primary-600;
+  @apply hover:shadow-2xl hover:shadow-primary-500/40;
+  @apply hover:scale-105;
+  @apply hover:text-primary-800 dark:hover:text-gray-100;
+}
+
+.react-calendar__year-view .react-calendar__tile--active,
+.react-calendar__decade-view .react-calendar__tile--active,
+.react-calendar__century-view .react-calendar__tile--active {
+  @apply bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600;
+  @apply text-white;
+  @apply border-2 border-primary-300;
+  @apply shadow-2xl shadow-primary-500/60;
+  @apply scale-110;
+  @apply font-extrabold text-xl;
+}
+
+.react-calendar__year-view .react-calendar__tile--now,
+.react-calendar__decade-view .react-calendar__tile--now,
+.react-calendar__century-view .react-calendar__tile--now {
+  @apply bg-gradient-to-br from-amber-200 to-orange-200;
+  @apply dark:from-amber-900/40 dark:to-orange-900/40;
+  @apply border-2 border-amber-600 dark:border-amber-400;
+  @apply shadow-xl shadow-amber-500/50;
+  @apply text-amber-900 dark:text-amber-100;
+  @apply font-extrabold;
+}
+
+.react-calendar__navigation button:enabled:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  @apply dark:ring-offset-dark-bg;
+}
+
+/* Smooth Transitions */
+.react-calendar *,
+.react-calendar *::before,
+.react-calendar *::after {
+  @apply transition-colors duration-300;
 }
