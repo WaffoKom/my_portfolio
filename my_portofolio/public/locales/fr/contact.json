@@ -1,0 +1,60 @@
+{
+  "title": "Transformons Votre Vision",
+  "subtitle": "Entrez vos informations et découvrez votre feuille de route personnalisée vers le succès numérique",
+  "namePlaceholder": "Votre nom...",
+  "emailPlaceholder": "Votre email...",
+  "button": "Découvrez Mon Message",
+  "available": "Disponible pour projets",
+  "response": "Réponse sous 24h",
+  "messageTitle": "Votre Invitation Personnalisée",
+  "selectDateTime": "Sélectionner Date & Heure",
+  "tryAgain": "Recommencer",
+  "selectDate": "Sélectionnez une Date",
+  "selectTime": "Sélectionnez une Heure",
+  "selectedSlot": "Sélectionné :",
+  "confirmAppointment": "Confirmer & Ajouter à Google Calendar",
+  "back": "Retour",
+  "fillAllFields": "Veuillez remplir tous les champs",
+  "templates": [
+    {
+      "greeting": "{{name}}, votre ambition mérite des solutions exceptionnelles !",
+      "body": "Je me spécialise dans la transformation d'idées visionnaires en réalité. Avec des technologies de pointe et un parcours éprouvé, je suis prêt à élever votre projet vers de nouveaux sommets.",
+      "cta": "Planifions une consultation pour discuter de la façon dont nous pouvons transformer votre vision en une expérience numérique puissante qui se démarque."
+    },
+    {
+      "greeting": "Bonjour {{name}} ! Prêt à faire des vagues dans le monde numérique ?",
+      "body": "Votre projet a un immense potentiel, et j'ai l'expertise pour le débloquer. Du concept au déploiement, je conçois des solutions qui non seulement répondent aux attentes, mais les dépassent.",
+      "cta": "Réservez une session stratégique avec moi, et créons ensemble quelque chose de remarquable que vos utilisateurs adoreront."
+    },
+    {
+      "greeting": "{{name}}, l'innovation vous appelle !",
+      "body": "Dans le paysage numérique rapide d'aujourd'hui, rester immobile signifie prendre du retard. Je construis des applications évolutives et performantes qui vous donnent un avantage concurrentiel.",
+      "cta": "Connectons-nous pour une consultation personnalisée et explorons comment nous pouvons accélérer votre transformation numérique."
+    },
+    {
+      "greeting": "Bienvenue {{name}} ! Votre prochaine percée commence ici.",
+      "body": "Chaque grande réalisation commence par un seul pas. J'apporte des années d'expérience et de passion à chaque projet, garantissant que votre succès n'est pas seulement un objectif, mais une certitude.",
+      "cta": "Réservons une réunion pour transformer vos idées en solutions impactantes qui résonnent avec votre audience."
+    },
+    {
+      "greeting": "{{name}}, construisons quelque chose d'extraordinaire !",
+      "body": "Un excellent logiciel ne se résume pas au code—il s'agit de créer des expériences qui ravissent les utilisateurs et génèrent des résultats. Je suis là pour faire cela pour vous.",
+      "cta": "Planifiez un appel avec moi pour découvrir comment nous pouvons créer ensemble un chef-d'œuvre numérique."
+    },
+    {
+      "greeting": "Salutations {{name}} ! Prêt à élever votre présence numérique ?",
+      "body": "Dans un monde numérique saturé, vous avez besoin de solutions qui se démarquent. Je combine créativité et expertise technique pour offrir des résultats qui dépassent les attentes.",
+      "cta": "Organisons une consultation pour explorer les possibilités et créer votre solution parfaite."
+    },
+    {
+      "greeting": "{{name}}, votre histoire de succès commence maintenant !",
+      "body": "Je crois en la transformation des défis en opportunités et des idées en réalité. Avec un accent sur la qualité et l'innovation, je suis engagé à votre succès.",
+      "cta": "Prenez rendez-vous et commençons à construire ensemble l'avenir de votre entreprise."
+    },
+    {
+      "greeting": "Salut {{name}} ! Faisons de votre vision une réalité.",
+      "body": "Des applications web élégantes aux solutions mobiles puissantes, je crée des expériences numériques qui font la différence. Votre projet mérite rien de moins que l'excellence.",
+      "cta": "Contactez-moi pour une consultation personnalisée et discutons de la façon dont nous pouvons donner vie à votre vision."
+    }
+  ]
+}
