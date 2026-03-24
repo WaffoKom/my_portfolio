@@ -8,8 +8,7 @@ import nodejs from "../../assets/tech/nodejs.png";
 import postgresql from "../../assets/tech/postgresql.png";
 import tailwindcss from "../../assets/tech/tailwindcss.png";
 import typescript from "../../assets/tech/typescript.png";
-import flutter from "../../assets/tech/flutter.jpeg";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFlutter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import { cn } from "../../lib/utils";
@@ -25,7 +24,7 @@ const Skills: React.FC = () => {
     { name: "PostgreSQL", icon: postgresql },
     { name: "Tailwind CSS", icon: tailwindcss },
     { name: "TypeScript", icon: typescript },
-    { name: "Flutter", icon: flutter },
+    { name: "Flutter", faIcon: faFlutter },
   ];
 
   return (
@@ -69,11 +68,18 @@ const Skills: React.FC = () => {
                 transition={{ duration: 0.5 }}
                 className="relative z-10"
               >
-                <img
-                  src={item.icon}
-                  alt={item.name}
-                  className="w-16 h-16 lg:w-20 lg:h-20 object-contain"
-                />
+                {item.faIcon ? (
+                  <FontAwesomeIcon
+                    icon={item.faIcon}
+                    className="w-16 h-16 lg:w-20 lg:h-20 text-sky-500"
+                  />
+                ) : (
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className="w-16 h-16 lg:w-20 lg:h-20 object-contain"
+                  />
+                )}
               </motion.div>
 
               <p className="relative z-10 text-sm font-semibold text-gray-700 dark:text-gray-300 text-center">

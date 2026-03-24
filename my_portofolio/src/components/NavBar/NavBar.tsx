@@ -60,18 +60,20 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
 
   return (
     <motion.nav
-      initial={{ x: -100, opacity: 0 }}
+      initial={{ y: 20, opacity: 0, scale: 0.95 }}
       animate={{
-        x: toggle ? 0 : -100,
+        y: toggle ? 0 : 20,
         opacity: toggle ? 1 : 0,
+        scale: toggle ? 1 : 0.95,
       }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       className={cn(
-        "fixed left-4 top-1/2 -translate-y-1/2 z-40",
-        "flex flex-col gap-3 p-3 rounded-2xl",
-        "bg-white/80 dark:bg-dark-card/80 backdrop-blur-lg",
-        "border border-light-border dark:border-dark-border",
-        "shadow-xl",
+        "fixed left-0 right-0 mx-auto bottom-6 z-40 w-max",
+        "flex flex-row items-center gap-2 p-2 rounded-full",
+        "bg-[#eef2f7]/90 dark:bg-[#1a1f2b]/85 backdrop-blur-xl",
+        "border border-white/70 dark:border-white/10",
+        "shadow-[8px_8px_20px_rgba(148,163,184,0.28),-8px_-8px_20px_rgba(255,255,255,0.85),inset_1px_1px_0_rgba(255,255,255,0.7),inset_-1px_-1px_0_rgba(148,163,184,0.2)]",
+        "dark:shadow-[8px_8px_20px_rgba(0,0,0,0.35),-6px_-6px_14px_rgba(255,255,255,0.03),inset_1px_1px_0_rgba(255,255,255,0.06)]",
         !toggle && "pointer-events-none"
       )}
       role="navigation"
@@ -86,11 +88,12 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            "p-4 rounded-xl cursor-pointer transition-all duration-300",
-            "bg-gray-100 dark:bg-dark-bg",
-            "border border-transparent",
-            "hover:bg-primary-500 hover:text-white",
-            "hover:shadow-lg hover:shadow-primary-500/50",
+            "p-3 rounded-full cursor-pointer transition-all duration-300",
+            "bg-[#f7f9fc] dark:bg-dark-bg/90",
+            "border border-slate-200/80 dark:border-slate-700/60",
+            "shadow-[inset_1px_1px_0_rgba(255,255,255,0.95),inset_-1px_-1px_0_rgba(148,163,184,0.15)]",
+            "hover:bg-primary-500 hover:text-white hover:border-primary-400",
+            "hover:shadow-lg hover:shadow-primary-500/30",
             "group relative"
           )}
         >
@@ -110,7 +113,7 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
               x: activeIndex === index ? 0 : -10,
             }}
             className={cn(
-              "absolute left-full ml-3 top-1/2 -translate-y-1/2",
+              "absolute left-1/2 -translate-x-1/2 bottom-full mb-3",
               "px-3 py-2 rounded-lg whitespace-nowrap",
               "bg-gray-900 dark:bg-gray-100",
               "text-white dark:text-gray-900",

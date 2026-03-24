@@ -61,18 +61,19 @@ const Header: React.FC = () => {
   };
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        "px-4 sm:px-6 lg:px-8 py-4",
-        isScrolled
-          ? "backdrop-blur-lg bg-white/80 dark:bg-dark-bg/80 shadow-lg"
-          : "bg-transparent"
-      )}
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          "px-4 sm:px-6 lg:px-8 py-4",
+          isScrolled
+            ? "backdrop-blur-lg bg-white/80 dark:bg-dark-bg/80 shadow-lg"
+            : "bg-transparent"
+        )}
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left - Menu Toggle */}
         <motion.button
           whileHover={{ scale: 1.05 }}
@@ -97,27 +98,68 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-3 sm:gap-4">
           {/* Theme Toggle */}
           <motion.button
-            whileHover={{ scale: 1.05, rotate: 180 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
             onClick={toggleTheme}
             className={cn(
-              "p-3 rounded-xl transition-all duration-300",
+              "relative h-12 w-24 rounded-full transition-all duration-300",
               "bg-white dark:bg-dark-card",
               "border border-light-border dark:border-dark-border",
-              "hover:bg-primary-50 dark:hover:bg-primary-900/20",
-              "shadow-sm hover:shadow-md"
+              "shadow-sm hover:shadow-md",
+              "focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
+              "dark:focus:ring-offset-dark-bg"
             )}
+            role="switch"
+            aria-checked={theme === "dark"}
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
-            <FontAwesomeIcon
-              icon={theme === "dark" ? faSun : faMoon}
+            <span
               className={cn(
-                "text-xl transition-colors duration-300",
+                "absolute inset-1 rounded-full transition-colors duration-300",
                 theme === "dark"
-                  ? "text-yellow-400"
-                  : "text-indigo-600"
+                  ? "bg-slate-800"
+                  : "bg-slate-200"
               )}
             />
+
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <FontAwesomeIcon
+                icon={faSun}
+                className={cn(
+                  "text-sm transition-colors duration-300",
+                  theme === "dark" ? "text-slate-500" : "text-amber-500"
+                )}
+              />
+            </span>
+
+            <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+              <FontAwesomeIcon
+                icon={faMoon}
+                className={cn(
+                  "text-sm transition-colors duration-300",
+                  theme === "dark" ? "text-indigo-300" : "text-slate-500"
+                )}
+              />
+            </span>
+
+            <motion.span
+              className={cn(
+                "absolute top-1 left-1 z-10 h-10 w-10 rounded-full",
+                "flex items-center justify-center",
+                "shadow-md border border-light-border dark:border-dark-border",
+                "bg-white dark:bg-slate-900"
+              )}
+              animate={{ x: theme === "dark" ? 44 : 0 }}
+              transition={{ type: "spring", stiffness: 500, damping: 32 }}
+            >
+              <FontAwesomeIcon
+                icon={theme === "dark" ? faMoon : faSun}
+                className={cn(
+                  "text-sm",
+                  theme === "dark" ? "text-indigo-300" : "text-amber-500"
+                )}
+              />
+            </motion.span>
           </motion.button>
 
           {/* Language Selector */}
@@ -202,11 +244,12 @@ const Header: React.FC = () => {
             </AnimatePresence>
           </div>
         </div>
-      </div>
+        </div>
+      </motion.header>
 
       {/* Navigation Bar */}
       <NavBar toggle={navVisible} />
-    </motion.header>
+    </>
   );
 };
 
