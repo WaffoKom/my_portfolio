@@ -334,22 +334,27 @@
 
 .react-calendar__navigation button {
   @apply min-w-[44px] h-12;
-  @apply bg-gradient-to-br from-primary-500 to-primary-600;
-  @apply dark:from-primary-600 dark:to-primary-700;
   @apply rounded-xl px-5 py-2;
-  @apply font-bold text-white;
+  @apply font-bold;
   @apply transition-all duration-300;
-  @apply hover:from-primary-600 hover:to-primary-700;
-  @apply dark:hover:from-primary-700 dark:hover:to-primary-800;
-  @apply hover:scale-105 hover:shadow-lg hover:shadow-primary-500/50;
+  @apply hover:scale-105;
   @apply active:scale-95;
 }
 
-.react-calendar__navigation button:enabled:hover {
+.react-calendar__navigation button:not(.react-calendar__navigation__label) {
+  @apply bg-gradient-to-br from-primary-500 to-primary-600;
+  @apply dark:from-primary-600 dark:to-primary-700;
+  @apply text-white;
+  @apply hover:from-primary-600 hover:to-primary-700;
+  @apply dark:hover:from-primary-700 dark:hover:to-primary-800;
+  @apply hover:shadow-lg hover:shadow-primary-500/50;
+}
+
+.react-calendar__navigation button:not(.react-calendar__navigation__label):enabled:hover {
   @apply shadow-xl shadow-primary-500/60;
 }
 
-.react-calendar__navigation button:disabled {
+.react-calendar__navigation button:not(.react-calendar__navigation__label):disabled {
   @apply opacity-40 cursor-not-allowed;
   @apply hover:scale-100 hover:shadow-none;
   @apply from-primary-300 to-purple-300;
@@ -358,16 +363,16 @@
 
 .react-calendar__navigation__label {
   @apply flex-grow font-display text-base font-bold;
-  @apply text-primary-600 dark:text-primary-400;
+  @apply text-gray-800 dark:text-primary-300;
   @apply px-10 py-4;
-  @apply bg-primary-50 dark:bg-primary-900/20;
-  @apply hover:bg-primary-100 dark:hover:bg-primary-900/30;
-  @apply border-2 border-primary-200 dark:border-primary-800;
+  @apply bg-gray-50 dark:bg-primary-900/20;
+  @apply hover:bg-primary-50 dark:hover:bg-primary-900/30;
+  @apply border-2 border-gray-200 dark:border-primary-800;
   @apply hover:border-primary-400 dark:hover:border-primary-600;
   @apply rounded-xl;
   @apply transition-all duration-300;
   @apply min-h-[52px];
-  @apply shadow-md hover:shadow-lg hover:shadow-primary-500/30;
+  @apply shadow-sm hover:shadow-md hover:shadow-primary-500/20;
   @apply hover:scale-[1.02];
   @apply active:scale-95;
 }
@@ -512,15 +517,15 @@
 .react-calendar__decade-view .react-calendar__tile,
 .react-calendar__century-view .react-calendar__tile {
   @apply px-5 py-5 m-2;
-  @apply bg-gradient-to-br from-gray-50 to-gray-100;
+  @apply bg-gradient-to-br from-white to-gray-100;
   @apply dark:bg-dark-card;
-  @apply text-primary-700 dark:text-gray-200;
-  @apply border-2 border-gray-400 dark:border-gray-700;
+  @apply text-gray-800 dark:text-gray-200;
+  @apply border-2 border-gray-300 dark:border-gray-700;
   @apply rounded-xl;
   @apply font-bold text-lg;
   @apply transition-all duration-300;
   @apply shadow-lg;
-  @apply hover:bg-gradient-to-br hover:from-primary-100 hover:to-purple-100;
+  @apply hover:bg-gradient-to-br hover:from-primary-100 hover:to-indigo-100;
   @apply dark:hover:bg-primary-900/20;
   @apply hover:border-primary-500 dark:hover:border-primary-600;
   @apply hover:shadow-2xl hover:shadow-primary-500/40;
