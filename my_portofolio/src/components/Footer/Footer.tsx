@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
             <p className="text-sm">
               © {new Date().getFullYear()} Copyright :{" "}
               <Link
-                to="/#about"
+                to="/about"
                 className="font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
               >
                 DaniloWaffis - WaffoKom
