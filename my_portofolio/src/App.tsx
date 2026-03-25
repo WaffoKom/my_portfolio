@@ -46,7 +46,7 @@ const MainLayout: React.FC = () => {
         i18n.changeLanguage(lang);
       }
     } else {
-      const defaultLang = localStorage.getItem("language") || "en";
+      const defaultLang = "en";
       navigate(`/${defaultLang}`, { replace: true });
     }
   }, [lang, i18n, navigate]);
@@ -83,7 +83,7 @@ const MainLayout: React.FC = () => {
 };
 
 const App: React.FC = () => {
-  const defaultLang = localStorage.getItem("language") || "en";
+  const defaultLang = "en";
 
   return (
     <BrowserRouter>
