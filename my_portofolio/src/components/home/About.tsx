@@ -3,7 +3,7 @@ import { Div } from "../ui/motion";
 import { useTranslation } from "react-i18next";
 import { NavLink, useParams } from "react-router-dom";
 import { cn } from "../../lib/utils";
-import { buttonVariants } from "../ui/button";
+
 import { Button } from "../ui/button";
 import { Icon, type IconName } from "../ui/icon/icon";
 
@@ -105,13 +105,11 @@ const About: React.FC = () => {
                 <Button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  variant="gradient"
+                  tone="primary"
+                  size="lg"
+                  radius="xl"
                   className={cn(
-                    buttonVariants({
-                      variant: "gradient",
-                      tone: "primary",
-                      size: "lg",
-                      radius: "xl",
-                    }),
                     "shadow-lg shadow-primary-500/50 hover:shadow-xl hover:shadow-primary-500/60"
                   )}
                 >
