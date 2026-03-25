@@ -1,6 +1,6 @@
 import React from "react";
 import { Div } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import testimonial1 from "../../assets/testimonials/testimonial-1.png";
 import testimonial2 from "../../assets/testimonials/testimonial-2.png";
 import testimonial3 from "../../assets/testimonials/testimonial-3.png";
@@ -9,7 +9,7 @@ import testimonail5 from "../../assets/testimonials/testimonial-5.png";
 import { cn } from "../../lib/utils";
 
 const Testimonials: React.FC = () => {
-  const { t } = useTranslation("testimonials");
+  const { t } = useTranslations("testimonials");
 
   const testimonials = [
     {

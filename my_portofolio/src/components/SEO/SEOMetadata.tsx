@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 
 const SEOMetadata: React.FC = () => {
-  const { t, i18n } = useTranslation("metadata");
+  const { t, i18n } = useTranslations("metadata");
   const currentLang = i18n.language || "en";
   const siteUrl = "https://danilowaffis-portfolio.vercel.app";
   const previewImage = `${siteUrl}/author/danilo_img.jpg`;

@@ -1,10 +1,13 @@
 import type { Namespace } from "./namespaces";
 import { namespaces } from "./namespaces";
 
-export const languages = ["fr", "en", "es"] as const;
+export const languages = ["fr", "en"] as const;
 export type Language = (typeof languages)[number];
 
 type TranslationRecord = Record<string, unknown>;
+type TranslationModule = { default: TranslationRecord };
+
+const translationModules = import.meta.glob<TranslationModule>("./locales/*/*.json");
 
 function asArray(ns: Namespace | Namespace[] | undefined): Namespace[] {
   if (ns === undefined) {
@@ -16,8 +19,15 @@ async function loadClientTranslation(
   language: Language,
   namespace: Namespace
 ): Promise<TranslationRecord> {
-  const module = await import(`./locales/${language}/${namespace}.json`);
-  return module.default as TranslationRecord;
+  const modulePath = `./locales/${language}/${namespace}.json`;
+  const loader = translationModules[modulePath];
+
+  if (loader === undefined) {
+    throw new Error(`Translation file not found: ${modulePath}`);
+  }
+
+  const module = await loader();
+  return module.default;
 }
 
 export async function loadClientTranslations(

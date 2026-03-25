@@ -1,6 +1,6 @@
 import React from "react";
 import { Div } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
@@ -21,7 +21,7 @@ import we_travel from "../../assets/work/we_travel.png";
 import ProjetCard from "./ProjetCard";
 
 const Projects: React.FC = () => {
-  const { t } = useTranslation("project");
+  const { t } = useTranslations("project");
 
   const projectsList = [
     {

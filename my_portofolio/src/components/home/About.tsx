@@ -1,6 +1,6 @@
 import React from "react";
 import { Div } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import { NavLink, useParams } from "react-router-dom";
 import { cn } from "../../lib/utils";
 
@@ -15,7 +15,7 @@ type SocialLink = {
 };
 
 const About: React.FC = () => {
-  const { t } = useTranslation("about");
+  const { t } = useTranslations("about");
   const { lang } = useParams<{ lang: string }>();
   const currentLang = lang || "en";
 

@@ -5,14 +5,12 @@ import {
 import type { Namespace } from "./namespaces";
 import { assertNamespaces, type NamespaceInput } from "./i18n.config";
 
-type TypedUseTranslationOptions = Omit<UseTranslationOptions<string>, "ns"> & {
-  ns?: NamespaceInput;
-};
-
-export function useTranslation(options: TypedUseTranslationOptions = {}) {
-  const { ns, ...translationOptions } = options;
+export function useTranslations(
+  ns?: NamespaceInput,
+  options?: Omit<UseTranslationOptions<string>, "ns">
+): ReturnType<typeof useI18NextTranslation> {
   const validatedNamespaces = assertNamespaces(ns);
-  return useI18NextTranslation(validatedNamespaces, translationOptions);
+  return useI18NextTranslation(validatedNamespaces, options);
 }
 
 export type { Namespace };

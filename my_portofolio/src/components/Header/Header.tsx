@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, Div, Span, Header as MotionHeader } from "../ui/motion";
 import { useNavigate, useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import { useAppDispatch } from "../../hooks";
 import { setLanguage } from "../../actions/languageAction";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const { lang } = useParams<{ lang: string }>();
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslations();
   const dispatch = useAppDispatch();
 
   const [menuVisible, setMenuVisible] = useState(false);

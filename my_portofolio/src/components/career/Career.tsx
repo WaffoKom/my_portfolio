@@ -1,6 +1,6 @@
 import React from "react";
 import { Div } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import altplus from "../../assets/company/altplus.png";
 import free from "../../assets/company/free.png";
 import scs from "../../assets/company/scs.jpg";
@@ -8,7 +8,7 @@ import { cn } from "../../lib/utils";
 import { Icon } from "../ui/icon/icon";
 
 const Career: React.FC = () => {
-  const { t } = useTranslation("experience");
+  const { t } = useTranslations("experience");
 
   const experiences = [
     {

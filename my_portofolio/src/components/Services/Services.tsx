@@ -1,6 +1,6 @@
 import React from "react";
 import { Div } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import { cn } from "../../lib/utils";
 import { Icon, type IconName } from "../ui/icon/icon";
 
@@ -13,7 +13,7 @@ type ServiceItem = {
 };
 
 const Services: React.FC = () => {
-  const { t } = useTranslation("services");
+  const { t } = useTranslations("services");
 
   const services: ServiceItem[] = [
     {

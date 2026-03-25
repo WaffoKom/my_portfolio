@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, Div, H1, P, Form } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { cn } from "../../lib/utils";
@@ -13,7 +13,7 @@ type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 const Contact: React.FC = () => {
-  const { t } = useTranslation("contact");
+  const { t } = useTranslations("contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [showCalendar, setShowCalendar] = useState(false);

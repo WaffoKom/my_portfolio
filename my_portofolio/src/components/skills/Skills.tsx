@@ -1,6 +1,6 @@
 import React from "react";
 import { Div } from "../ui/motion";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "../../i18n/useTranslation";
 import git from "../../assets/tech/git.png";
 import mongodb from "../../assets/tech/mongodb.png";
 import mysql from "../../assets/tech/mysql.png";
@@ -19,7 +19,7 @@ type SkillItem = {
 };
 
 const Skills: React.FC = () => {
-  const { t } = useTranslation("skills");
+  const { t } = useTranslations("skills");
 
   const icons: SkillItem[] = [
     { name: "Git", icon: git },

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "./i18n/useTranslation";
 import About from "./components/home/About.tsx";
 import Skills from "./components/skills/Skills.tsx";
 import Projects from "./components/projets/Projects.tsx";
@@ -37,7 +37,7 @@ const ScrollToSection: React.FC = () => {
 
 const MainLayout: React.FC = () => {
   const { lang } = useParams<{ lang: string }>();
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslations();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -97,6 +97,7 @@ const App: React.FC = () => {
         <Route path="/:lang/testimonials" element={<MainLayout />} />
         <Route path="/:lang/contact" element={<MainLayout />} />
         <Route path="/" element={<Navigate to={`/${defaultLang}`} replace />} />
+        <Route path="*" element={<Navigate to={`/${defaultLang}`} replace />} />
       </Routes>
     </BrowserRouter>
   );
