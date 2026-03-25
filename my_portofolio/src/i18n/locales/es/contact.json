@@ -1,0 +1,60 @@
+{
+  "title": "Let's Transform Your Vision",
+  "subtitle": "Enter your details and discover your personalized roadmap to digital success",
+  "namePlaceholder": "Your name...",
+  "emailPlaceholder": "Your email...",
+  "button": "Discover My Message",
+  "available": "Available for projects",
+  "response": "Response within 24h",
+  "messageTitle": "Your Personalized Invitation",
+  "selectDateTime": "Select Date & Time",
+  "tryAgain": "Start Over",
+  "selectDate": "Select a Date",
+  "selectTime": "Select a Time",
+  "selectedSlot": "Selected:",
+  "confirmAppointment": "Confirm & Add to Google Calendar",
+  "back": "Back",
+  "fillAllFields": "Please fill all fields",
+  "templates": [
+    {
+      "greeting": "{name}, your ambition deserves exceptional solutions!",
+      "body": "I specialize in turning visionary ideas into reality. With cutting-edge technologies and a proven track record, I'm ready to elevate your project to new heights.",
+      "cta": "Let's schedule a consultation to discuss how we can transform your vision into a powerful digital experience that stands out."
+    },
+    {
+      "greeting": "Hello {name}! Ready to make waves in the digital world?",
+      "body": "Your project has immense potential, and I have the expertise to unlock it. From concept to deployment, I craft solutions that not only meet expectations but exceed them.",
+      "cta": "Book a strategic session with me, and let's create something remarkable together that your users will love."
+    },
+    {
+      "greeting": "{name}, innovation is calling!",
+      "body": "In today's fast-paced digital landscape, standing still means falling behind. I build scalable, performant applications that give you a competitive edge.",
+      "cta": "Let's connect for a personalized consultation and explore how we can accelerate your digital transformation."
+    },
+    {
+      "greeting": "Welcome {name}! Your next breakthrough starts here.",
+      "body": "Every great achievement begins with a single step. I bring years of experience and passion to every project, ensuring your success is not just a goal, but a guarantee.",
+      "cta": "Let's book a meeting to turn your ideas into impactful solutions that resonate with your audience."
+    },
+    {
+      "greeting": "{name}, let's build something extraordinary!",
+      "body": "Great software isn't just about code—it's about creating experiences that delight users and drive results. I'm here to make that happen for you.",
+      "cta": "Schedule a call with me to discover how we can create a digital masterpiece together."
+    },
+    {
+      "greeting": "Greetings {name}! Ready to elevate your digital presence?",
+      "body": "In a crowded digital world, you need solutions that stand out. I combine creativity with technical expertise to deliver results that exceed expectations.",
+      "cta": "Let's arrange a consultation to explore the possibilities and craft your perfect solution."
+    },
+    {
+      "greeting": "{name}, your success story begins now!",
+      "body": "I believe in turning challenges into opportunities and ideas into reality. With a focus on quality and innovation, I'm committed to your success.",
+      "cta": "Book an appointment and let's start building the future of your business together."
+    },
+    {
+      "greeting": "Hey {name}! Let's make your vision a reality.",
+      "body": "From sleek web applications to powerful mobile solutions, I create digital experiences that make an impact. Your project deserves nothing less than excellence.",
+      "cta": "Reach out for a personalized consultation and let's discuss how we can bring your vision to life."
+    }
+  ]
+}
