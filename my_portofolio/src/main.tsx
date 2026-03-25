@@ -7,6 +7,7 @@ import store from "./store/store.ts";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "./contexts/ThemeContext.tsx";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 
 const root = createRoot(document.getElementById("root")!);
 
@@ -19,6 +20,7 @@ function renderApp() {
         <Provider store={store}>
           <ThemeProvider>
             <App />
+            <Analytics />
           </ThemeProvider>
         </Provider>
       </HelmetProvider>
