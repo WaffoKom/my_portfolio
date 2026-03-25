@@ -5,7 +5,8 @@ import { useTranslation } from "react-i18next";
 const SEOMetadata: React.FC = () => {
   const { t, i18n } = useTranslation("metadata");
   const currentLang = i18n.language || "en";
-  const siteUrl = "danilowaffis-portfolio.vercel.app";
+  const siteUrl = "https://danilowaffis-portfolio.vercel.app";
+  const previewImage = `${siteUrl}/author/danilo_img.jpg`;
 
   return (
     <Helmet>
@@ -24,7 +25,7 @@ const SEOMetadata: React.FC = () => {
       <meta property="og:url" content={`${siteUrl}/${currentLang}`} />
       <meta property="og:title" content={t("ogTitle")} />
       <meta property="og:description" content={t("ogDescription")} />
-      <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+      <meta property="og:image" content={previewImage} />
       <meta property="og:site_name" content={t("siteName")} />
       <meta property="og:locale" content={currentLang === "fr" ? "fr_FR" : "en_US"} />
 
@@ -33,7 +34,7 @@ const SEOMetadata: React.FC = () => {
       <meta property="twitter:url" content={`${siteUrl}/${currentLang}`} />
       <meta property="twitter:title" content={t("twitterTitle")} />
       <meta property="twitter:description" content={t("twitterDescription")} />
-      <meta property="twitter:image" content={`${siteUrl}/twitter-image.jpg`} />
+      <meta property="twitter:image" content={previewImage} />
       <meta property="twitter:creator" content="@DaniloWaffis" />
 
       {/* LinkedIn */}
