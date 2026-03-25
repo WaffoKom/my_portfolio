@@ -93,7 +93,7 @@ export function buttonVariants({
 
 export type ButtonProps = HTMLMotionProps<"button"> & ButtonVariantOptions;
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+export const  Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   { className, variant, tone, size, radius, fullWidth, ...props },
   ref
 ) {

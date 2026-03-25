@@ -98,7 +98,7 @@ const Header: React.FC = () => {
             size="md"
             radius="full"
             className={cn(
-              "relative h-12 w-24 rounded-full transition-all duration-300",
+              "relative h-12 w-24  transition-all duration-300",
               "p-0",
               "shadow-sm hover:shadow-md",
               "focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2",
