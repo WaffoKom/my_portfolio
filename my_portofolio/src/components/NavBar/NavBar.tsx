@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHome,
-  faContactBook,
-  faUser,
-  faBrain,
-} from "@fortawesome/free-solid-svg-icons";
-import { faServicestack } from "@fortawesome/free-brands-svg-icons";
-import { NavItem } from "../../types/NavItem.ts";
+import { Div, Nav } from "../ui/motion";
 import { useNavigate, useParams } from "react-router-dom";
 import { cn } from "../../lib/utils";
+import { Button } from "../ui/button";
+import { buttonVariants } from "../ui/button";
+import {
+  Icon,
+  type IconName,
+} from "../ui/icon/icon";
+
+type NavItem = {
+  link: string;
+  icon: IconName;
+};
 
 const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -21,28 +23,23 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
   const nav: NavItem[] = [
     {
       link: "about",
-      icon: () => <FontAwesomeIcon icon={faHome} />,
-      iconClassName: "custom-icon-class",
+      icon: "Fa6Home",
     },
     {
       link: "services",
-      icon: () => <FontAwesomeIcon icon={faUser} />,
-      iconClassName: "custom-icon-class",
+      icon: "Fa6User",
     },
     {
       link: "career",
-      icon: () => <FontAwesomeIcon icon={faServicestack} />,
-      iconClassName: "custom-icon-class",
+      icon: "Fa6Servicestack",
     },
     {
       link: "skills",
-      icon: () => <FontAwesomeIcon icon={faBrain} />,
-      iconClassName: "custom-icon-class",
+      icon: "Fa6Brain",
     },
     {
       link: "testimonials",
-      icon: () => <FontAwesomeIcon icon={faContactBook} />,
-      iconClassName: "custom-icon-class",
+      icon: "Fa6ContactBook",
     },
   ];
 
@@ -59,7 +56,7 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
   };
 
   return (
-    <motion.nav
+    <Nav
       initial={{ y: 20, opacity: 0, scale: 0.95 }}
       animate={{
         y: toggle ? 0 : 20,
@@ -80,33 +77,39 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
       aria-label="Main navigation"
     >
       {nav.map((item, index) => (
-        <motion.div
+        <Button
           key={index}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => handleNavClick(item.link)}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={handleMouseLeave}
+          variant="soft"
+          tone="neutral"
+          size="icon"
+          radius="full"
+          aria-label={item.link}
           className={cn(
-            "p-3 rounded-full cursor-pointer transition-all duration-300",
-            "bg-[#f7f9fc] dark:bg-dark-bg/90",
-            "border border-slate-200/80 dark:border-slate-700/60",
+            buttonVariants({ variant: "soft", tone: "neutral", size: "icon", radius: "full" }),
+            "cursor-pointer transition-all duration-300",
+            "bg-[#f7f9fc] dark:bg-dark-bg/90 border border-slate-200/80 dark:border-slate-700/60",
             "shadow-[inset_1px_1px_0_rgba(255,255,255,0.95),inset_-1px_-1px_0_rgba(148,163,184,0.15)]",
             "hover:bg-primary-500 hover:text-white hover:border-primary-400",
             "hover:shadow-lg hover:shadow-primary-500/30",
             "group relative"
           )}
         >
-          {React.createElement(item.icon, {
-            className: cn(
+          <Icon
+            name={item.icon}
+            className={cn(
               "text-lg transition-colors duration-300",
               "text-gray-700 dark:text-gray-300",
               "group-hover:text-white"
-            ),
-          })}
+            )}
+          />
 
           {/* Tooltip */}
-          <motion.div
+          <Div
             initial={{ opacity: 0, x: -10 }}
             animate={{
               opacity: activeIndex === index ? 1 : 0,
@@ -122,10 +125,10 @@ const NavBar: React.FC<{ toggle: boolean }> = ({ toggle }) => {
             )}
           >
             {item.link.charAt(0).toUpperCase() + item.link.slice(1)}
-          </motion.div>
-        </motion.div>
+          </Div>
+        </Button>
       ))}
-    </motion.nav>
+    </Nav>
   );
 };
 

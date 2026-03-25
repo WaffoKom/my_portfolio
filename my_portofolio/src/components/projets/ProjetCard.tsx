@@ -1,9 +1,9 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { AiOutlineGoogle, AiOutlineGithub } from "react-icons/ai";
+import { Div, Img } from "../ui/motion";
 import ProjetCardProps from "../../types/ProjetCard.ts";
 import { NavLink } from "react-router-dom";
 import { cn } from "../../lib/utils";
+import { Icon } from "../ui/icon/icon";
 
 const ProjetCard: React.FC<typeof ProjetCardProps> = ({
                                                         name,
@@ -18,7 +18,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
   const imgSrc = mobileDevice ? thumbnail || image : image;
 
   return (
-      <motion.div
+      <Div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -33,7 +33,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
       >
         {/* Image */}
         <div className="relative overflow-hidden aspect-video">
-          <motion.img
+          <Img
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.5 }}
               loading="lazy"
@@ -75,7 +75,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
                     rel="noopener noreferrer"
                     className="flex-1"
                 >
-                  <motion.div
+                  <Div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className={cn(
@@ -87,8 +87,8 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
                       )}
                   >
                     <span>Demo</span>
-                    <AiOutlineGoogle className="text-xl" />
-                  </motion.div>
+                    <Icon name="AiOutlineGoogle" className="text-xl" />
+                  </Div>
                 </NavLink>
             )}
             {sourcecode && (
@@ -98,7 +98,7 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
                     rel="noopener noreferrer"
                     className="flex-1"
                 >
-                  <motion.div
+                  <Div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className={cn(
@@ -110,13 +110,13 @@ const ProjetCard: React.FC<typeof ProjetCardProps> = ({
                       )}
                   >
                     <span>Code</span>
-                    <AiOutlineGithub className="text-xl" />
-                  </motion.div>
+                    <Icon name="AiOutlineGithub" className="text-xl" />
+                  </Div>
                 </NavLink>
             )}
           </div>
         </div>
-      </motion.div>
+      </Div>
   );
 };
 

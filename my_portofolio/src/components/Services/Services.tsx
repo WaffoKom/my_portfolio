@@ -1,27 +1,33 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Div } from "../ui/motion";
 import { useTranslation } from "react-i18next";
 import { cn } from "../../lib/utils";
-import { FaMobileAlt, FaLaptopCode, FaReact, FaNodeJs } from "react-icons/fa";
-import { HiDeviceMobile } from "react-icons/hi";
-import { BiCodeAlt } from "react-icons/bi";
+import { Icon, type IconName } from "../ui/icon/icon";
+
+type ServiceItem = {
+  title: string;
+  icon: IconName;
+  gradient: string;
+  secondaryIcons: [IconName, IconName];
+  alt: string;
+};
 
 const Services: React.FC = () => {
   const { t } = useTranslation("services");
 
-  const services = [
+  const services: ServiceItem[] = [
     {
       title: t("services.devmobile"),
-      icon: FaMobileAlt,
+      icon: "FaMobileAlt",
       gradient: "from-purple-500 via-pink-500 to-red-500",
-      secondaryIcons: [HiDeviceMobile, FaReact],
+      secondaryIcons: ["HiDeviceMobile", "FaReact"],
       alt: "Mobile Development",
     },
     {
       title: t("services.devweb"),
-      icon: FaLaptopCode,
+      icon: "FaLaptopCode",
       gradient: "from-blue-500 via-cyan-500 to-teal-500",
-      secondaryIcons: [BiCodeAlt, FaNodeJs],
+      secondaryIcons: ["BiCodeAlt", "FaNodeJs"],
       alt: "Web Development",
     },
   ];
@@ -29,7 +35,7 @@ const Services: React.FC = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-7xl w-full">
-        <motion.div
+        <Div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -39,11 +45,11 @@ const Services: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
             <span className="gradient-text">{t("services.contact")}</span>
           </h1>
-        </motion.div>
+        </Div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index) => (
-            <motion.div
+            <Div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +73,7 @@ const Services: React.FC = () => {
 
               <div className="relative z-10 flex flex-col items-center text-center space-y-8">
                 {/* Main Icon with Gradient Background */}
-                <motion.div
+                <Div
                   whileHover={{ scale: 1.05, rotate: [0, -5, 5, 0] }}
                   transition={{ type: "spring", stiffness: 200 }}
                   className="relative"
@@ -80,19 +86,19 @@ const Services: React.FC = () => {
 
                   {/* Main icon container */}
                   <div className={cn(
-                    "relative w-48 h-48 rounded-3xl",
+                    "relative w-40 h-40 rounded-3xl",
                     "bg-gradient-to-br",
                     service.gradient,
                     "flex items-center justify-center",
                     "shadow-2xl",
                     "transform group-hover:rotate-3 transition-transform duration-300"
                   )}>
-                    <service.icon className="text-white text-8xl drop-shadow-2xl" />
+                    <Icon name={service.icon} className="text-white text-6xl drop-shadow-2xl" />
                   </div>
 
                   {/* Secondary floating icons */}
                   <div className="absolute -top-4 -right-4">
-                    <motion.div
+                    <Div
                       animate={{
                         y: [0, -10, 0],
                         rotate: [0, 10, 0]
@@ -102,16 +108,20 @@ const Services: React.FC = () => {
                         repeat: Infinity,
                         ease: "easeInOut"
                       }}
-                      className="w-16 h-16 rounded-2xl bg-white dark:bg-dark-card shadow-xl flex items-center justify-center border-2 border-white dark:border-dark-border"
+                      className="w-14 h-14 rounded-2xl bg-white dark:bg-dark-card shadow-xl flex items-center justify-center border-2 border-white dark:border-dark-border"
                     >
-                      {React.createElement(service.secondaryIcons[0], {
-                        className: cn("text-3xl bg-gradient-to-r bg-clip-text text-transparent", service.gradient)
-                      })}
-                    </motion.div>
+                      <Icon
+                        name={service.secondaryIcons[0]}
+                        className={cn(
+                          "text-2xl bg-gradient-to-r bg-clip-text text-transparent",
+                          service.gradient
+                        )}
+                      />
+                    </Div>
                   </div>
 
                   <div className="absolute -bottom-4 -left-4">
-                    <motion.div
+                    <Div
                       animate={{
                         y: [0, 10, 0],
                         rotate: [0, -10, 0]
@@ -122,21 +132,25 @@ const Services: React.FC = () => {
                         ease: "easeInOut",
                         delay: 1.5
                       }}
-                      className="w-16 h-16 rounded-2xl bg-white dark:bg-dark-card shadow-xl flex items-center justify-center border-2 border-white dark:border-dark-border"
+                      className="w-14 h-14 rounded-2xl bg-white dark:bg-dark-card shadow-xl flex items-center justify-center border-2 border-white dark:border-dark-border"
                     >
-                      {React.createElement(service.secondaryIcons[1], {
-                        className: cn("text-3xl bg-gradient-to-r bg-clip-text text-transparent", service.gradient)
-                      })}
-                    </motion.div>
+                      <Icon
+                        name={service.secondaryIcons[1]}
+                        className={cn(
+                          "text-2xl bg-gradient-to-r bg-clip-text text-transparent",
+                          service.gradient
+                        )}
+                      />
+                    </Div>
                   </div>
-                </motion.div>
+                </Div>
 
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-gray-100">
                   {service.title}
                 </h3>
 
                 {/* Decorative line */}
-                <motion.div
+                <Div
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   viewport={{ once: true }}
@@ -149,7 +163,7 @@ const Services: React.FC = () => {
               </div>
 
               {/* Animated Corner Accents */}
-              <motion.div
+              <Div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className={cn(
@@ -158,7 +172,7 @@ const Services: React.FC = () => {
                   service.gradient
                 )}
               />
-              <motion.div
+              <Div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                 className={cn(
@@ -167,7 +181,7 @@ const Services: React.FC = () => {
                   service.gradient
                 )}
               />
-            </motion.div>
+            </Div>
           ))}
         </div>
       </div>

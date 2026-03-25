@@ -1,11 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Div } from "../ui/motion";
 import { useTranslation } from "react-i18next";
-import { CgSoftwareDownload } from "react-icons/cg";
 import altplus from "../../assets/company/altplus.png";
 import free from "../../assets/company/free.png";
 import scs from "../../assets/company/scs.jpg";
 import { cn } from "../../lib/utils";
+import { Icon } from "../ui/icon/icon";
 
 const Career: React.FC = () => {
   const { t } = useTranslation("experience");
@@ -66,7 +66,7 @@ const Career: React.FC = () => {
   return (
     <section className="min-h-screen px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-5xl mx-auto">
-        <motion.div
+        <Div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -76,7 +76,7 @@ const Career: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
             <span className="gradient-text">{t("work.experience")}</span>
           </h1>
-        </motion.div>
+        </Div>
 
         {/* Timeline */}
         <div className="relative">
@@ -85,7 +85,7 @@ const Career: React.FC = () => {
 
           <div className="space-y-12">
             {experiences.map((experience, index) => (
-              <motion.div
+              <Div
                 key={index}
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -146,13 +146,13 @@ const Career: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </Div>
             ))}
           </div>
         </div>
 
         {/* Download Resume Button */}
-        <motion.div
+        <Div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -165,7 +165,7 @@ const Career: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <motion.div
+            <Div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={cn(
@@ -177,10 +177,10 @@ const Career: React.FC = () => {
               )}
             >
               <span>{t("myResume.youCan")}</span>
-              <CgSoftwareDownload size={24} />
-            </motion.div>
+              <Icon name="CgSoftwareDownload" className="size-6" />
+            </Div>
           </a>
-        </motion.div>
+        </Div>
       </div>
     </section>
   );

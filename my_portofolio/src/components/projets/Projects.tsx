@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Div } from "../ui/motion";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
@@ -94,7 +94,7 @@ const Projects: React.FC = () => {
   return (
     <section className="min-h-screen px-4 sm:px-6 lg:px-8 py-20 bg-gradient-to-b from-white to-gray-50 dark:from-dark-bg dark:to-dark-card">
       <div className="max-w-7xl mx-auto">
-        <motion.div
+        <Div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -110,7 +110,7 @@ const Projects: React.FC = () => {
             <p>{t("work.project.phr_2")}</p>
             <p>{t("work.project.phr_3")}</p>
           </div>
-        </motion.div>
+        </Div>
 
         <div className="relative px-4 sm:px-8 lg:px-12">
           <Swiper
@@ -156,7 +156,7 @@ const Projects: React.FC = () => {
           >
             {projectsList.map((project, index) => (
               <SwiperSlide key={index} className="!h-auto">
-                <motion.div
+                <Div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -164,7 +164,7 @@ const Projects: React.FC = () => {
                   className="h-full"
                 >
                   <ProjetCard {...project} />
-                </motion.div>
+                </Div>
               </SwiperSlide>
             ))}
           </Swiper>

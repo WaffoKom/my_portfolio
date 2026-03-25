@@ -1,40 +1,42 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Div } from "../ui/motion";
 import { Link } from "react-router-dom";
-import {
-  faWhatsapp,
-  faLinkedin,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { cn } from "../../lib/utils";
+import { Icon, type IconName } from "../ui/icon/icon";
+
+type SocialLink = {
+  iconName: IconName;
+  url: string;
+  label: string;
+  gradient: string;
+  hoverColor: string;
+};
 
 const Footer: React.FC = () => {
-  const socialLinks = [
+  const socialLinks: SocialLink[] = [
     {
-      icon: faWhatsapp,
+      iconName: "Fa6Whatsapp",
       url: "https://wa.me/+237656294240",
       label: "WhatsApp",
       gradient: "from-green-400 to-green-600",
       hoverColor: "hover:shadow-green-500/50",
     },
     {
-      icon: faLinkedin,
+      iconName: "Fa6Linkedin",
       url: "https://www.linkedin.com/in/waffokom-daniel-kom-24151a354/",
       label: "LinkedIn",
       gradient: "from-blue-500 to-blue-700",
       hoverColor: "hover:shadow-blue-500/50",
     },
     {
-      icon: faGithub,
+      iconName: "Fa6Github",
       url: "https://github.com/WaffoKom/",
       label: "GitHub",
       gradient: "from-gray-700 to-gray-900",
       hoverColor: "hover:shadow-gray-700/50",
     },
     {
-      icon: faEnvelope,
+      iconName: "Fa6Envelope",
       url: "mailto:kwdparabic@gmail.com",
       label: "Email",
       gradient: "from-red-500 to-pink-600",
@@ -49,7 +51,7 @@ const Footer: React.FC = () => {
           {/* Social Links */}
           <div className="flex flex-wrap gap-6 justify-center">
             {socialLinks.map((social, index) => (
-              <motion.div
+              <Div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +66,7 @@ const Footer: React.FC = () => {
                   rel="noopener noreferrer"
                   aria-label={social.label}
                 >
-                  <motion.div
+                  <Div
                     whileTap={{ scale: 0.95 }}
                     className={cn(
                       "relative p-5 rounded-2xl overflow-hidden",
@@ -79,8 +81,8 @@ const Footer: React.FC = () => {
                     <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                     {/* Icon */}
-                    <FontAwesomeIcon
-                      icon={social.icon}
+                    <Icon
+                      name={social.iconName}
                       className="relative z-10 text-2xl text-white drop-shadow-lg group-hover:scale-110 transition-transform duration-300"
                     />
 
@@ -90,14 +92,14 @@ const Footer: React.FC = () => {
                         {social.label}
                       </span>
                     </div>
-                  </motion.div>
+                  </Div>
                 </Link>
-              </motion.div>
+              </Div>
             ))}
           </div>
 
           {/* Copyright */}
-          <motion.div
+          <Div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -113,7 +115,7 @@ const Footer: React.FC = () => {
                 DaniloWaffis - WaffoKom
               </Link>
             </p>
-          </motion.div>
+          </Div>
         </div>
       </div>
 

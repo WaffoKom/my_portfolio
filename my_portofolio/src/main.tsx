@@ -2,7 +2,7 @@ import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import "./i18next.ts";
+import { i18nReady } from "./i18next.ts";
 import store from "./store/store.ts";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "./contexts/ThemeContext.tsx";
@@ -33,5 +33,10 @@ function fancyLog() {
   // console.log(store.getState());
 }
 
-renderApp();
-store.subscribe(renderApp);
+async function start(): Promise<void> {
+  await i18nReady;
+  renderApp();
+  store.subscribe(renderApp);
+}
+
+void start();
